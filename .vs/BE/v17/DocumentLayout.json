@@ -3,132 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\services\\common\\firebase\\firebaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|solutionrelative:services\\common\\firebase\\firebaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\be\\controllers\\orchidcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|solutionrelative:be\\controllers\\orchidcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\be\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|solutionrelative:be\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\be\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|solutionrelative:be\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|solutionrelative:be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\services\\auth\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|solutionrelative:services\\auth\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\services\\common\\jwt\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|solutionrelative:services\\common\\jwt\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\be\\be.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|solutionrelative:be\\be.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43434334-0B0D-4617-AAFA-BBE3F545CC5E}|BussinessObjects\\BussinessObjects.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\bussinessobjects\\models\\orchidauctioncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43434334-0B0D-4617-AAFA-BBE3F545CC5E}|BussinessObjects\\BussinessObjects.csproj|solutionrelative:bussinessobjects\\models\\orchidauctioncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{487049D2-F7FE-40DF-88EC-A1BA9E980537}|Repositories\\Repositories.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\repositories\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{487049D2-F7FE-40DF-88EC-A1BA9E980537}|Repositories\\Repositories.csproj|solutionrelative:repositories\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\be\\controllers\\orchidcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|solutionrelative:be\\controllers\\orchidcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\services\\auth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|solutionrelative:services\\auth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\services\\common\\sha256\\sha256service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|solutionrelative:services\\common\\sha256\\sha256service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\services\\common\\firebase\\ifirebaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|solutionrelative:services\\common\\firebase\\ifirebaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\services\\common\\jwt\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|solutionrelative:services\\common\\jwt\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\services\\orchid\\orchidservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|solutionrelative:services\\orchid\\orchidservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\services\\orchid\\iorchidservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|solutionrelative:services\\orchid\\iorchidservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43434334-0B0D-4617-AAFA-BBE3F545CC5E}|BussinessObjects\\BussinessObjects.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\bussinessobjects\\dtos\\orchiddtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43434334-0B0D-4617-AAFA-BBE3F545CC5E}|BussinessObjects\\BussinessObjects.csproj|solutionrelative:bussinessobjects\\dtos\\orchiddtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\services\\auth\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|solutionrelative:services\\auth\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{487049D2-F7FE-40DF-88EC-A1BA9E980537}|Repositories\\Repositories.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\repositories\\user\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{487049D2-F7FE-40DF-88EC-A1BA9E980537}|Repositories\\Repositories.csproj|solutionrelative:repositories\\user\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43434334-0B0D-4617-AAFA-BBE3F545CC5E}|BussinessObjects\\BussinessObjects.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\bussinessobjects\\bussinessobjects.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{43434334-0B0D-4617-AAFA-BBE3F545CC5E}|BussinessObjects\\BussinessObjects.csproj|solutionrelative:bussinessobjects\\bussinessobjects.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{487049D2-F7FE-40DF-88EC-A1BA9E980537}|Repositories\\Repositories.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\repositories\\generic\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{487049D2-F7FE-40DF-88EC-A1BA9E980537}|Repositories\\Repositories.csproj|solutionrelative:repositories\\generic\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{487049D2-F7FE-40DF-88EC-A1BA9E980537}|Repositories\\Repositories.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\repositories\\generic\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{487049D2-F7FE-40DF-88EC-A1BA9E980537}|Repositories\\Repositories.csproj|solutionrelative:repositories\\generic\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{487049D2-F7FE-40DF-88EC-A1BA9E980537}|Repositories\\Repositories.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\repositories\\orchid\\orchidrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{487049D2-F7FE-40DF-88EC-A1BA9E980537}|Repositories\\Repositories.csproj|solutionrelative:repositories\\orchid\\orchidrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{487049D2-F7FE-40DF-88EC-A1BA9E980537}|Repositories\\Repositories.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\repositories\\orchid\\iorchidrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{487049D2-F7FE-40DF-88EC-A1BA9E980537}|Repositories\\Repositories.csproj|solutionrelative:repositories\\orchid\\iorchidrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\be\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|solutionrelative:be\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{487049D2-F7FE-40DF-88EC-A1BA9E980537}|Repositories\\Repositories.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\repositories\\repositories.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{487049D2-F7FE-40DF-88EC-A1BA9E980537}|Repositories\\Repositories.csproj|solutionrelative:repositories\\repositories.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43434334-0B0D-4617-AAFA-BBE3F545CC5E}|BussinessObjects\\BussinessObjects.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\bussinessobjects\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43434334-0B0D-4617-AAFA-BBE3F545CC5E}|BussinessObjects\\BussinessObjects.csproj|solutionrelative:bussinessobjects\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43434334-0B0D-4617-AAFA-BBE3F545CC5E}|BussinessObjects\\BussinessObjects.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\bussinessobjects\\dtos\\basedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43434334-0B0D-4617-AAFA-BBE3F545CC5E}|BussinessObjects\\BussinessObjects.csproj|solutionrelative:bussinessobjects\\dtos\\basedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43434334-0B0D-4617-AAFA-BBE3F545CC5E}|BussinessObjects\\BussinessObjects.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\bussinessobjects\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43434334-0B0D-4617-AAFA-BBE3F545CC5E}|BussinessObjects\\BussinessObjects.csproj|solutionrelative:bussinessobjects\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\be\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|solutionrelative:be\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\be\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|solutionrelative:be\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43434334-0B0D-4617-AAFA-BBE3F545CC5E}|BussinessObjects\\BussinessObjects.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\bussinessobjects\\models\\orchid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43434334-0B0D-4617-AAFA-BBE3F545CC5E}|BussinessObjects\\BussinessObjects.csproj|solutionrelative:bussinessobjects\\models\\orchid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\services\\common\\sha256\\isha256service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|solutionrelative:services\\common\\sha256\\isha256service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43434334-0B0D-4617-AAFA-BBE3F545CC5E}|BussinessObjects\\BussinessObjects.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\bussinessobjects\\migrations\\20240317051822_aaa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43434334-0B0D-4617-AAFA-BBE3F545CC5E}|BussinessObjects\\BussinessObjects.csproj|solutionrelative:bussinessobjects\\migrations\\20240317051822_aaa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{43434334-0B0D-4617-AAFA-BBE3F545CC5E}|BussinessObjects\\BussinessObjects.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\bussinessobjects\\dtos\\orchiddtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43434334-0B0D-4617-AAFA-BBE3F545CC5E}|BussinessObjects\\BussinessObjects.csproj|solutionrelative:bussinessobjects\\dtos\\orchiddtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -138,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 465,
-          "SelectedChildIndex": 23,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -198,265 +98,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BE",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\BE.csproj",
-              "RelativeDocumentMoniker": "BE\\BE.csproj",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\BE.csproj",
-              "RelativeToolTip": "BE\\BE.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-17T07:45:57.702Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "BussinessObjects",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BussinessObjects\\BussinessObjects.csproj",
-              "RelativeDocumentMoniker": "BussinessObjects\\BussinessObjects.csproj",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BussinessObjects\\BussinessObjects.csproj",
-              "RelativeToolTip": "BussinessObjects\\BussinessObjects.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-17T07:37:19.811Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "IGenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Repositories\\Generic\\IGenericRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\Generic\\IGenericRepository.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Repositories\\Generic\\IGenericRepository.cs",
-              "RelativeToolTip": "Repositories\\Generic\\IGenericRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T07:36:48.097Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "OrchidRepository.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Repositories\\Orchid\\OrchidRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\Orchid\\OrchidRepository.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Repositories\\Orchid\\OrchidRepository.cs",
-              "RelativeToolTip": "Repositories\\Orchid\\OrchidRepository.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T07:33:11.09Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "IOrchidRepository.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Repositories\\Orchid\\IOrchidRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\Orchid\\IOrchidRepository.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Repositories\\Orchid\\IOrchidRepository.cs",
-              "RelativeToolTip": "Repositories\\Orchid\\IOrchidRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T07:33:00.111Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Repositories",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Repositories\\Repositories.csproj",
-              "RelativeDocumentMoniker": "Repositories\\Repositories.csproj",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Repositories\\Repositories.csproj",
-              "RelativeToolTip": "Repositories\\Repositories.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-17T07:32:05.298Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BussinessObjects\\Models\\User.cs",
-              "RelativeDocumentMoniker": "BussinessObjects\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BussinessObjects\\Models\\User.cs",
-              "RelativeToolTip": "BussinessObjects\\Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T06:29:33.723Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Repositories\\Generic\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\Generic\\GenericRepository.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Repositories\\Generic\\GenericRepository.cs",
-              "RelativeToolTip": "Repositories\\Generic\\GenericRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T06:29:32.981Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "BE\\WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\WeatherForecast.cs",
-              "RelativeToolTip": "BE\\WeatherForecast.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T06:20:43.777Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FirebaseService.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Common\\Firebase\\FirebaseService.cs",
-              "RelativeDocumentMoniker": "Services\\Common\\Firebase\\FirebaseService.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Common\\Firebase\\FirebaseService.cs",
-              "RelativeToolTip": "Services\\Common\\Firebase\\FirebaseService.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAYwC8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T05:57:38.567Z",
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "BE\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\Properties\\launchSettings.json",
+              "RelativeToolTip": "BE\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-17T08:53:16.316Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IFirebaseService.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Common\\Firebase\\IFirebaseService.cs",
-              "RelativeDocumentMoniker": "Services\\Common\\Firebase\\IFirebaseService.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Common\\Firebase\\IFirebaseService.cs",
-              "RelativeToolTip": "Services\\Common\\Firebase\\IFirebaseService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAsAAAAOAAAA",
+              "DocumentIndex": 2,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Auth\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Services\\Auth\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Auth\\IAuthService.cs",
+              "RelativeToolTip": "Services\\Auth\\IAuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T05:57:22.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-17T08:19:17.152Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IJwtService.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Common\\Jwt\\IJwtService.cs",
-              "RelativeDocumentMoniker": "Services\\Common\\Jwt\\IJwtService.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Common\\Jwt\\IJwtService.cs",
-              "RelativeToolTip": "Services\\Common\\Jwt\\IJwtService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T05:48:32.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "JwtService.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Common\\Jwt\\JwtService.cs",
-              "RelativeDocumentMoniker": "Services\\Common\\Jwt\\JwtService.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Common\\Jwt\\JwtService.cs",
-              "RelativeToolTip": "Services\\Common\\Jwt\\JwtService.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAcwBMAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T05:47:15.123Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "ISha256Service.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Common\\Sha256\\ISha256Service.cs",
-              "RelativeDocumentMoniker": "Services\\Common\\Sha256\\ISha256Service.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Common\\Sha256\\ISha256Service.cs",
-              "RelativeToolTip": "Services\\Common\\Sha256\\ISha256Service.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T05:47:04.417Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Orchid.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BussinessObjects\\Models\\Orchid.cs",
-              "RelativeDocumentMoniker": "BussinessObjects\\Models\\Orchid.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BussinessObjects\\Models\\Orchid.cs",
-              "RelativeToolTip": "BussinessObjects\\Models\\Orchid.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T05:44:18.061Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "OrchidDTOs.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BussinessObjects\\DTOs\\OrchidDTOs.cs",
-              "RelativeDocumentMoniker": "BussinessObjects\\DTOs\\OrchidDTOs.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BussinessObjects\\DTOs\\OrchidDTOs.cs",
-              "RelativeToolTip": "BussinessObjects\\DTOs\\OrchidDTOs.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAA0wBUAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T05:35:32.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IOrchidService.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Orchid\\IOrchidService.cs",
-              "RelativeDocumentMoniker": "Services\\Orchid\\IOrchidService.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Orchid\\IOrchidService.cs",
-              "RelativeToolTip": "Services\\Orchid\\IOrchidService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T05:35:11.435Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "OrchidService.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Orchid\\OrchidService.cs",
-              "RelativeDocumentMoniker": "Services\\Orchid\\OrchidService.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Orchid\\OrchidService.cs",
-              "RelativeToolTip": "Services\\Orchid\\OrchidService.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAA5wBEAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T05:34:56.577Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "OrchidController.cs",
               "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\Controllers\\OrchidController.cs",
               "RelativeDocumentMoniker": "BE\\Controllers\\OrchidController.cs",
               "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\Controllers\\OrchidController.cs",
               "RelativeToolTip": "BE\\Controllers\\OrchidController.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAuwBgAAAASAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T05:33:35.69Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-17T08:16:57.499Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\Program.cs",
-              "RelativeDocumentMoniker": "BE\\Program.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\Program.cs",
-              "RelativeToolTip": "BE\\Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAvAAAA",
+              "DocumentIndex": 4,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Auth\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\Auth\\AuthService.cs",
+              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Auth\\AuthService.cs",
+              "RelativeToolTip": "Services\\Auth\\AuthService.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAA2wF8AAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T05:19:45.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-17T08:16:37.739Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 5,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "BE\\Controllers\\WeatherForecastController.cs",
@@ -464,150 +155,31 @@
               "RelativeToolTip": "BE\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T05:19:44.188Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "20240317051822_AAA.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BussinessObjects\\Migrations\\20240317051822_AAA.cs",
-              "RelativeDocumentMoniker": "BussinessObjects\\Migrations\\20240317051822_AAA.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BussinessObjects\\Migrations\\20240317051822_AAA.cs",
-              "RelativeToolTip": "BussinessObjects\\Migrations\\20240317051822_AAA.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T05:18:22.122Z"
+              "WhenOpened": "2024-03-17T08:16:28.862Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "OrchidAuctionContext.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BussinessObjects\\Models\\OrchidAuctionContext.cs",
-              "RelativeDocumentMoniker": "BussinessObjects\\Models\\OrchidAuctionContext.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BussinessObjects\\Models\\OrchidAuctionContext.cs",
-              "RelativeToolTip": "BussinessObjects\\Models\\OrchidAuctionContext.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAowC8AAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T05:17:29.992Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "BaseDTOs.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BussinessObjects\\DTOs\\BaseDTOs.cs",
-              "RelativeDocumentMoniker": "BussinessObjects\\DTOs\\BaseDTOs.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BussinessObjects\\DTOs\\BaseDTOs.cs",
-              "RelativeToolTip": "BussinessObjects\\DTOs\\BaseDTOs.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAA1wBUAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T05:17:27.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "AuthDTOs.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BussinessObjects\\DTOs\\AuthDTOs.cs",
-              "RelativeDocumentMoniker": "BussinessObjects\\DTOs\\AuthDTOs.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BussinessObjects\\DTOs\\AuthDTOs.cs",
-              "RelativeToolTip": "BussinessObjects\\DTOs\\AuthDTOs.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAA1wDoAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T05:17:22.951Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Auth\\IAuthService.cs",
-              "RelativeDocumentMoniker": "Services\\Auth\\IAuthService.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Auth\\IAuthService.cs",
-              "RelativeToolTip": "Services\\Auth\\IAuthService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T05:14:07.795Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "BE\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\MappingProfile.cs",
-              "RelativeToolTip": "BE\\MappingProfile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T05:11:54.663Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Sha256Service.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Common\\Sha256\\Sha256Service.cs",
-              "RelativeDocumentMoniker": "Services\\Common\\Sha256\\Sha256Service.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Common\\Sha256\\Sha256Service.cs",
-              "RelativeToolTip": "Services\\Common\\Sha256\\Sha256Service.cs",
+              "Title": "OrchidDTOs.cs",
+              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BussinessObjects\\DTOs\\OrchidDTOs.cs",
+              "RelativeDocumentMoniker": "BussinessObjects\\DTOs\\OrchidDTOs.cs",
+              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BussinessObjects\\DTOs\\OrchidDTOs.cs",
+              "RelativeToolTip": "BussinessObjects\\DTOs\\OrchidDTOs.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T05:10:39.876Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-17T08:16:05.505Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Repositories\\User\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\User\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Repositories\\User\\UserRepository.cs",
-              "RelativeToolTip": "Repositories\\User\\UserRepository.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAvwBEAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T05:05:25.428Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Auth\\AuthService.cs",
-              "RelativeDocumentMoniker": "Services\\Auth\\AuthService.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Auth\\AuthService.cs",
-              "RelativeToolTip": "Services\\Auth\\AuthService.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T05:00:28.189Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "BE\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\Controllers\\AuthController.cs",
               "RelativeToolTip": "BE\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAAFAAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAEUAAABcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T04:57:58.815Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Repositories\\User\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\User\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Repositories\\User\\IUserRepository.cs",
-              "RelativeToolTip": "Repositories\\User\\IUserRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T04:57:40.764Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-17T08:12:04.837Z"
             }
           ]
         },

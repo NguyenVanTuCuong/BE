@@ -78,7 +78,7 @@ namespace Services.Auth
             return _mapper.Map<SignInDTO.SignInResponseData>(user);
         }
 
-        public async Task<SignUpDTO.SignUpResponse> SignUp(SignUpDTO.SignUpRequest request)
+        public async Task<SignUpDTO.SignUpResponseData> SignUp(SignUpDTO.SignUpRequest request)
         {
             var user = await _userRepository.GetByEmailAsync(request.Email);
             
@@ -93,7 +93,7 @@ namespace Services.Auth
 
             var created = await _userRepository.AddAsync(mapped);
 
-            return new SignUpDTO.SignUpResponse
+            return new SignUpDTO.SignUpResponseData
             {
                 UserId = created.UserId
             };

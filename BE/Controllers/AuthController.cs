@@ -62,7 +62,14 @@ namespace BE.Controllers
             {
                 var user = await _authService.SignUp(data);
 
-                return Created("null", user);
+                return Created("null", new SignUpDTO.SignUpResponse()
+                {
+                    Data = user,
+                    AuthTokens = new AuthTokens
+                    {
+                      AccessToken = await _jwtService.GenerateToken(user.UserId),           
+                    }
+                });
             }
             catch (AuthService.SignUpException e)
             {

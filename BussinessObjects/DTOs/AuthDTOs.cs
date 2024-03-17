@@ -19,6 +19,7 @@ namespace BussinessObjects.DTOs
         }
         public class SignInResponse : AuthResponse<SignInResponseData>
         {
+            
         }
     }
 
@@ -29,9 +30,13 @@ namespace BussinessObjects.DTOs
             public string Email { get; set; }
             public string Password { get; set; }
         }
-        public class SignUpResponse
+        public class SignUpResponseData
         {
             public Guid UserId { get; set; }
+        }
+
+        public class SignUpResponse : AuthResponse<SignUpResponseData>
+        {
         }
     }
 
