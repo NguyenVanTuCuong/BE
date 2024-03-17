@@ -1,8 +1,18 @@
 [
   {
     "ContainingType": "BE.Controllers.AuthController",
+    "Method": "GetProfile",
+    "RelativePath": "api/auth/get-profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BE.Controllers.AuthController",
     "Method": "SignIn",
-    "RelativePath": "api/Auth/sign-in",
+    "RelativePath": "api/auth/sign-in",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -11,6 +21,43 @@
         "Name": "data",
         "Type": "BussinessObjects.DTOs.SignInDTO\u002BSignInRequest",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BE.Controllers.AuthController",
+    "Method": "SignUp",
+    "RelativePath": "api/auth/sign-up",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "BussinessObjects.DTOs.SignUpDTO\u002BSignUpRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BE.Controllers.OrchidController",
+    "Method": "AddOrchid",
+    "RelativePath": "api/orchid/add-orchid",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Json.Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

@@ -18,4 +18,10 @@ namespace BussinessObjects.DTOs
         public T Data { get; set; }
         public AuthTokens? AuthTokens { get; set; }
     }
+
+    public class AuthRequest<T> where T : class
+    {
+        public T Data { get; set; }
+        public Guid UserId { get; set; }
+    }
 }

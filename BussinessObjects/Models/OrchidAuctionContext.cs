@@ -45,7 +45,7 @@ public partial class OrchidAuctionContext : DbContext
 
             entity.Property(e => e.UserId).ValueGeneratedOnAdd();
             entity.Property(e => e.Email).HasMaxLength(50);
-            entity.Property(e => e.Password).HasMaxLength(20);
+            entity.Property(e => e.Password).HasMaxLength(100);
         });
 
         OnModelCreatingPartial(modelBuilder);

@@ -3,6 +3,7 @@ using BussinessObjects.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using Repositories.User;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -15,13 +16,19 @@ using System.Threading.Tasks;
 namespace Services.Common.Jwt
 {
     public class JwtService : IJwtService
-    {
-        public string GenerateToken(Guid userId, UserRole role)
+    {   
+        private readonly IUserRepository _userRepository;
+        public JwtService(IUserRepository userRepository)
         {
+            _userRepository = userRepository;
+        }
+        public async Task<string> GenerateToken(Guid userId)
+        {
+            var user = await _userRepository.GetByIdAsync(userId);
             var claims = new List<Claim>
             {
-                new (ClaimTypes.NameIdentifier, userId.ToString()),
-                new (ClaimTypes.Role, role.ToString())
+                new (ClaimTypes.NameIdentifier, user.UserId.ToString()),
+                new (ClaimTypes.Role, user.Role.ToString())
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(

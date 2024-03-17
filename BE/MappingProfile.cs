@@ -9,6 +9,10 @@ namespace BE
         public MappingProfile()
         {
             CreateMap<SignInDTO.SignInResponseData, User>().ReverseMap();
+            CreateMap<SignUpDTO.SignUpRequest, User>().ReverseMap();
+            CreateMap<GetProfileDTO.GetProfileResponseData, User>().ReverseMap();
+
+            CreateMap<AddOrchidDTO.AddOrchidResponseData, Orchid>().ReverseMap();
         }
     }
 }

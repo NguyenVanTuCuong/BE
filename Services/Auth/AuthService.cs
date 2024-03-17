@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BussinessObjects.DTOs;
+using BussinessObjects.Enums;
 using Repositories.User;
 using Services.Common.Jwt;
 using Services.Common.Sha256;
@@ -42,6 +43,23 @@ namespace Services.Auth
             }
         }
 
+        public class SignUpException : Exception
+        {
+            public enum StatusCodeEnum
+            {
+                UserEmailExisted,
+                
+            }
+            public StatusCodeEnum StatusCode { get; }
+            public override string Message { get; }
+
+            public SignUpException(StatusCodeEnum statusCode, string message)
+            {
+                StatusCode = statusCode;
+                Message = message;
+            }
+        }
+
         public async Task<SignInDTO.SignInResponseData> SignIn(SignInDTO.SignInRequest request)
         {
             var user = await _userRepository.GetByEmailAsync(request.Email);
@@ -60,9 +78,31 @@ namespace Services.Auth
             return _mapper.Map<SignInDTO.SignInResponseData>(user);
         }
 
-        public Task<SignUpDTO.SignUpResponse> SignUp(SignUpDTO.SignUpRequest request)
+        public async Task<SignUpDTO.SignUpResponse> SignUp(SignUpDTO.SignUpRequest request)
         {
-            throw new NotImplementedException();
+            var user = await _userRepository.GetByEmailAsync(request.Email);
+            
+            if (user != null)
+            {
+                throw new SignUpException(SignUpException.StatusCodeEnum.UserEmailExisted, "User with this email has been existed.");
+            }
+
+            request.Password = _sha256Service.Hash(request.Password);
+            var mapped = _mapper.Map<BussinessObjects.Models.User>(request);
+            mapped.Role = UserRole.User;
+
+            var created = await _userRepository.AddAsync(mapped);
+
+            return new SignUpDTO.SignUpResponse
+            {
+                UserId = created.UserId
+            };
+        }
+
+        public async Task<GetProfileDTO.GetProfileResponseData> GetProfile(GetProfileDTO.GetProfileRequest request)
+        {
+            var user = await _userRepository.GetByIdAsync(request.UserId);
+            return _mapper.Map<GetProfileDTO.GetProfileResponseData>(user);
         }
     }
 }

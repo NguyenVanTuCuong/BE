@@ -10,7 +10,7 @@ namespace Services.Common.Jwt
 {
     public interface IJwtService
     {
-        public string GenerateToken(Guid userId, UserRole role);
+        public Task<string> GenerateToken(Guid userId);
         public Guid? GetUserIdFromContext(HttpContext context);
     }
 }

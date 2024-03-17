@@ -76,3 +76,17 @@ C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\Services.dll
 C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\Repositories.pdb
 C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\Services.pdb
 C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\BussinessObjects.pdb
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\obj\Debug\net8.0\BE.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\FirebaseAdmin.dll
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\Google.Api.Gax.dll
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\Google.Api.Gax.Rest.dll
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\Google.Apis.dll
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\Google.Apis.Auth.dll
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\Google.Apis.Core.dll
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\Google.Apis.Storage.v1.dll
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\Google.Cloud.Storage.V1.dll
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\System.Management.dll
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\google-credential.json

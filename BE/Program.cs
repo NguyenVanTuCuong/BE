@@ -4,8 +4,10 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Repositories.User;
 using Services.Auth;
+using Services.Common.Firebase;
 using Services.Common.Jwt;
 using Services.Common.Sha256;
+using Services.Orchid;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,14 +16,15 @@ builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 builder.Services.AddControllers();
 
-builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddTransient<IUserRepository, UserRepository>();
+builder.Services.AddTransient<IOrchidRepository, OrchidRepository>();
 
-builder.Services.AddScoped<IJwtService, JwtService>();
-builder.Services.AddScoped<ISha256Service, Sha256Service>();
+builder.Services.AddTransient<IJwtService, JwtService>();
+builder.Services.AddTransient<ISha256Service, Sha256Service>();
+builder.Services.AddSingleton<IFirebaseService, FirebaseService>();
 
-builder.Services.AddScoped<IAuthService, AuthService>();
-
-
+builder.Services.AddTransient<IAuthService, AuthService>();
+builder.Services.AddTransient<IOrchidService, OrchidService>();
 
 builder.Services.AddEndpointsApiExplorer();
 
