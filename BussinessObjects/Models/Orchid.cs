@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BussinessObjects.Enums;
+using System;
 using System.Collections.Generic;
 
 namespace BussinessObjects.Models;
@@ -14,6 +15,8 @@ public partial class Orchid
     public string? ImageUrl { get; set; }
 
     public Guid OwnerId { get; set; }
+
+    public DepositStatus DepositedStatus { get; set; }
 
     public virtual User Owner { get; set; } = null!;
 }

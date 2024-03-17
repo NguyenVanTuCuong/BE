@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\be\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|solutionrelative:be\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\be\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|solutionrelative:be\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\services\\auth\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|solutionrelative:services\\auth\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\be\\controllers\\orchidcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|solutionrelative:be\\controllers\\orchidcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\services\\auth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|solutionrelative:services\\auth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\services\\orchid\\orchidservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|solutionrelative:services\\orchid\\orchidservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\be\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{157D235E-6472-4801-9692-98C89CBFF085}|BE\\BE.csproj|solutionrelative:be\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{487049D2-F7FE-40DF-88EC-A1BA9E980537}|Repositories\\Repositories.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\repositories\\orchid\\iorchidrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{487049D2-F7FE-40DF-88EC-A1BA9E980537}|Repositories\\Repositories.csproj|solutionrelative:repositories\\orchid\\iorchidrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\services\\orchid\\iorchidservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CC5BE37-71F1-460F-941C-1931F06E790C}|Services\\Services.csproj|solutionrelative:services\\orchid\\iorchidservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{487049D2-F7FE-40DF-88EC-A1BA9E980537}|Repositories\\Repositories.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\repositories\\orchid\\orchidrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{487049D2-F7FE-40DF-88EC-A1BA9E980537}|Repositories\\Repositories.csproj|solutionrelative:repositories\\orchid\\orchidrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{43434334-0B0D-4617-AAFA-BBE3F545CC5E}|BussinessObjects\\BussinessObjects.csproj|c:\\users\\huynh\\onedrive\\m\u00E1y t\u00EDnh\\233\\be\\bussinessobjects\\dtos\\orchiddtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 465,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 19,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,88 +94,76 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "BE\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\Properties\\launchSettings.json",
-              "RelativeToolTip": "BE\\Properties\\launchSettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-17T08:53:16.316Z",
-              "EditorCaption": ""
+              "DocumentIndex": 4,
+              "Title": "OrchidRepository.cs",
+              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Repositories\\Orchid\\OrchidRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Orchid\\OrchidRepository.cs",
+              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Repositories\\Orchid\\OrchidRepository.cs",
+              "RelativeToolTip": "Repositories\\Orchid\\OrchidRepository.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwCIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-17T12:24:33.904Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Auth\\IAuthService.cs",
-              "RelativeDocumentMoniker": "Services\\Auth\\IAuthService.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Auth\\IAuthService.cs",
-              "RelativeToolTip": "Services\\Auth\\IAuthService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAwAAAA",
+              "Title": "IOrchidRepository.cs",
+              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Repositories\\Orchid\\IOrchidRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Orchid\\IOrchidRepository.cs",
+              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Repositories\\Orchid\\IOrchidRepository.cs",
+              "RelativeToolTip": "Repositories\\Orchid\\IOrchidRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T08:19:17.152Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrchidController.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\Controllers\\OrchidController.cs",
-              "RelativeDocumentMoniker": "BE\\Controllers\\OrchidController.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\Controllers\\OrchidController.cs",
-              "RelativeToolTip": "BE\\Controllers\\OrchidController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T08:16:57.499Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Auth\\AuthService.cs",
-              "RelativeDocumentMoniker": "Services\\Auth\\AuthService.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Auth\\AuthService.cs",
-              "RelativeToolTip": "Services\\Auth\\AuthService.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAA2wF8AAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T08:16:37.739Z"
+              "WhenOpened": "2024-03-17T12:23:23.637Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "BE\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "BE\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T08:16:28.862Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "OrchidDTOs.cs",
               "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BussinessObjects\\DTOs\\OrchidDTOs.cs",
               "RelativeDocumentMoniker": "BussinessObjects\\DTOs\\OrchidDTOs.cs",
               "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BussinessObjects\\DTOs\\OrchidDTOs.cs",
               "RelativeToolTip": "BussinessObjects\\DTOs\\OrchidDTOs.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAEAAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T08:16:05.505Z"
+              "WhenOpened": "2024-03-17T11:59:07.901Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "BE\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "BE\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAAAEUAAABcAAAA",
+              "Title": "OrchidService.cs",
+              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Orchid\\OrchidService.cs",
+              "RelativeDocumentMoniker": "Services\\Orchid\\OrchidService.cs",
+              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Orchid\\OrchidService.cs",
+              "RelativeToolTip": "Services\\Orchid\\OrchidService.cs",
+              "ViewState": "AQIAAI4AAAAAAAAAAAAwwKgAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T08:12:04.837Z"
+              "WhenOpened": "2024-03-17T11:55:00.542Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IOrchidService.cs",
+              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Orchid\\IOrchidService.cs",
+              "RelativeDocumentMoniker": "Services\\Orchid\\IOrchidService.cs",
+              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\Services\\Orchid\\IOrchidService.cs",
+              "RelativeToolTip": "Services\\Orchid\\IOrchidService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-17T11:54:50.874Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrchidController.cs",
+              "DocumentMoniker": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\Controllers\\OrchidController.cs",
+              "RelativeDocumentMoniker": "BE\\Controllers\\OrchidController.cs",
+              "ToolTip": "C:\\Users\\huynh\\OneDrive\\M\u00E1y t\u00EDnh\\233\\BE\\BE\\Controllers\\OrchidController.cs",
+              "RelativeToolTip": "BE\\Controllers\\OrchidController.cs",
+              "ViewState": "AQIAAJgAAAAAAAAAAAAqwKgAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-17T11:51:52.026Z",
+              "EditorCaption": ""
             }
           ]
         },

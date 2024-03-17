@@ -13,6 +13,7 @@ namespace BE
             CreateMap<GetProfileDTO.GetProfileResponseData, User>().ReverseMap();
 
             CreateMap<AddOrchidDTO.AddOrchidResponseData, Orchid>().ReverseMap();
+            CreateMap<OrchidDTO, Orchid>().ReverseMap();
         }
     }
 }

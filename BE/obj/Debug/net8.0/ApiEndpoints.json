@@ -55,8 +55,118 @@
         "IsRequired": false
       },
       {
+        "Name": "Json.Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "ImageFile",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BE.Controllers.OrchidController",
+    "Method": "DeleteOrchid",
+    "RelativePath": "api/orchid/delete-orchid",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orchidId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BE.Controllers.OrchidController",
+    "Method": "GetOrchidsPagination",
+    "RelativePath": "api/orchid/get-orchids-pagination",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BE.Controllers.OrchidController",
+    "Method": "GetOrchidById",
+    "RelativePath": "api/orchid/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BE.Controllers.OrchidController",
+    "Method": "GetOrchidByName",
+    "RelativePath": "api/orchid/name/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BE.Controllers.OrchidController",
+    "Method": "UpdateOrchid",
+    "RelativePath": "api/orchid/update-orchid",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "OrchidId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "Json.Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Json.Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "DepositStatus",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],
