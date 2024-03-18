@@ -4,7 +4,9 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Repositories.User;
 using Services.Auth;
+using Services.Blockchain;
 using Services.Common.Firebase;
+using Services.Common.Gprc.Nft;
 using Services.Common.Jwt;
 using Services.Common.Sha256;
 using Services.Orchid;
@@ -23,8 +25,11 @@ builder.Services.AddTransient<IJwtService, JwtService>();
 builder.Services.AddTransient<ISha256Service, Sha256Service>();
 builder.Services.AddSingleton<IFirebaseService, FirebaseService>();
 
+builder.Services.AddSingleton<INftGrpcService, NftGrpcService>();
+
 builder.Services.AddTransient<IAuthService, AuthService>();
 builder.Services.AddTransient<IOrchidService, OrchidService>();
+builder.Services.AddSingleton<IBlockchainService, BlockchainService>();
 
 builder.Services.AddEndpointsApiExplorer();
 
