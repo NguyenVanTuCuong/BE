@@ -6,6 +6,7 @@ using Repositories.User;
 using Services.Auth;
 using Services.Common.Firebase;
 using Services.Common.Jwt;
+using static BussinessObjects.DTOs.GetOrchidDTO;
 namespace Services.Orchid
 {
     public class OrchidService : IOrchidService
@@ -143,30 +144,26 @@ namespace Services.Orchid
             };
         }
 
-        public async Task<IList<OrchidDTO>> GetOrchidsPagination(int pageSize, int pageNumber)
+        public async Task<IList<GetOrchidResponseData>> GetOrchidsPagination(int pageSize, int pageNumber)
         {
             var orchids = await _orchidRepository.GetOrchidsPagination(pageSize, pageNumber);
-            return _mapper.Map<IList<OrchidDTO>>(orchids);
+            return _mapper.Map<IList<GetOrchidResponseData>>(orchids);
         }
 
-        public async Task<OrchidDTO> GetOrchidById(Guid orchidId)
+        public async Task<GetOrchidResponseData> GetOrchidById(Guid orchidId)
         {
             var orchid = await _orchidRepository.GetByIdAsync(orchidId);
             if (orchid == null)
             {
                 throw new GetOrchidException(GetOrchidException.StatusCodeEnum.OrchidNotFound, "Orchid not found");
             }
-            return _mapper.Map<OrchidDTO>(orchid);
+            return _mapper.Map<GetOrchidResponseData>(orchid);
         }
 
-        public async Task<OrchidDTO> GetOrchidByName(string name)
+        public async Task<IList<GetOrchidResponseData>> SearchOrchids(GetOrchidDTO.GetOrchidRequestData data)
         {
-            var orchid = await _orchidRepository.GetOrchidByName(name);
-            if (orchid == null)
-            {
-                throw new GetOrchidException(GetOrchidException.StatusCodeEnum.OrchidNotFound, "Orchid not found");
-            }
-            return _mapper.Map<OrchidDTO>(orchid);
+            var orchids = await _orchidRepository.SearchOrchids(data.Name, data.Description, data.DepositStatus);
+            return _mapper.Map<IList<GetOrchidResponseData>>(orchids);
         }
     }
 }

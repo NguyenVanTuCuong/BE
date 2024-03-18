@@ -122,16 +122,26 @@
   },
   {
     "ContainingType": "BE.Controllers.OrchidController",
-    "Method": "GetOrchidByName",
-    "RelativePath": "api/orchid/name/{name}",
-    "HttpMethod": "GET",
+    "Method": "SearchOrchids",
+    "RelativePath": "api/orchid/search-orchids",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "name",
+        "Name": "Name",
         "Type": "System.String",
-        "IsRequired": true
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DepositStatus",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

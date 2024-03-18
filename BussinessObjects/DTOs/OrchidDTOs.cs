@@ -33,20 +33,6 @@ namespace BussinessObjects.DTOs
         }
     }
 
-    public class OrchidDTO
-    {
-        public Guid OrchidId { get; set; }
-
-        public string Name { get; set; } = null!;
-
-        public string? Description { get; set; }
-
-        public string? ImageUrl { get; set; }
-
-        public Guid OwnerId { get; set; }
-        public DepositStatus DepositStatus { get; set; }
-    }
-
     public class UpdateOrchidDTO
     {
         public class UpdateOrchidRequestJson
@@ -94,6 +80,28 @@ namespace BussinessObjects.DTOs
             public Guid OrchidId { get; set; }
         }
         public class DeleteOrchidResponse : AuthResponse<DeleteOrchidResponseData>
+        {
+        }
+    }
+    public class GetOrchidDTO
+    {
+        public class GetOrchidRequestData
+        {
+            public string? Name { get; set; }
+            public string? Description { get; set; }
+            public DepositStatus? DepositStatus { get; set; }
+        }
+        public class GetOrchidResponseData
+        {
+            public Guid OrchidId { get; set; }
+            public string Name { get; set; } = null!;
+            public string? Description { get; set; }
+            public string? ImageUrl { get; set; }
+            public Guid OwnerId { get; set; }
+            public DepositStatus DepositedStatus { get; set; }
+        }
+
+        public class GetOrchidResponse : AuthResponse<IList<GetOrchidResponseData>>
         {
         }
     }

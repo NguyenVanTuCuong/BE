@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BussinessObjects.Models;
+using BussinessObjects.DTOs;
+using BussinessObjects.Enums;
 
 namespace Repositories.User
 {
@@ -27,11 +29,17 @@ namespace Repositories.User
                 .ToListAsync();
         }
 
-        public Task<Orchid?> GetOrchidByName(string name)
+        public async Task<IList<Orchid>> SearchOrchids(string? name, string? description, DepositStatus? depositedStatus)
         {
-            return _context.Orchids
-                .Where(o => o.Name == name)
-                .FirstOrDefaultAsync();
+            IQueryable<Orchid> query = _context.Orchids;
+
+            query = query.Where(o =>
+                (string.IsNullOrWhiteSpace(name) || o.Name.Contains(name)) &&
+                (string.IsNullOrWhiteSpace(description) || o.Description.Contains(description)) &&
+                (!depositedStatus.HasValue || o.DepositedStatus == depositedStatus)
+            );
+
+            return await query.ToListAsync();
         }
     }
 }

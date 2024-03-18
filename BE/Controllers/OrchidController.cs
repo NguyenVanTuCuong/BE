@@ -1,4 +1,5 @@
 ﻿using BussinessObjects.DTOs;
+using BussinessObjects.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -159,21 +160,30 @@ namespace BE.Controllers
             }
         }
 
-        [HttpGet]
-        [Route("name/{name}")]
-        public async Task<IActionResult> GetOrchidByName(string name)
+        [AllowAnonymous]
+        [HttpPost]
+        [Route("search-orchids")]
+        public async Task<IActionResult> SearchOrchids([FromForm] GetOrchidDTO.GetOrchidRequestData data)
         {
+            var userId = _jwtService.GetUserIdFromContext(HttpContext);
             try
             {
-                var orchids = await _orchidService.GetOrchidByName(name);
-                return Ok(orchids);
+                var orchids = await _orchidService.SearchOrchids(data);
+
+                return Ok(new GetOrchidDTO.GetOrchidResponse
+                {
+                    Data = orchids,
+                    AuthTokens = new AuthTokens
+                    {
+                        AccessToken = userId.HasValue ? await _jwtService.GenerateToken(userId.Value) : null,
+                    }
+
+                });
             }
-            catch (GetOrchidException e)
+            catch (OrchidService.GetOrchidException e)
             {
                 switch (e.StatusCode)
                 {
-                    case GetOrchidException.StatusCodeEnum.OrchidNotFound:
-                        return NotFound(e.Message);
                     default:
                         return StatusCode(500, e.Message);
                 }
