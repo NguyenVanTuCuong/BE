@@ -52,6 +52,10 @@
               "target": "Package",
               "version": "[2.4.0, )"
             },
+            "Grpc.AspNetCore": {
+              "target": "Package",
+              "version": "[2.61.0, )"
+            },
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -152,6 +156,10 @@
             "FirebaseAdmin": {
               "target": "Package",
               "version": "[2.4.0, )"
+            },
+            "Grpc.AspNetCore": {
+              "target": "Package",
+              "version": "[2.61.0, )"
             }
           },
           "imports": [
