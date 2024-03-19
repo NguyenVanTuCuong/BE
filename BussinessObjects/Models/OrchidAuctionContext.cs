@@ -46,6 +46,13 @@ public partial class OrchidAuctionContext : DbContext
             entity.Property(e => e.UserId).ValueGeneratedOnAdd();
             entity.Property(e => e.Email).HasMaxLength(50);
             entity.Property(e => e.Password).HasMaxLength(100);
+            entity.Property(e => e.Username).HasMaxLength(50);
+            entity.Property(e => e.FirstName).HasMaxLength(50);
+            entity.Property(e => e.LastName).HasMaxLength(50);
+            entity.Property(e => e.WalletAddress).HasMaxLength(50);
+            entity.Property(e => e.Birthday).HasColumnType("date");
+            entity.Property(e => e.Status).HasColumnType("int");
+            entity.Property(e => e.Role).HasColumnType("int");
         });
 
         OnModelCreatingPartial(modelBuilder);

@@ -8,6 +8,7 @@ using Services.Common.Firebase;
 using Services.Common.Jwt;
 using Services.Common.Sha256;
 using Services.Orchid;
+using Services.User;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,6 +26,7 @@ builder.Services.AddSingleton<IFirebaseService, FirebaseService>();
 
 builder.Services.AddTransient<IAuthService, AuthService>();
 builder.Services.AddTransient<IOrchidService, OrchidService>();
+builder.Services.AddTransient<IUserService, UserService>();
 
 builder.Services.AddEndpointsApiExplorer();
 

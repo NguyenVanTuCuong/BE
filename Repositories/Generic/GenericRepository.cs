@@ -24,9 +24,18 @@ namespace Repositories.Generic
             return added.Entity;
         }
 
-        public Task<T> DeleteAsync(Guid id)
+        public async Task<T> DeleteAsync(Guid id)
         {
-            throw new NotImplementedException();
+            var entity = await _context.Set<T>().FindAsync(id);
+            if (entity == null)
+            {
+                throw new InvalidOperationException($"Entity with ID {id} not found.");
+            }
+
+            _context.Set<T>().Remove(entity);
+            await _context.SaveChangesAsync();
+
+            return entity;
         }
 
         public async Task<IList<T>> GetAllAsync()
@@ -39,9 +48,20 @@ namespace Repositories.Generic
             return await _context.Set<T>().FindAsync(id);
         }
 
-        public Task<T> UpdateAsync(Guid id, T entity)
+        public async Task<T> UpdateAsync(Guid id, T entity)
         {
-            throw new NotImplementedException();
+            var existingEntity = await _context.Set<T>().FindAsync(id);
+
+            if (existingEntity == null)
+            {
+                throw new InvalidOperationException($"Entity with ID {id} not found.");
+            }
+
+            _context.Entry(existingEntity).CurrentValues.SetValues(entity);
+
+            await _context.SaveChangesAsync();
+
+            return existingEntity;
         }
     }
 }

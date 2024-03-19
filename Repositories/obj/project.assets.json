@@ -3506,19 +3506,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\huynh\\.nuget\\packages\\": {}
+    "C:\\Users\\ADMIN\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\Repositories\\Repositories.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\PRN_BE\\BE\\Repositories\\Repositories.csproj",
       "projectName": "Repositories",
-      "projectPath": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\Repositories\\Repositories.csproj",
-      "packagesPath": "C:\\Users\\huynh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\Repositories\\obj\\",
+      "projectPath": "C:\\Users\\ADMIN\\Desktop\\PRN_BE\\BE\\Repositories\\Repositories.csproj",
+      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ADMIN\\Desktop\\PRN_BE\\BE\\Repositories\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\huynh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3532,8 +3537,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\BussinessObjects\\BussinessObjects.csproj": {
-              "projectPath": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\BussinessObjects\\BussinessObjects.csproj"
+            "C:\\Users\\ADMIN\\Desktop\\PRN_BE\\BE\\BussinessObjects\\BussinessObjects.csproj": {
+              "projectPath": "C:\\Users\\ADMIN\\Desktop\\PRN_BE\\BE\\BussinessObjects\\BussinessObjects.csproj"
             }
           }
         }
@@ -3542,11 +3547,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3578,7 +3578,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
