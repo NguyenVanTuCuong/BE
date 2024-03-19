@@ -22,5 +22,6 @@ namespace Repositories.User
         {
             return await _context.Users.FirstOrDefaultAsync(entity => entity.Email.Equals(email));
         }
+
     }
 }

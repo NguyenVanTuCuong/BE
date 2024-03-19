@@ -3921,19 +3921,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tucuo\\.nuget\\packages\\": {}
+    "C:\\Users\\ADMIN\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tucuo\\OneDrive\\Desktop\\New folder\\BE\\Repositories\\Repositories.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\PRN_BE\\BE\\Repositories\\Repositories.csproj",
       "projectName": "Repositories",
-      "projectPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\New folder\\BE\\Repositories\\Repositories.csproj",
-      "packagesPath": "C:\\Users\\tucuo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\New folder\\BE\\Repositories\\obj\\",
+      "projectPath": "C:\\Users\\ADMIN\\Desktop\\PRN_BE\\BE\\Repositories\\Repositories.csproj",
+      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ADMIN\\Desktop\\PRN_BE\\BE\\Repositories\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\tucuo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3947,8 +3952,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\tucuo\\OneDrive\\Desktop\\New folder\\BE\\BussinessObjects\\BussinessObjects.csproj": {
-              "projectPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\New folder\\BE\\BussinessObjects\\BussinessObjects.csproj"
+            "C:\\Users\\ADMIN\\Desktop\\PRN_BE\\BE\\BussinessObjects\\BussinessObjects.csproj": {
+              "projectPath": "C:\\Users\\ADMIN\\Desktop\\PRN_BE\\BE\\BussinessObjects\\BussinessObjects.csproj"
             }
           }
         }

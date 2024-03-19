@@ -10,6 +10,7 @@ using Services.Common.Gprc.Nft;
 using Services.Common.Jwt;
 using Services.Common.Sha256;
 using Services.Orchid;
+using Services.User;
 using System.Text;
 using System.Text.Json.Serialization;
 
@@ -32,6 +33,7 @@ builder.Services.AddSingleton<INftGrpcService, NftGrpcService>();
 builder.Services.AddTransient<IAuthService, AuthService>();
 builder.Services.AddTransient<IOrchidService, OrchidService>();
 builder.Services.AddSingleton<IBlockchainService, BlockchainService>();
+builder.Services.AddTransient<IUserService, UserService>();
 
 builder.Services.AddEndpointsApiExplorer();
 
