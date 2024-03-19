@@ -72,11 +72,11 @@ namespace Services.User
         public async Task<GetUserListResponseData> SearchWithPagination(int skip, int top, string input)
         {
             var queryable = await _userRepository.GetAllAsync();
-            var data = queryable.Where(x => x.Username!.Contains(input, StringComparison.OrdinalIgnoreCase) || x.Email!.Contains(input, StringComparison.OrdinalIgnoreCase))
-                .Skip(skip).Take(top).AsQueryable();
-            var totalCount = queryable.Count();
-            var maxPage = totalCount >= top ? Math.Ceiling((double)totalCount / top) : 1;
-            var response = _mapper.Map<IList<UserDTO>>(data);
+            var data = queryable.Where(x => x.Username!.Contains(input, StringComparison.OrdinalIgnoreCase) || x.Email!.Contains(input, StringComparison.OrdinalIgnoreCase));
+            var pagination = data.Skip(skip).Take(top).AsQueryable();
+            var totalCount = data.Count();
+            var maxPage = totalCount >= top ? Math.Ceiling((double)totalCount / top) : 1; 
+            var response = _mapper.Map<IList<UserDTO>>(pagination);
 
             return new GetUserListResponseData
             {
