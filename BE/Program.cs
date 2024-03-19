@@ -4,18 +4,22 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Repositories.User;
 using Services.Auth;
+using Services.Blockchain;
 using Services.Common.Firebase;
+using Services.Common.Gprc.Nft;
 using Services.Common.Jwt;
 using Services.Common.Sha256;
 using Services.Orchid;
 using Services.User;
 using System.Text;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(options =>
+ options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 
 builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddTransient<IOrchidRepository, OrchidRepository>();
@@ -24,8 +28,11 @@ builder.Services.AddTransient<IJwtService, JwtService>();
 builder.Services.AddTransient<ISha256Service, Sha256Service>();
 builder.Services.AddSingleton<IFirebaseService, FirebaseService>();
 
+builder.Services.AddSingleton<INftGrpcService, NftGrpcService>();
+
 builder.Services.AddTransient<IAuthService, AuthService>();
 builder.Services.AddTransient<IOrchidService, OrchidService>();
+builder.Services.AddSingleton<IBlockchainService, BlockchainService>();
 builder.Services.AddTransient<IUserService, UserService>();
 
 builder.Services.AddEndpointsApiExplorer();

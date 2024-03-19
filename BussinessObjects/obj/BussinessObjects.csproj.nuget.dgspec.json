@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\Desktop\\PRN_BE\\BE\\BussinessObjects\\BussinessObjects.csproj": {}
+    "C:\\Users\\tucuo\\OneDrive\\Desktop\\New folder\\BE\\BussinessObjects\\BussinessObjects.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\Desktop\\PRN_BE\\BE\\BussinessObjects\\BussinessObjects.csproj": {
+    "C:\\Users\\tucuo\\OneDrive\\Desktop\\New folder\\BE\\BussinessObjects\\BussinessObjects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\PRN_BE\\BE\\BussinessObjects\\BussinessObjects.csproj",
+        "projectUniqueName": "C:\\Users\\tucuo\\OneDrive\\Desktop\\New folder\\BE\\BussinessObjects\\BussinessObjects.csproj",
         "projectName": "BussinessObjects",
-        "projectPath": "C:\\Users\\ADMIN\\Desktop\\PRN_BE\\BE\\BussinessObjects\\BussinessObjects.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Desktop\\PRN_BE\\BE\\BussinessObjects\\obj\\",
+        "projectPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\New folder\\BE\\BussinessObjects\\BussinessObjects.csproj",
+        "packagesPath": "C:\\Users\\tucuo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\New folder\\BE\\BussinessObjects\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\tucuo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -51,6 +47,10 @@
             "FirebaseAdmin": {
               "target": "Package",
               "version": "[2.4.0, )"
+            },
+            "Grpc.AspNetCore": {
+              "target": "Package",
+              "version": "[2.61.0, )"
             },
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
