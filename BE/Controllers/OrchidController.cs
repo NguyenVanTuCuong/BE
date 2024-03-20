@@ -24,6 +24,7 @@ namespace BE.Controllers
             _jwtService = jwtService;
         }
 
+        //Add orchid from dto
         [Authorize]
         [HttpPost("add-orchid")]
         public async Task<IActionResult> AddOrchid([FromForm] AddOrchidDTO.AddOrchidRequestData data)
@@ -58,6 +59,7 @@ namespace BE.Controllers
             }
         }
 
+        //Update orchid from dto
         [Authorize]
         [HttpPut("update-orchid")]
         public async Task<IActionResult> UpdateOrchid([FromForm] UpdateOrchidDTO.UpdateOrchidRequestData data)
@@ -73,6 +75,7 @@ namespace BE.Controllers
 
                 return Ok(new UpdateOrchidDTO.UpdateOrchidResponse
                 {
+                    //add token for orchid
                     Data = orchid,
                     AuthTokens = new AuthTokens
                     {
@@ -82,6 +85,7 @@ namespace BE.Controllers
             }
             catch (OrchidService.UpdateOrchidException e)
             {
+                //catch if update fail
                 switch (e.StatusCode)
                 {
                     default:
@@ -90,6 +94,7 @@ namespace BE.Controllers
             }
         }
 
+        //Delete orchid from dto
         [Authorize]
         [HttpDelete("delete-orchid")]
         public async Task<IActionResult> DeleteOrchid(Guid orchidId)
