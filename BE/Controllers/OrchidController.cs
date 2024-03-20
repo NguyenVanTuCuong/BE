@@ -24,6 +24,7 @@ namespace BE.Controllers
             _jwtService = jwtService;
         }
 
+        //Add orchid from dto
         [Authorize]
         [HttpPost("add-orchid")]
         public async Task<IActionResult> AddOrchid([FromForm] AddOrchidDTO.AddOrchidRequestData data)
@@ -58,6 +59,7 @@ namespace BE.Controllers
             }
         }
 
+        //Update orchid from dto
         [Authorize]
         [HttpPut("update-orchid")]
         public async Task<IActionResult> UpdateOrchid([FromForm] UpdateOrchidDTO.UpdateOrchidRequestData data)
@@ -73,6 +75,7 @@ namespace BE.Controllers
 
                 return Ok(new UpdateOrchidDTO.UpdateOrchidResponse
                 {
+                    //add token for orchid
                     Data = orchid,
                     AuthTokens = new AuthTokens
                     {
@@ -82,6 +85,7 @@ namespace BE.Controllers
             }
             catch (OrchidService.UpdateOrchidException e)
             {
+                //catch if update fail
                 switch (e.StatusCode)
                 {
                     default:
@@ -90,6 +94,7 @@ namespace BE.Controllers
             }
         }
 
+        //Delete orchid from dto
         [Authorize]
         [HttpDelete("delete-orchid")]
         public async Task<IActionResult> DeleteOrchid(Guid orchidId)
@@ -125,16 +130,19 @@ namespace BE.Controllers
             }
         }
 
+        //get list orchids from pageSize and pageNumber
         [HttpGet("get-orchids-pagination")]
         public async Task<IActionResult> GetOrchidsPagination(int pageSize, int pageNumber)
         {
             try
             {
+                //get list
                 var orchids = await _orchidService.GetOrchidsPagination(pageSize, pageNumber);
                 return Ok(orchids);
             }
             catch (Exception e)
             {
+                //return if error for get list
                 return StatusCode(500, e.Message);
             }
         }

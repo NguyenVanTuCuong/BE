@@ -1,4 +1,6 @@
 ﻿using BussinessObjects.Enums;
+using Microsoft.Identity.Client;
+using System.ComponentModel.DataAnnotations;
 using static BussinessObjects.DTOs.SignInDTO;
 
 namespace BussinessObjects.DTOs
@@ -7,12 +9,14 @@ namespace BussinessObjects.DTOs
     {
         public class SignInRequest
         {
+            [EmailAddress]
             public string Email { get; set; }
             public string Password { get; set; }
         }
         public class SignInResponseData
         {
             public Guid UserId { get; set; }
+            [EmailAddress]
             public string Email { get; set; }
             public string Password { get; set; }
             public UserRole Role { get; set; }
@@ -28,6 +32,9 @@ namespace BussinessObjects.DTOs
         public class SignUpRequest
         {
             public string Email { get; set; }
+            public string Username { get; set; }
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
             public string Password { get; set; }
         }
         public class SignUpResponseData
@@ -54,7 +61,11 @@ namespace BussinessObjects.DTOs
         {
             public Guid UserId { get; set; }
             public string Email { get; set; }
-            public string Password { get; set; }
+            public string Username { get; set; }
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+            public string Birthday { get; set; }
+            public string WalletAddress { get; set; }
             public UserRole Role { get; set; }
         }
 

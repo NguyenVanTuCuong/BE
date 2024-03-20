@@ -13,6 +13,12 @@ namespace BussinessObjects.Enums
         Administrator
     }
 
+    public enum UserStatus
+    {
+        Active,
+        Inactive,
+    }
+
     public enum DepositStatus
     {
         [Description("Available")]

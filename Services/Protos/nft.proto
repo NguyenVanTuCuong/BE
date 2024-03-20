@@ -1,0 +1,18 @@
+syntax = "proto3";
+package nft;
+option csharp_namespace = "NftGrpc";
+
+service NftService {
+	rpc MintNft(MintNftRequest) returns (MintNftResponse);
+}
+
+message MintNftRequest {
+	string name = 1;
+	string description = 2;
+	bytes imageBytes = 3;
+	string to = 4;
+}
+
+message MintNftResponse {
+	string transactionHash = 1;
+}
