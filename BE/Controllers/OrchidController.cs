@@ -130,16 +130,19 @@ namespace BE.Controllers
             }
         }
 
+        //get list orchids from pageSize and pageNumber
         [HttpGet("get-orchids-pagination")]
         public async Task<IActionResult> GetOrchidsPagination(int pageSize, int pageNumber)
         {
             try
             {
+                //get list
                 var orchids = await _orchidService.GetOrchidsPagination(pageSize, pageNumber);
                 return Ok(orchids);
             }
             catch (Exception e)
             {
+                //return if error for get list
                 return StatusCode(500, e.Message);
             }
         }
