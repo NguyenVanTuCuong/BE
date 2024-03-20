@@ -12,7 +12,5 @@ namespace Repositories.User
 {
     public interface IOrchidRepository : IGenericRepository<Orchid>
     {
-        public Task<IList<Orchid>> GetOrchidsPagination(int pageSize, int pageNumber);
-        public Task<IList<Orchid>> SearchOrchids(string? name, string? description, DepositStatus? depositedStatus);
     }
 }

@@ -20,26 +20,5 @@ namespace Repositories.User
         {
             _context = new OrchidAuctionContext();
         }
-
-        public async Task<IList<Orchid>> GetOrchidsPagination(int pageSize, int pageNumber)
-        {
-            return await _context.Orchids
-                .Skip((pageNumber - 1) * pageSize)
-                .Take(pageSize)
-                .ToListAsync();
-        }
-
-        public async Task<IList<Orchid>> SearchOrchids(string? name, string? description, DepositStatus? depositedStatus)
-        {
-            IQueryable<Orchid> query = _context.Orchids;
-
-            query = query.Where(o =>
-                (string.IsNullOrWhiteSpace(name) || o.Name.Contains(name)) &&
-                (string.IsNullOrWhiteSpace(description) || o.Description.Contains(description)) &&
-                (!depositedStatus.HasValue || o.DepositedStatus == depositedStatus)
-            );
-
-            return await query.ToListAsync();
-        }
     }
 }

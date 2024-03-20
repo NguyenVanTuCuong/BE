@@ -15,7 +15,8 @@ namespace BussinessObjects.Models
         public Guid OrchidId { get; set; }
         public RequestStatus RequestStatus { get; set; }
         public virtual Orchid Orchid { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
+        public string? Title { get; set; }
+        public string? Description { get; set; }
+        public string WalletAddress { get; set; }
     }
 }

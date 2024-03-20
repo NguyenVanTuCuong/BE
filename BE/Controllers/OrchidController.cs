@@ -1,4 +1,5 @@
 ﻿using BussinessObjects.DTOs;
+using BussinessObjects.Enums;
 using BussinessObjects.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -26,7 +27,7 @@ namespace BE.Controllers
 
         //Add orchid from dto
         [Authorize]
-        [HttpPost("add-orchid")]
+        [HttpPost()]
         public async Task<IActionResult> AddOrchid([FromForm] AddOrchidDTO.AddOrchidRequestData data)
         {
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
@@ -59,9 +60,8 @@ namespace BE.Controllers
             }
         }
 
-        //Update orchid from dto
         [Authorize]
-        [HttpPut("update-orchid")]
+        [HttpPut]
         public async Task<IActionResult> UpdateOrchid([FromForm] UpdateOrchidDTO.UpdateOrchidRequestData data)
         {
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
@@ -75,7 +75,6 @@ namespace BE.Controllers
 
                 return Ok(new UpdateOrchidDTO.UpdateOrchidResponse
                 {
-                    //add token for orchid
                     Data = orchid,
                     AuthTokens = new AuthTokens
                     {
@@ -83,11 +82,12 @@ namespace BE.Controllers
                     }
                 });
             }
-            catch (OrchidService.UpdateOrchidException e)
+            catch (UpdateOrchidException e)
             {
-                //catch if update fail
                 switch (e.StatusCode)
                 {
+                    case UpdateOrchidException.StatusCodeEnum.OrchidNotFound:
+                        return NotFound(e.Message);
                     default:
                         return StatusCode(500, e.Message);
                 }
@@ -96,7 +96,7 @@ namespace BE.Controllers
 
         //Delete orchid from dto
         [Authorize]
-        [HttpDelete("delete-orchid")]
+        [HttpDelete()]
         public async Task<IActionResult> DeleteOrchid(Guid orchidId)
         {
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
@@ -130,25 +130,26 @@ namespace BE.Controllers
             }
         }
 
-        //get list orchids from pageSize and pageNumber
-        [HttpGet("get-orchids-pagination")]
-        public async Task<IActionResult> GetOrchidsPagination(int pageSize, int pageNumber)
+        [HttpGet]
+        public async Task<IActionResult> GetOrchidsPagination(int skip, int top)
         {
             try
             {
-                //get list
-                var orchids = await _orchidService.GetOrchidsPagination(pageSize, pageNumber);
-                return Ok(orchids);
+                var orchids = await _orchidService.GetOrchidsPagination(skip, top);
+                return Ok(new GetOrchidDTO.GetOrchidListResponse
+                {
+                    orchids = orchids.orchids,
+                    pages = orchids.pages
+                });
             }
             catch (Exception e)
             {
-                //return if error for get list
                 return StatusCode(500, e.Message);
             }
         }
 
         [HttpGet]
-        [Route("id/{id}")]
+        [Route("{id}")]
         public async Task<IActionResult> GetOrchidById(Guid id)
         {
             try
@@ -168,25 +169,19 @@ namespace BE.Controllers
             }
         }
 
-        [AllowAnonymous]
-        [HttpPost]
-        [Route("search-orchids")]
-        public async Task<IActionResult> SearchOrchids([FromForm] GetOrchidDTO.GetOrchidRequestData data)
+        [HttpGet]
+        [Route("search")]
+        public async Task<IActionResult> SearchOrchids(string? name, string? decription, DepositStatus? depositStatus, int skip, int top)
         {
-            var userId = _jwtService.GetUserIdFromContext(HttpContext);
             try
             {
-                var orchids = await _orchidService.SearchOrchids(data);
+                var orchids = await _orchidService.SearchOrchids(name, decription, depositStatus, skip, top);
 
-                return Ok(new GetOrchidDTO.GetOrchidResponse
+                return Ok(new GetOrchidDTO.GetOrchidListResponse
                 {
-                    Data = orchids,
-                    AuthTokens = new AuthTokens
-                    {
-                        AccessToken = userId.HasValue ? await _jwtService.GenerateToken(userId.Value) : null,
-                    }
-
-                });
+                    orchids = orchids.orchids,
+                    pages = orchids.pages
+                }) ;
             }
             catch (OrchidService.GetOrchidException e)
             {

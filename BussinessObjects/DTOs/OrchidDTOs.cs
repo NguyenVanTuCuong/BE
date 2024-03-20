@@ -91,13 +91,7 @@ namespace BussinessObjects.DTOs
     }
     public class GetOrchidDTO
     {
-        public class GetOrchidRequestData
-        {
-            public string? Name { get; set; }
-            public string? Description { get; set; }
-            public DepositStatus? DepositStatus { get; set; }
-        }
-        public class GetOrchidResponseData
+        public class OrchidDTO
         {
             public Guid OrchidId { get; set; }
             public string Name { get; set; } = null!;
@@ -110,8 +104,10 @@ namespace BussinessObjects.DTOs
             public DepositStatus DepositedStatus { get; set; }
         }
 
-        public class GetOrchidResponse : AuthResponse<IList<GetOrchidResponseData>>
+        public class GetOrchidListResponse
         {
+            public IList<OrchidDTO>? orchids { get; set; }
+            public double pages { get; set; }
         }
     }
 }
