@@ -9,18 +9,11 @@ namespace BussinessObjects.DTOs
 {
     public class DepositForNftDTO
     {
-        public class DepositForNftRequestJson
+        public class DepositForNftRequestData
         {
             public string Address { get; set;  }
             public Guid OrchidId { get; set; }
         }
-
-        public class DepositForNftRequestData
-        {
-            public DepositForNftRequestJson Json { get; set; }
-            public IFormFile ImageFile { get; set; }
-        }
-
 
         public class DepositForNftRequest : AuthRequest<DepositForNftRequestData>
         {
@@ -33,5 +26,27 @@ namespace BussinessObjects.DTOs
         public class DepositForNftResponse : AuthResponse<DepositForNftResponseData>
         {
         }
+    }
+
+    public class WithdawNftDTO
+    {
+        public class WithdawNftRequestData
+        {
+            public int TokenId { get; set; }
+        }
+
+        public class WithdawNftRequest : AuthRequest<WithdawNftRequestData>
+        {
+        }
+
+        public class WithdawNftResponseData
+        {
+            public string TransactionHash { get; set; }
+        }
+        public class WithdawNftResponse : AuthResponse<WithdawNftResponseData>
+        {
+        }
+
+
     }
 }

@@ -60,6 +60,21 @@
         "IsRequired": false
       },
       {
+        "Name": "Json.Color",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Json.Origin",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Json.Species",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "ImageFile",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
@@ -166,6 +181,21 @@
       },
       {
         "Name": "Json.Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Json.Color",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Json.Origin",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Json.Species",
         "Type": "System.String",
         "IsRequired": false
       },

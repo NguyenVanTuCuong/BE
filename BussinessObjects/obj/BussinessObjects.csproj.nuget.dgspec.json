@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tucuo\\OneDrive\\Desktop\\New folder\\BE\\BussinessObjects\\BussinessObjects.csproj": {}
+    "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\BussinessObjects\\BussinessObjects.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tucuo\\OneDrive\\Desktop\\New folder\\BE\\BussinessObjects\\BussinessObjects.csproj": {
+    "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\BussinessObjects\\BussinessObjects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tucuo\\OneDrive\\Desktop\\New folder\\BE\\BussinessObjects\\BussinessObjects.csproj",
+        "projectUniqueName": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\BussinessObjects\\BussinessObjects.csproj",
         "projectName": "BussinessObjects",
-        "projectPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\New folder\\BE\\BussinessObjects\\BussinessObjects.csproj",
+        "projectPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\BussinessObjects\\BussinessObjects.csproj",
         "packagesPath": "C:\\Users\\tucuo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\New folder\\BE\\BussinessObjects\\obj\\",
+        "outputPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\BussinessObjects\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tucuo\\AppData\\Roaming\\NuGet\\NuGet.Config",

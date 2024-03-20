@@ -24,17 +24,25 @@ namespace NftGrpc {
     static NftReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChBQcm90b3MvbmZ0LnByb3RvEgNuZnQiUwoOTWludE5mdFJlcXVlc3QSDAoE",
-            "bmFtZRgBIAEoCRITCgtkZXNjcmlwdGlvbhgCIAEoCRISCgppbWFnZUJ5dGVz",
-            "GAMgASgMEgoKAnRvGAQgASgJIioKD01pbnROZnRSZXNwb25zZRIXCg90cmFu",
-            "c2FjdGlvbkhhc2gYASABKAkyQgoKTmZ0U2VydmljZRI0CgdNaW50TmZ0EhMu",
-            "bmZ0Lk1pbnROZnRSZXF1ZXN0GhQubmZ0Lk1pbnROZnRSZXNwb25zZUIKqgIH",
-            "TmZ0R3JwY2IGcHJvdG8z"));
+            "ChBQcm90b3MvbmZ0LnByb3RvEgNuZnQiuwEKDk1pbnROZnRSZXF1ZXN0EhAK",
+            "CG9yY2hpZElkGAEgASgJEgwKBG5hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24Y",
+            "AyABKAkSEgoKaW1hZ2VCeXRlcxgEIAEoDBIKCgJ0bxgFIAEoCRINCgVjb2xv",
+            "chgGIAEoCRIPCgdzcGVjaWVzGAcgASgJEg4KBm9yaWdpbhgIIAEoCRIRCglj",
+            "cmVhdGVkQXQYCSABKAMSEQoJdXBkYXRlZEF0GAogASgDIioKD01pbnROZnRS",
+            "ZXNwb25zZRIXCg90cmFuc2FjdGlvbkhhc2gYASABKAkiIQoOQnVybk5mdFJl",
+            "cXVlc3QSDwoHdG9rZW5JZBgBIAEoBSI8Cg9CdXJuTmZ0UmVzcG9uc2USEAoI",
+            "b3JjaGlkSWQYASABKAkSFwoPdHJhbnNhY3Rpb25IYXNoGAIgASgJMngKCk5m",
+            "dFNlcnZpY2USNAoHTWludE5mdBITLm5mdC5NaW50TmZ0UmVxdWVzdBoULm5m",
+            "dC5NaW50TmZ0UmVzcG9uc2USNAoHQnVybk5mdBITLm5mdC5CdXJuTmZ0UmVx",
+            "dWVzdBoULm5mdC5CdXJuTmZ0UmVzcG9uc2VCCqoCB05mdEdycGNiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::NftGrpc.MintNftRequest), global::NftGrpc.MintNftRequest.Parser, new[]{ "Name", "Description", "ImageBytes", "To" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::NftGrpc.MintNftResponse), global::NftGrpc.MintNftResponse.Parser, new[]{ "TransactionHash" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::NftGrpc.MintNftRequest), global::NftGrpc.MintNftRequest.Parser, new[]{ "OrchidId", "Name", "Description", "ImageBytes", "To", "Color", "Species", "Origin", "CreatedAt", "UpdatedAt" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::NftGrpc.MintNftResponse), global::NftGrpc.MintNftResponse.Parser, new[]{ "TransactionHash" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::NftGrpc.BurnNftRequest), global::NftGrpc.BurnNftRequest.Parser, new[]{ "TokenId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::NftGrpc.BurnNftResponse), global::NftGrpc.BurnNftResponse.Parser, new[]{ "OrchidId", "TransactionHash" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,10 +84,16 @@ namespace NftGrpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MintNftRequest(MintNftRequest other) : this() {
+      orchidId_ = other.orchidId_;
       name_ = other.name_;
       description_ = other.description_;
       imageBytes_ = other.imageBytes_;
       to_ = other.to_;
+      color_ = other.color_;
+      species_ = other.species_;
+      origin_ = other.origin_;
+      createdAt_ = other.createdAt_;
+      updatedAt_ = other.updatedAt_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -89,8 +103,20 @@ namespace NftGrpc {
       return new MintNftRequest(this);
     }
 
+    /// <summary>Field number for the "orchidId" field.</summary>
+    public const int OrchidIdFieldNumber = 1;
+    private string orchidId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OrchidId {
+      get { return orchidId_; }
+      set {
+        orchidId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
+    public const int NameFieldNumber = 2;
     private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -102,7 +128,7 @@ namespace NftGrpc {
     }
 
     /// <summary>Field number for the "description" field.</summary>
-    public const int DescriptionFieldNumber = 2;
+    public const int DescriptionFieldNumber = 3;
     private string description_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -114,7 +140,7 @@ namespace NftGrpc {
     }
 
     /// <summary>Field number for the "imageBytes" field.</summary>
-    public const int ImageBytesFieldNumber = 3;
+    public const int ImageBytesFieldNumber = 4;
     private pb::ByteString imageBytes_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -126,7 +152,7 @@ namespace NftGrpc {
     }
 
     /// <summary>Field number for the "to" field.</summary>
-    public const int ToFieldNumber = 4;
+    public const int ToFieldNumber = 5;
     private string to_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -134,6 +160,66 @@ namespace NftGrpc {
       get { return to_; }
       set {
         to_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "color" field.</summary>
+    public const int ColorFieldNumber = 6;
+    private string color_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Color {
+      get { return color_; }
+      set {
+        color_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "species" field.</summary>
+    public const int SpeciesFieldNumber = 7;
+    private string species_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Species {
+      get { return species_; }
+      set {
+        species_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "origin" field.</summary>
+    public const int OriginFieldNumber = 8;
+    private string origin_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Origin {
+      get { return origin_; }
+      set {
+        origin_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "createdAt" field.</summary>
+    public const int CreatedAtFieldNumber = 9;
+    private long createdAt_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long CreatedAt {
+      get { return createdAt_; }
+      set {
+        createdAt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "updatedAt" field.</summary>
+    public const int UpdatedAtFieldNumber = 10;
+    private long updatedAt_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long UpdatedAt {
+      get { return updatedAt_; }
+      set {
+        updatedAt_ = value;
       }
     }
 
@@ -152,10 +238,16 @@ namespace NftGrpc {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (OrchidId != other.OrchidId) return false;
       if (Name != other.Name) return false;
       if (Description != other.Description) return false;
       if (ImageBytes != other.ImageBytes) return false;
       if (To != other.To) return false;
+      if (Color != other.Color) return false;
+      if (Species != other.Species) return false;
+      if (Origin != other.Origin) return false;
+      if (CreatedAt != other.CreatedAt) return false;
+      if (UpdatedAt != other.UpdatedAt) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -163,10 +255,16 @@ namespace NftGrpc {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (OrchidId.Length != 0) hash ^= OrchidId.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (ImageBytes.Length != 0) hash ^= ImageBytes.GetHashCode();
       if (To.Length != 0) hash ^= To.GetHashCode();
+      if (Color.Length != 0) hash ^= Color.GetHashCode();
+      if (Species.Length != 0) hash ^= Species.GetHashCode();
+      if (Origin.Length != 0) hash ^= Origin.GetHashCode();
+      if (CreatedAt != 0L) hash ^= CreatedAt.GetHashCode();
+      if (UpdatedAt != 0L) hash ^= UpdatedAt.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -185,21 +283,45 @@ namespace NftGrpc {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Name.Length != 0) {
+      if (OrchidId.Length != 0) {
         output.WriteRawTag(10);
+        output.WriteString(OrchidId);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
         output.WriteString(Name);
       }
       if (Description.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteString(Description);
       }
       if (ImageBytes.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(34);
         output.WriteBytes(ImageBytes);
       }
       if (To.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(42);
         output.WriteString(To);
+      }
+      if (Color.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Color);
+      }
+      if (Species.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Species);
+      }
+      if (Origin.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Origin);
+      }
+      if (CreatedAt != 0L) {
+        output.WriteRawTag(72);
+        output.WriteInt64(CreatedAt);
+      }
+      if (UpdatedAt != 0L) {
+        output.WriteRawTag(80);
+        output.WriteInt64(UpdatedAt);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -211,21 +333,45 @@ namespace NftGrpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Name.Length != 0) {
+      if (OrchidId.Length != 0) {
         output.WriteRawTag(10);
+        output.WriteString(OrchidId);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
         output.WriteString(Name);
       }
       if (Description.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteString(Description);
       }
       if (ImageBytes.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(34);
         output.WriteBytes(ImageBytes);
       }
       if (To.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(42);
         output.WriteString(To);
+      }
+      if (Color.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Color);
+      }
+      if (Species.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Species);
+      }
+      if (Origin.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Origin);
+      }
+      if (CreatedAt != 0L) {
+        output.WriteRawTag(72);
+        output.WriteInt64(CreatedAt);
+      }
+      if (UpdatedAt != 0L) {
+        output.WriteRawTag(80);
+        output.WriteInt64(UpdatedAt);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -237,6 +383,9 @@ namespace NftGrpc {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (OrchidId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OrchidId);
+      }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
@@ -248,6 +397,21 @@ namespace NftGrpc {
       }
       if (To.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(To);
+      }
+      if (Color.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Color);
+      }
+      if (Species.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Species);
+      }
+      if (Origin.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Origin);
+      }
+      if (CreatedAt != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(CreatedAt);
+      }
+      if (UpdatedAt != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(UpdatedAt);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -261,6 +425,9 @@ namespace NftGrpc {
       if (other == null) {
         return;
       }
+      if (other.OrchidId.Length != 0) {
+        OrchidId = other.OrchidId;
+      }
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
@@ -272,6 +439,21 @@ namespace NftGrpc {
       }
       if (other.To.Length != 0) {
         To = other.To;
+      }
+      if (other.Color.Length != 0) {
+        Color = other.Color;
+      }
+      if (other.Species.Length != 0) {
+        Species = other.Species;
+      }
+      if (other.Origin.Length != 0) {
+        Origin = other.Origin;
+      }
+      if (other.CreatedAt != 0L) {
+        CreatedAt = other.CreatedAt;
+      }
+      if (other.UpdatedAt != 0L) {
+        UpdatedAt = other.UpdatedAt;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -289,19 +471,43 @@ namespace NftGrpc {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Name = input.ReadString();
+            OrchidId = input.ReadString();
             break;
           }
           case 18: {
-            Description = input.ReadString();
+            Name = input.ReadString();
             break;
           }
           case 26: {
-            ImageBytes = input.ReadBytes();
+            Description = input.ReadString();
             break;
           }
           case 34: {
+            ImageBytes = input.ReadBytes();
+            break;
+          }
+          case 42: {
             To = input.ReadString();
+            break;
+          }
+          case 50: {
+            Color = input.ReadString();
+            break;
+          }
+          case 58: {
+            Species = input.ReadString();
+            break;
+          }
+          case 66: {
+            Origin = input.ReadString();
+            break;
+          }
+          case 72: {
+            CreatedAt = input.ReadInt64();
+            break;
+          }
+          case 80: {
+            UpdatedAt = input.ReadInt64();
             break;
           }
         }
@@ -320,19 +526,43 @@ namespace NftGrpc {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            Name = input.ReadString();
+            OrchidId = input.ReadString();
             break;
           }
           case 18: {
-            Description = input.ReadString();
+            Name = input.ReadString();
             break;
           }
           case 26: {
-            ImageBytes = input.ReadBytes();
+            Description = input.ReadString();
             break;
           }
           case 34: {
+            ImageBytes = input.ReadBytes();
+            break;
+          }
+          case 42: {
             To = input.ReadString();
+            break;
+          }
+          case 50: {
+            Color = input.ReadString();
+            break;
+          }
+          case 58: {
+            Species = input.ReadString();
+            break;
+          }
+          case 66: {
+            Origin = input.ReadString();
+            break;
+          }
+          case 72: {
+            CreatedAt = input.ReadInt64();
+            break;
+          }
+          case 80: {
+            UpdatedAt = input.ReadInt64();
             break;
           }
         }
@@ -522,6 +752,423 @@ namespace NftGrpc {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
+            TransactionHash = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BurnNftRequest : pb::IMessage<BurnNftRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BurnNftRequest> _parser = new pb::MessageParser<BurnNftRequest>(() => new BurnNftRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BurnNftRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::NftGrpc.NftReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BurnNftRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BurnNftRequest(BurnNftRequest other) : this() {
+      tokenId_ = other.tokenId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BurnNftRequest Clone() {
+      return new BurnNftRequest(this);
+    }
+
+    /// <summary>Field number for the "tokenId" field.</summary>
+    public const int TokenIdFieldNumber = 1;
+    private int tokenId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int TokenId {
+      get { return tokenId_; }
+      set {
+        tokenId_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BurnNftRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BurnNftRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TokenId != other.TokenId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TokenId != 0) hash ^= TokenId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (TokenId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(TokenId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TokenId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(TokenId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (TokenId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TokenId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BurnNftRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TokenId != 0) {
+        TokenId = other.TokenId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            TokenId = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            TokenId = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BurnNftResponse : pb::IMessage<BurnNftResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BurnNftResponse> _parser = new pb::MessageParser<BurnNftResponse>(() => new BurnNftResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BurnNftResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::NftGrpc.NftReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BurnNftResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BurnNftResponse(BurnNftResponse other) : this() {
+      orchidId_ = other.orchidId_;
+      transactionHash_ = other.transactionHash_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BurnNftResponse Clone() {
+      return new BurnNftResponse(this);
+    }
+
+    /// <summary>Field number for the "orchidId" field.</summary>
+    public const int OrchidIdFieldNumber = 1;
+    private string orchidId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OrchidId {
+      get { return orchidId_; }
+      set {
+        orchidId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "transactionHash" field.</summary>
+    public const int TransactionHashFieldNumber = 2;
+    private string transactionHash_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TransactionHash {
+      get { return transactionHash_; }
+      set {
+        transactionHash_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BurnNftResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BurnNftResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (OrchidId != other.OrchidId) return false;
+      if (TransactionHash != other.TransactionHash) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (OrchidId.Length != 0) hash ^= OrchidId.GetHashCode();
+      if (TransactionHash.Length != 0) hash ^= TransactionHash.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (OrchidId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(OrchidId);
+      }
+      if (TransactionHash.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(TransactionHash);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (OrchidId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(OrchidId);
+      }
+      if (TransactionHash.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(TransactionHash);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (OrchidId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OrchidId);
+      }
+      if (TransactionHash.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TransactionHash);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BurnNftResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.OrchidId.Length != 0) {
+        OrchidId = other.OrchidId;
+      }
+      if (other.TransactionHash.Length != 0) {
+        TransactionHash = other.TransactionHash;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            OrchidId = input.ReadString();
+            break;
+          }
+          case 18: {
+            TransactionHash = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            OrchidId = input.ReadString();
+            break;
+          }
+          case 18: {
             TransactionHash = input.ReadString();
             break;
           }

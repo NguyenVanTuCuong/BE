@@ -49,6 +49,10 @@ namespace NftGrpc {
     static readonly grpc::Marshaller<global::NftGrpc.MintNftRequest> __Marshaller_nft_MintNftRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::NftGrpc.MintNftRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::NftGrpc.MintNftResponse> __Marshaller_nft_MintNftResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::NftGrpc.MintNftResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::NftGrpc.BurnNftRequest> __Marshaller_nft_BurnNftRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::NftGrpc.BurnNftRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::NftGrpc.BurnNftResponse> __Marshaller_nft_BurnNftResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::NftGrpc.BurnNftResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::NftGrpc.MintNftRequest, global::NftGrpc.MintNftResponse> __Method_MintNft = new grpc::Method<global::NftGrpc.MintNftRequest, global::NftGrpc.MintNftResponse>(
@@ -57,6 +61,14 @@ namespace NftGrpc {
         "MintNft",
         __Marshaller_nft_MintNftRequest,
         __Marshaller_nft_MintNftResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::NftGrpc.BurnNftRequest, global::NftGrpc.BurnNftResponse> __Method_BurnNft = new grpc::Method<global::NftGrpc.BurnNftRequest, global::NftGrpc.BurnNftResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BurnNft",
+        __Marshaller_nft_BurnNftRequest,
+        __Marshaller_nft_BurnNftResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -70,6 +82,12 @@ namespace NftGrpc {
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::NftGrpc.MintNftResponse> MintNft(global::NftGrpc.MintNftRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::NftGrpc.BurnNftResponse> BurnNft(global::NftGrpc.BurnNftRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -123,6 +141,26 @@ namespace NftGrpc {
       {
         return CallInvoker.AsyncUnaryCall(__Method_MintNft, null, options, request);
       }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::NftGrpc.BurnNftResponse BurnNft(global::NftGrpc.BurnNftRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BurnNft(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::NftGrpc.BurnNftResponse BurnNft(global::NftGrpc.BurnNftRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BurnNft, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::NftGrpc.BurnNftResponse> BurnNftAsync(global::NftGrpc.BurnNftRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BurnNftAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::NftGrpc.BurnNftResponse> BurnNftAsync(global::NftGrpc.BurnNftRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BurnNft, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override NftServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -137,7 +175,8 @@ namespace NftGrpc {
     public static grpc::ServerServiceDefinition BindService(NftServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_MintNft, serviceImpl.MintNft).Build();
+          .AddMethod(__Method_MintNft, serviceImpl.MintNft)
+          .AddMethod(__Method_BurnNft, serviceImpl.BurnNft).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -148,6 +187,7 @@ namespace NftGrpc {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, NftServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_MintNft, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::NftGrpc.MintNftRequest, global::NftGrpc.MintNftResponse>(serviceImpl.MintNft));
+      serviceBinder.AddMethod(__Method_BurnNft, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::NftGrpc.BurnNftRequest, global::NftGrpc.BurnNftResponse>(serviceImpl.BurnNft));
     }
 
   }

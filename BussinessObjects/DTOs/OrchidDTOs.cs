@@ -11,12 +11,15 @@ namespace BussinessObjects.DTOs
         {
             public string Name { get; set; }
             public string? Description { get; set; }
+            public string? Color { get; set; }
+            public string? Origin { get; set; }
+            public string? Species { get; set; }
         }
 
         public class AddOrchidRequestData
         {
             public AddOrchidRequestJson Json { get; set; }
-            public IFormFile ImageFile { get; set; }
+            public IFormFile? ImageFile { get; set; }
         }
 
         public class AddOrchidRequest : AuthRequest<AddOrchidRequestData>
@@ -39,6 +42,9 @@ namespace BussinessObjects.DTOs
         {
             public string? Name { get; set; }
             public string? Description { get; set; }
+            public string? Color { get; set; }
+            public string? Origin { get; set; }
+            public string? Species { get; set; }
         }
 
         public class UpdateOrchidRequestData
@@ -98,6 +104,9 @@ namespace BussinessObjects.DTOs
             public string? Description { get; set; }
             public string? ImageUrl { get; set; }
             public Guid OwnerId { get; set; }
+            public string? Color { get; set; }
+            public string? Origin { get; set; }
+            public string? Species { get; set; }
             public DepositStatus DepositedStatus { get; set; }
         }
 
