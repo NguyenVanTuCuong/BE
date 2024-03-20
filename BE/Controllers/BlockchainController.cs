@@ -22,7 +22,7 @@ namespace BE.Controllers
             _jwtService = jwtService;
         }
 
-        [Authorize]
+        [Authorize(Roles = "Administrator")]
         [HttpPost("deposit-for-nft")]
         public async Task<IActionResult> DepositForNft([FromForm] DepositForNftDTO.DepositForNftRequestData data)
         {
