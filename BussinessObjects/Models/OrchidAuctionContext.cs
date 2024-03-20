@@ -36,6 +36,7 @@ public partial class OrchidAuctionContext : DbContext
             entity.Property(e => e.Color).HasMaxLength(50);
             entity.Property(e => e.Species).HasMaxLength(50);
             entity.Property(e => e.Origin).HasMaxLength(50);
+            entity.Property(e => e.DepositedStatus).HasDefaultValue(Enums.DepositStatus.Available);
 
             entity.Property(e => e.CreatedAt)
                 .HasColumnType("datetime2")
@@ -67,6 +68,31 @@ public partial class OrchidAuctionContext : DbContext
             entity.Property(e => e.Birthday).HasColumnType("date");
             entity.Property(e => e.Status).HasColumnType("int");
             entity.Property(e => e.Role).HasColumnType("int");
+        });
+
+        modelBuilder.Entity<DepositRequest>(entity =>
+        {
+            entity.ToTable("DepositRequest");
+
+            entity.Property(e => e.DepositRequestId).ValueGeneratedOnAdd();
+            entity.Property(e => e.Title).HasMaxLength(255);
+            entity.Property(e => e.Description).HasMaxLength(255);
+            entity.Property(e => e.RequestStatus).HasDefaultValue(Enums.RequestStatus.Pending);
+
+            entity.Property(e => e.CreatedAt)
+               .HasColumnType("datetime2")
+               .HasDefaultValueSql("SYSDATETIME()")
+               .ValueGeneratedOnAdd();
+
+            entity.Property(e => e.UpdatedAt)
+                .HasColumnType("datetime2")
+                .HasDefaultValueSql("SYSDATETIME()")
+                .ValueGeneratedOnAdd();
+
+            entity.HasOne(d => d.Orchid).WithMany(p => p.DepositRequests)
+                .HasForeignKey(d => d.OrchidId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_DepositRequest_Orchid");
         });
 
         OnModelCreatingPartial(modelBuilder);

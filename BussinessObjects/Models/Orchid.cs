@@ -26,4 +26,6 @@ public partial class Orchid
 
     public DateTime CreatedAt { get; set; }
     public DateTime? UpdatedAt { get; set; }
+
+    public virtual ICollection<DepositRequest> DepositRequests { get; set; } = new List<DepositRequest>();
 }
