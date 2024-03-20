@@ -25,7 +25,7 @@ public partial class Orchid
     public virtual User Owner { get; set; } = null!;
 
     public DateTime CreatedAt { get; set; }
-    public DateTime? UpdatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
 
     public virtual ICollection<DepositRequest> DepositRequests { get; set; } = new List<DepositRequest>();
 }

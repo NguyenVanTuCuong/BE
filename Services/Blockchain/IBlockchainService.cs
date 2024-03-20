@@ -10,5 +10,7 @@ namespace Services.Blockchain
     public interface IBlockchainService
     {
         public Task<DepositForNftDTO.DepositForNftResponseData> DepositForNft(DepositForNftDTO.DepositForNftRequest request);
+
+        public Task<WithdawNftDTO.WithdawNftResponseData> WithdrawNft(WithdawNftDTO.WithdawNftRequest request);
     }
 }

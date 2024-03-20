@@ -6,6 +6,7 @@ using Services.Auth;
 using Services.Blockchain;
 using Services.Common.Jwt;
 using Services.Orchid;
+using static Services.Blockchain.BlockchainService;
 
 namespace BE.Controllers
 {
@@ -24,7 +25,7 @@ namespace BE.Controllers
 
         [Authorize(Roles = "Administrator")]
         [HttpPost("deposit-for-nft")]
-        public async Task<IActionResult> DepositForNft([FromForm] DepositForNftDTO.DepositForNftRequestData data)
+        public async Task<IActionResult> DepositForNft([FromBody] DepositForNftDTO.DepositForNftRequestData data)
         {
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
             try
@@ -45,10 +46,47 @@ namespace BE.Controllers
                     }
                 });
             }
-            catch (OrchidService.AddOrchidException e)
+            catch (DepositForNftException e)
             {
                 switch (e.StatusCode)
                 {
+                    case DepositForNftException.StatusCodeEnum.AlreadyDeposited:
+                        return Conflict(e.Message);
+                    default:
+                        return StatusCode(500, e.Message);
+                }
+            }
+        }
+
+        [Authorize]
+        [HttpPost("withdraw-nft")]
+        public async Task<IActionResult> WithdrawNft([FromBody] WithdawNftDTO.WithdawNftRequestData data)
+        {
+            var userId = _jwtService.GetUserIdFromContext(HttpContext);
+            try
+            {
+
+                var response = await _blockchainService.WithdrawNft(new WithdawNftDTO.WithdawNftRequest()
+                {
+                    UserId = userId.Value,
+                    Data = data
+                });
+
+                return Ok(new WithdawNftDTO.WithdawNftResponse
+                {
+                    Data = response,
+                    AuthTokens = new AuthTokens
+                    {   
+                        AccessToken = await _jwtService.GenerateToken(userId.Value),
+                    }
+                });
+            }
+            catch (WithdrawNftException e)
+            {
+                switch (e.StatusCode)
+                {
+                    case WithdrawNftException.StatusCodeEnum.NotOwned:
+                        return Conflict(e.Message);
                     default:
                         return StatusCode(500, e.Message);
                 }
