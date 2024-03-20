@@ -23,7 +23,19 @@ namespace BussinessObjects.Enums
     {
         [Description("Available")]
         Available,
+        [Description("Pending")]
+        Pending,
         [Description("Deposited")]
         Deposited,
+    }
+
+    public enum RequestStatus
+    {
+        [Description("Pending")]
+        Pending,
+        [Description("Approved")]
+        Approved,
+        [Description("Rejected")]
+        Rejected,
     }
 }

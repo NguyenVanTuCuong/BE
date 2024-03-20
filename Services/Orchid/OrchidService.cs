@@ -93,6 +93,9 @@ namespace Services.Orchid
                 ImageUrl = imageUrl,
                 Name = request.Data.Json.Name,
                 Description = request.Data.Json.Description,
+                Color = request.Data.Json.Color,
+                Origin = request.Data.Json.Origin,
+                Species = request.Data.Json.Species,
                 OwnerId = request.UserId,
                 DepositedStatus = DepositStatus.Available,
             };
@@ -115,6 +118,10 @@ namespace Services.Orchid
             existingOrchid.DepositedStatus = request.Data.DepositStatus ?? existingOrchid.DepositedStatus;
             existingOrchid.Name = request.Data.Json.Name ?? existingOrchid.Name;
             existingOrchid.Description = request.Data.Json.Description ?? existingOrchid.Description;
+            existingOrchid.Color = request.Data.Json.Color ?? existingOrchid.Color;
+            existingOrchid.Origin = request.Data.Json.Origin ?? existingOrchid.Origin;
+            existingOrchid.Species = request.Data.Json.Species ?? existingOrchid.Species;
+            existingOrchid.UpdatedAt = DateTime.Now;
 
             if (request.Data.ImageFile != null)
             {

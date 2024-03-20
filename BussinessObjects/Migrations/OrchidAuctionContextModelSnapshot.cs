@@ -22,11 +22,66 @@ namespace BussinessObjects.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("BussinessObjects.Models.DepositRequest", b =>
+                {
+                    b.Property<Guid>("DepositRequestId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("SYSDATETIME()");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<Guid>("OrchidId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("RequestStatus")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("SYSDATETIME()");
+
+                    b.HasKey("DepositRequestId");
+
+                    b.HasIndex("OrchidId");
+
+                    b.ToTable("DepositRequest", (string)null);
+                });
+
             modelBuilder.Entity("BussinessObjects.Models.Orchid", b =>
                 {
                     b.Property<Guid>("OrchidId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Color")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("SYSDATETIME()");
+
+                    b.Property<int>("DepositedStatus")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)
@@ -41,8 +96,21 @@ namespace BussinessObjects.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<string>("Origin")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<Guid>("OwnerId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Species")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("SYSDATETIME()");
 
                     b.HasKey("OrchidId");
 
@@ -57,8 +125,19 @@ namespace BussinessObjects.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<DateTime?>("Birthday")
+                        .HasColumnType("date");
+
                     b.Property<string>("Email")
                         .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("FirstName")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("LastName")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -70,9 +149,32 @@ namespace BussinessObjects.Migrations
                     b.Property<int>("Role")
                         .HasColumnType("int");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("WalletAddress")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.HasKey("UserId");
 
                     b.ToTable("User", (string)null);
+                });
+
+            modelBuilder.Entity("BussinessObjects.Models.DepositRequest", b =>
+                {
+                    b.HasOne("BussinessObjects.Models.Orchid", "Orchid")
+                        .WithMany("DepositRequests")
+                        .HasForeignKey("OrchidId")
+                        .IsRequired()
+                        .HasConstraintName("FK_DepositRequest_Orchid");
+
+                    b.Navigation("Orchid");
                 });
 
             modelBuilder.Entity("BussinessObjects.Models.Orchid", b =>
@@ -84,6 +186,11 @@ namespace BussinessObjects.Migrations
                         .HasConstraintName("FK_Orchid_User");
 
                     b.Navigation("Owner");
+                });
+
+            modelBuilder.Entity("BussinessObjects.Models.Orchid", b =>
+                {
+                    b.Navigation("DepositRequests");
                 });
 
             modelBuilder.Entity("BussinessObjects.Models.User", b =>
