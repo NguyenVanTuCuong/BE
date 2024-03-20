@@ -58,6 +58,7 @@ namespace Services.Orchid
             public enum StatusCodeEnum
             {
                 UpdateOrchidFailed,
+                OrchidNotFound
             }
             public StatusCodeEnum StatusCode { get; }
             public override string Message { get; }
@@ -113,7 +114,7 @@ namespace Services.Orchid
             var existingOrchid = await _orchidRepository.GetByIdAsync(request.Data.OrchidId);
             if (existingOrchid == null)
             {
-                throw new GetOrchidException(GetOrchidException.StatusCodeEnum.OrchidNotFound, "Orchid not found");
+                throw new UpdateOrchidException(UpdateOrchidException.StatusCodeEnum.OrchidNotFound, "Orchid not found");
             }
             existingOrchid.DepositedStatus = request.Data.DepositStatus ?? existingOrchid.DepositedStatus;
             existingOrchid.Name = request.Data.Json.Name ?? existingOrchid.Name;
@@ -151,26 +152,48 @@ namespace Services.Orchid
             };
         }
 
-        public async Task<IList<GetOrchidResponseData>> GetOrchidsPagination(int pageSize, int pageNumber)
+        public async Task<GetOrchidListResponse> GetOrchidsPagination(int skip, int top)
         {
-            var orchids = await _orchidRepository.GetOrchidsPagination(pageSize, pageNumber);
-            return _mapper.Map<IList<GetOrchidResponseData>>(orchids);
+            var queryable = await _orchidRepository.GetAllAsync();
+            var pagination = queryable.Skip(skip).Take(top).AsQueryable();
+            var totalCount = queryable.Count();
+            var maxPage = totalCount >= top ? Math.Ceiling((double)totalCount / top) : 1;
+            var response = _mapper.Map<IList<OrchidDTO>>(pagination);
+
+            return new GetOrchidListResponse
+            {
+                orchids = response,
+                pages = maxPage
+            };
         }
 
-        public async Task<GetOrchidResponseData> GetOrchidById(Guid orchidId)
+        public async Task<OrchidDTO> GetOrchidById(Guid orchidId)
         {
             var orchid = await _orchidRepository.GetByIdAsync(orchidId);
             if (orchid == null)
             {
                 throw new GetOrchidException(GetOrchidException.StatusCodeEnum.OrchidNotFound, "Orchid not found");
             }
-            return _mapper.Map<GetOrchidResponseData>(orchid);
+            return _mapper.Map<OrchidDTO>(orchid);
         }
 
-        public async Task<IList<GetOrchidResponseData>> SearchOrchids(GetOrchidDTO.GetOrchidRequestData data)
+        public async Task<GetOrchidListResponse> SearchOrchids(string? name, string? description, DepositStatus? depositStatus, int skip, int top)
         {
-            var orchids = await _orchidRepository.SearchOrchids(data.Name, data.Description, data.DepositStatus);
-            return _mapper.Map<IList<GetOrchidResponseData>>(orchids);
+            var queryable = await _orchidRepository.GetAllAsync();
+            var data = queryable
+            .Where(x => name == null || x.Name.Contains(name))
+            .Where(x => description == null || x.Description.Contains(description))
+            .Where(x => depositStatus == null || x.DepositedStatus == depositStatus);
+            var pagination = data.Skip(skip).Take(top).AsQueryable();
+            var totalCount = data.Count();
+            var maxPage = totalCount >= top ? Math.Ceiling((double)totalCount / top) : 1;
+            var response = _mapper.Map<IList<OrchidDTO>>(pagination);
+
+            return new GetOrchidListResponse
+            {
+                orchids = response,
+                pages = maxPage
+            };
         }
     }
 }

@@ -2,6 +2,7 @@ using BE;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Repositories.DepositRequest;
 using Repositories.User;
 using Services.Auth;
 using Services.Blockchain;
@@ -9,6 +10,7 @@ using Services.Common.Firebase;
 using Services.Common.Gprc.Nft;
 using Services.Common.Jwt;
 using Services.Common.Sha256;
+using Services.DepositRequest;
 using Services.Orchid;
 using Services.User;
 using System.Text;
@@ -23,6 +25,7 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 
 builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddTransient<IOrchidRepository, OrchidRepository>();
+builder.Services.AddTransient<IDepositRequestRepository, DepositRequestRepository>();
 
 builder.Services.AddTransient<IJwtService, JwtService>();
 builder.Services.AddTransient<ISha256Service, Sha256Service>();
@@ -34,6 +37,7 @@ builder.Services.AddTransient<IAuthService, AuthService>();
 builder.Services.AddTransient<IOrchidService, OrchidService>();
 builder.Services.AddSingleton<IBlockchainService, BlockchainService>();
 builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<IDepositRequestService, DepositRequestService>();
 
 builder.Services.AddEndpointsApiExplorer();
 

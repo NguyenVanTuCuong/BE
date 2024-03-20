@@ -3921,19 +3921,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tucuo\\.nuget\\packages\\": {}
+    "C:\\Users\\huynh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\Repositories\\Repositories.csproj",
+      "projectUniqueName": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\Repositories\\Repositories.csproj",
       "projectName": "Repositories",
-      "projectPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\Repositories\\Repositories.csproj",
-      "packagesPath": "C:\\Users\\tucuo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\Repositories\\obj\\",
+      "projectPath": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\Repositories\\Repositories.csproj",
+      "packagesPath": "C:\\Users\\huynh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\Repositories\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\tucuo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\huynh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3947,8 +3947,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\BussinessObjects\\BussinessObjects.csproj": {
-              "projectPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\BussinessObjects\\BussinessObjects.csproj"
+            "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\BussinessObjects\\BussinessObjects.csproj": {
+              "projectPath": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\BussinessObjects\\BussinessObjects.csproj"
             }
           }
         }
@@ -3957,6 +3957,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3992,7 +3997,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

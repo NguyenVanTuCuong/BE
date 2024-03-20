@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BussinessObjects.DTOs;
 using BussinessObjects.Models;
+using static BussinessObjects.DTOs.GetOrchidDTO;
 
 namespace BE
 {
@@ -13,6 +14,10 @@ namespace BE
             CreateMap<GetProfileDTO.GetProfileResponseData, User>().ReverseMap();
 
             CreateMap<AddOrchidDTO.AddOrchidResponseData, Orchid>().ReverseMap();
+            CreateMap<OrchidDTO, Orchid>().ReverseMap();
+
+            CreateMap<AddDepositRequestDTO.AddDepositResponseData, Orchid>().ReverseMap();
+            CreateMap<GetDepositDTO.DepositDTO, DepositRequest>().ReverseMap();
 
             CreateMap<AddUserDTO.AddUserResponseData, User>().ReverseMap();
             CreateMap<AddUserDTO.AddUserRequestData, User>().ReverseMap();
@@ -22,7 +27,6 @@ namespace BE
 
             CreateMap<DetailsUserDTO.DetailsUserResponseData, User>().ReverseMap();
             CreateMap<UserDTO, User>().ReverseMap();
-
         }
     }
 }

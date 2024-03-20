@@ -34,7 +34,6 @@ namespace BussinessObjects.Migrations
                         .HasDefaultValueSql("SYSDATETIME()");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
@@ -47,7 +46,6 @@ namespace BussinessObjects.Migrations
                         .HasDefaultValue(0);
 
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
@@ -55,6 +53,11 @@ namespace BussinessObjects.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("SYSDATETIME()");
+
+                    b.Property<string>("WalletAddress")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("DepositRequestId");
 
