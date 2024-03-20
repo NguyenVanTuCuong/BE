@@ -33,6 +33,19 @@ public partial class OrchidAuctionContext : DbContext
             entity.Property(e => e.Description).HasMaxLength(500);
             entity.Property(e => e.ImageUrl).HasMaxLength(500);
             entity.Property(e => e.Name).HasMaxLength(100);
+            entity.Property(e => e.Color).HasMaxLength(50);
+            entity.Property(e => e.Species).HasMaxLength(50);
+            entity.Property(e => e.Origin).HasMaxLength(50);
+
+            entity.Property(e => e.CreatedAt)
+                .HasColumnType("datetime2")
+                .HasDefaultValueSql("SYSDATETIME()")
+                .ValueGeneratedOnAdd();
+
+            entity.Property(e => e.UpdatedAt)
+                .HasColumnType("datetime2")
+                .HasDefaultValueSql("SYSDATETIME()")
+                .ValueGeneratedOnAdd();
 
             entity.HasOne(d => d.Owner).WithMany(p => p.Orchids)
                 .HasForeignKey(d => d.OwnerId)
@@ -44,7 +57,7 @@ public partial class OrchidAuctionContext : DbContext
         {
             entity.ToTable("User");
 
-            entity.Property(e => e.UserId).ValueGeneratedNever();
+            entity.Property(e => e.UserId).ValueGeneratedOnAdd();
             entity.Property(e => e.Email).HasMaxLength(50);
             entity.Property(e => e.Password).HasMaxLength(100);
         });
