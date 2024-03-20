@@ -88,8 +88,15 @@ namespace Services.Auth
             }
 
             request.Password = _sha256Service.Hash(request.Password);
-            var mapped = _mapper.Map<BussinessObjects.Models.User>(request);
-            mapped.Role = UserRole.User;
+            var mapped = new BussinessObjects.Models.User()
+            {
+                Email = request.Email,
+                Username = request.Username,
+                Password = request.Password,
+                FirstName = request.FirstName,
+                LastName = request.LastName,
+            };
+            mapped.Password = _sha256Service.Hash(mapped.Password);
 
             var created = await _userRepository.AddAsync(mapped);
 
