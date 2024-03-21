@@ -1,4 +1,5 @@
-﻿using BussinessObjects.DTOs;
+﻿using AutoMapper;
+using BussinessObjects.DTOs;
 using BussinessObjects.Enums;
 using BussinessObjects.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -18,11 +19,13 @@ namespace BE.Controllers
     {
         private readonly IOrchidService _orchidService;
         private readonly IJwtService _jwtService;
+        private readonly IMapper _mapper;
 
-        public OrchidController(IOrchidService orchidService, IJwtService jwtService)
+        public OrchidController(IOrchidService orchidService, IJwtService jwtService, IMapper mapper)
         {
             _orchidService = orchidService;
             _jwtService = jwtService;
+            _mapper = mapper;
         }
 
         //Add orchid from dto
@@ -33,7 +36,7 @@ namespace BE.Controllers
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
             try
             {
-
+                //add with userId and all data from orchid request
                 var orchid = await _orchidService.AddOrchid(new AddOrchidDTO.AddOrchidRequest()
                 {
                     UserId = userId.Value,
@@ -67,6 +70,7 @@ namespace BE.Controllers
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
             try
             {
+                //update with data and user id
                 var orchid = await _orchidService.UpdateOrchid(new UpdateOrchidDTO.UpdateOrchidRequest()
                 {
                     UserId = userId.Value,
@@ -102,6 +106,7 @@ namespace BE.Controllers
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
             try
             {
+                //delete orchid with id
                 var orchid = await _orchidService.DeleteOrchid(new DeleteOrchidDTO.DeleteOrchidRequest()
                 {
                     UserId = userId.Value,
@@ -130,11 +135,40 @@ namespace BE.Controllers
             }
         }
 
+        [Authorize]
+        [HttpGet("owned")]
+        public async Task<IActionResult> GetOwnedOrchidsPagination(int skip, int top)
+        {
+            var userId = _jwtService.GetUserIdFromContext(HttpContext);
+            try
+            {
+                var orchids = await _orchidService.GetOwnedOrchidsPagination(userId.Value, skip, top);
+                return Ok(new GetOrchidDTO.GetOwnedOrchidListResponse()
+                {
+                    Data = new GetOrchidDTO.GetOwnedOrchidListResponseData
+                    {
+                        orchids = orchids.orchids,
+                        pages = orchids.pages
+                    },
+                    AuthTokens = new AuthTokens
+                    {
+                        AccessToken = await _jwtService.GenerateToken(userId.Value),
+                    }
+                }
+               );
+           }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetOrchidsPagination(int skip, int top)
         {
             try
             {
+                //get list orchid with pageSize and pageNumber
                 var orchids = await _orchidService.GetOrchidsPagination(skip, top);
                 return Ok(new GetOrchidDTO.GetOrchidListResponse
                 {
@@ -154,6 +188,7 @@ namespace BE.Controllers
         {
             try
             {
+                //get orchid by id
                 var orchids = await _orchidService.GetOrchidById(id);
                 return Ok(orchids);
             }
@@ -175,6 +210,7 @@ namespace BE.Controllers
         {
             try
             {
+                //search with name, description, depositStatus, pageNumber and pageSize
                 var orchids = await _orchidService.SearchOrchids(name, decription, depositStatus, skip, top);
 
                 return Ok(new GetOrchidDTO.GetOrchidListResponse

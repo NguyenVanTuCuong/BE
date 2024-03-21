@@ -38,4 +38,12 @@ namespace BussinessObjects.Enums
         [Description("Rejected")]
         Rejected,
     }
+
+    public enum ApprovalStatus
+    {
+        [Description("Available")]
+        Available,
+        [Description("Sented")]
+        Sented,
+    }
 }

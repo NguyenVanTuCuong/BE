@@ -101,6 +101,7 @@ namespace BussinessObjects.DTOs
             public string? Color { get; set; }
             public string? Origin { get; set; }
             public string? Species { get; set; }
+            public ApprovalStatus ApprovalStatus { get; set; }
             public DepositStatus DepositedStatus { get; set; }
         }
 
@@ -108,6 +109,15 @@ namespace BussinessObjects.DTOs
         {
             public IList<OrchidDTO>? orchids { get; set; }
             public double pages { get; set; }
+        }
+
+        public class GetOwnedOrchidListResponseData
+        {
+            public IList<OrchidDTO>? orchids { get; set; }
+            public double pages { get; set; }
+        }
+        public class GetOwnedOrchidListResponse : AuthResponse<GetOwnedOrchidListResponseData>
+        {
         }
     }
 }

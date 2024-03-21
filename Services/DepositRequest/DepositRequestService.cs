@@ -18,6 +18,7 @@ namespace Services.DepositRequest
     public class DepositRequestService : IDepositRequestService
     {
         private readonly IDepositRequestRepository _depositRequestRepository;
+        private readonly IOrchidRepository _orchidRepository;
         private readonly IMapper _mapper;
 
         public class GetDepositRequestException : Exception
@@ -69,10 +70,11 @@ namespace Services.DepositRequest
             }
         }
 
-        public DepositRequestService(IDepositRequestRepository depositRequestRepository, IMapper mapper)
+        public DepositRequestService(IDepositRequestRepository depositRequestRepository, IMapper mapper, IOrchidRepository orchidRepository)
         {
             _depositRequestRepository = depositRequestRepository;
             _mapper = mapper;
+            _orchidRepository = orchidRepository;
         }
         public async Task<AddDepositRequestDTO.AddDepositResponseData> AddDepositRequest(AddDepositRequestDTO.AddDepositRequest request)
         {
@@ -82,9 +84,13 @@ namespace Services.DepositRequest
                 Title = request.Data.Title,
                 Description = request.Data.Description,
                 WalletAddress = request.Data.WalletAddress,
-                RequestStatus = RequestStatus.Pending
+                RequestStatus = RequestStatus.Pending,
             };
             var created = await _depositRequestRepository.AddAsync(depositRequest);
+
+            var orchid = await _orchidRepository.GetByIdAsync(request.Data.OrchidId);
+            orchid.ApprovalStatus = ApprovalStatus.Sented;
+            await _orchidRepository.UpdateAsync(request.Data.OrchidId, orchid);
 
             return new AddDepositRequestDTO.AddDepositResponseData()
             {

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\Services\\Services.csproj": {}
+    "C:\\Users\\StarCii\\Desktop\\Repositories\\BE\\Services\\Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\BussinessObjects\\BussinessObjects.csproj": {
+    "C:\\Users\\StarCii\\Desktop\\Repositories\\BE\\BussinessObjects\\BussinessObjects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\BussinessObjects\\BussinessObjects.csproj",
+        "projectUniqueName": "C:\\Users\\StarCii\\Desktop\\Repositories\\BE\\BussinessObjects\\BussinessObjects.csproj",
         "projectName": "BussinessObjects",
-        "projectPath": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\BussinessObjects\\BussinessObjects.csproj",
-        "packagesPath": "C:\\Users\\huynh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\BussinessObjects\\obj\\",
+        "projectPath": "C:\\Users\\StarCii\\Desktop\\Repositories\\BE\\BussinessObjects\\BussinessObjects.csproj",
+        "packagesPath": "C:\\Users\\StarCii\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\StarCii\\Desktop\\Repositories\\BE\\BussinessObjects\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\huynh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\StarCii\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -102,21 +106,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\Repositories\\Repositories.csproj": {
+    "C:\\Users\\StarCii\\Desktop\\Repositories\\BE\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\StarCii\\Desktop\\Repositories\\BE\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\Repositories\\Repositories.csproj",
-        "packagesPath": "C:\\Users\\huynh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\Repositories\\obj\\",
+        "projectPath": "C:\\Users\\StarCii\\Desktop\\Repositories\\BE\\Repositories\\Repositories.csproj",
+        "packagesPath": "C:\\Users\\StarCii\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\StarCii\\Desktop\\Repositories\\BE\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\huynh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\StarCii\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -130,8 +138,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\BussinessObjects\\BussinessObjects.csproj": {
-                "projectPath": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\BussinessObjects\\BussinessObjects.csproj"
+              "C:\\Users\\StarCii\\Desktop\\Repositories\\BE\\BussinessObjects\\BussinessObjects.csproj": {
+                "projectPath": "C:\\Users\\StarCii\\Desktop\\Repositories\\BE\\BussinessObjects\\BussinessObjects.csproj"
               }
             }
           }
@@ -180,21 +188,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\Services\\Services.csproj": {
+    "C:\\Users\\StarCii\\Desktop\\Repositories\\BE\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\Services\\Services.csproj",
+        "projectUniqueName": "C:\\Users\\StarCii\\Desktop\\Repositories\\BE\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\Services\\Services.csproj",
-        "packagesPath": "C:\\Users\\huynh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\Services\\obj\\",
+        "projectPath": "C:\\Users\\StarCii\\Desktop\\Repositories\\BE\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\StarCii\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\StarCii\\Desktop\\Repositories\\BE\\Services\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\huynh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\StarCii\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -208,11 +220,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\BussinessObjects\\BussinessObjects.csproj": {
-                "projectPath": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\BussinessObjects\\BussinessObjects.csproj"
+              "C:\\Users\\StarCii\\Desktop\\Repositories\\BE\\BussinessObjects\\BussinessObjects.csproj": {
+                "projectPath": "C:\\Users\\StarCii\\Desktop\\Repositories\\BE\\BussinessObjects\\BussinessObjects.csproj"
               },
-              "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\Repositories\\Repositories.csproj": {
-                "projectPath": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\Repositories\\Repositories.csproj"
+              "C:\\Users\\StarCii\\Desktop\\Repositories\\BE\\Repositories\\Repositories.csproj": {
+                "projectPath": "C:\\Users\\StarCii\\Desktop\\Repositories\\BE\\Repositories\\Repositories.csproj"
               }
             }
           }
@@ -269,7 +281,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

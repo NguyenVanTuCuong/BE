@@ -79,7 +79,7 @@ namespace BE.Controllers
         }
 
         [HttpGet]
-        [Route("search/{input}")]
+        [Route("search")]
         public async Task<IActionResult> SearchUserByNameOrEmail(string input, int skip, int top)
         {
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
@@ -130,6 +130,8 @@ namespace BE.Controllers
             {
                 switch (e.StatusCode)
                 {
+                    case UserException.StatusCodeEnum.EmailExisted:
+                        return BadRequest(e.Message);
                     default:
                         return StatusCode(500, e.Message);
                 }

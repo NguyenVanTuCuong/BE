@@ -71,19 +71,25 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Json.Address",
-        "Type": "System.String",
-        "IsRequired": false
-      },
+        "Name": "data",
+        "Type": "BussinessObjects.DTOs.DepositForNftDTO\u002BDepositForNftRequestData",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BE.Controllers.BlockchainController",
+    "Method": "WithdrawNft",
+    "RelativePath": "api/blockchain/withdraw-nft",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Name": "Json.OrchidId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "ImageFile",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
+        "Name": "data",
+        "Type": "BussinessObjects.DTOs.WithdawNftDTO\u002BWithdawNftRequestData",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -434,7 +440,7 @@
   {
     "ContainingType": "BE.Controllers.UserController",
     "Method": "SearchUserByNameOrEmail",
-    "RelativePath": "api/user/search/{input}",
+    "RelativePath": "api/user/search",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -442,7 +448,7 @@
       {
         "Name": "input",
         "Type": "System.String",
-        "IsRequired": true
+        "IsRequired": false
       },
       {
         "Name": "skip",

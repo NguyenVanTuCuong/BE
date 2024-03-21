@@ -13,6 +13,7 @@ namespace Services.Orchid
     {
         public Task<AddOrchidDTO.AddOrchidResponseData> AddOrchid(AddOrchidDTO.AddOrchidRequest request);
         public Task<GetOrchidListResponse> GetOrchidsPagination(int skip, int top);
+        public Task<GetOwnedOrchidListResponseData> GetOwnedOrchidsPagination(Guid ownerId, int skip, int top);
         public Task<UpdateOrchidDTO.UpdateOrchidResponseData> UpdateOrchid(UpdateOrchidDTO.UpdateOrchidRequest request);
         public Task<DeleteOrchidDTO.DeleteOrchidResponseData> DeleteOrchid(DeleteOrchidDTO.DeleteOrchidRequest request);
         public Task<OrchidDTO> GetOrchidById(Guid orchidId);

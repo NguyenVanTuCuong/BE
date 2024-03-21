@@ -2,6 +2,7 @@
 using BussinessObjects.DTOs;
 using BussinessObjects.Enums;
 using BussinessObjects.Models;
+using Microsoft.AspNetCore.Mvc;
 using Repositories.User;
 using Services.Common.Sha256;
 using System;
@@ -31,7 +32,7 @@ namespace Services.User
         {
             public enum StatusCodeEnum
             {
-                UserNotFound, UpdateUserFailed, DeleteUserFailed,
+                UserNotFound, EmailExisted
             }
             public StatusCodeEnum StatusCode { get; }
             public override string Message { get; }
@@ -43,7 +44,7 @@ namespace Services.User
             }
         }
 
-        public async Task<GetUserListResponseData> GetAllPagination(int skip, int top)
+        public async Task<GetUserListResponseData> GetAllPagination([FromQuery] int skip, [FromQuery] int top)
         {
             var queryable = await _userRepository.GetAllAsync();
             var data = queryable.Skip(skip).Take(top).AsQueryable();
@@ -69,7 +70,7 @@ namespace Services.User
             return response;
         }
 
-        public async Task<GetUserListResponseData> SearchWithPagination(int skip, int top, string input)
+        public async Task<GetUserListResponseData> SearchWithPagination([FromQuery] int skip, [FromQuery] int top, [FromQuery] string input)
         {
             var queryable = await _userRepository.GetAllAsync();
             var data = queryable.Where(x => x.Username!.Contains(input, StringComparison.OrdinalIgnoreCase) || x.Email!.Contains(input, StringComparison.OrdinalIgnoreCase));
@@ -88,8 +89,24 @@ namespace Services.User
 
         public async Task<AddUserDTO.AddUserResponseData> AddAsync(AddUserDTO.AddUserRequest request)
         {
-            var user = _mapper.Map<BussinessObjects.Models.User>(request.Data);
+            var user = new BussinessObjects.Models.User()
+            {
+                Email = request.Data.Email,
+                Username = request.Data.Username,
+                Password = request.Data.Password,
+                FirstName = request.Data.FirstName,
+                LastName = request.Data.LastName,
+                Birthday = request.Data.Birthday,
+                Role = request.Data.Role,
+            };
             user.Password = _sha256Service.Hash(user.Password);
+            
+
+            var existingUser = await _userRepository.GetByEmailAsync(user.Email);
+            if (existingUser != null)
+            {
+                throw new UserException(UserException.StatusCodeEnum.EmailExisted, "Email existed!");
+            }
 
             var created = await _userRepository.AddAsync(user);
 
