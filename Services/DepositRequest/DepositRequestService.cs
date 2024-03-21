@@ -136,7 +136,7 @@ namespace Services.DepositRequest
             };
         }
 
-        public async Task<GetDepositRequestDTO.GetDepositRequestListResponse> GetAllDepositRequestPagination(int skip, int top)
+        public async Task<GetDepositRequestDTO.GetDepositRequestListResponseData> GetAllDepositRequestPagination(int skip, int top)
         {
             var queryable = await _depositRequestRepository.GetAllAsync();
             var pagination = queryable.Skip(skip).Take(top).AsQueryable();
@@ -144,25 +144,35 @@ namespace Services.DepositRequest
             var maxPage = totalCount >= top ? Math.Ceiling((double)totalCount / top) : 1;
             var response = _mapper.Map<IList<GetDepositRequestDTO.DepositRequestDTO>>(pagination);
 
-            return new GetDepositRequestDTO.GetDepositRequestListResponse()
+            return new GetDepositRequestDTO.GetDepositRequestListResponseData()
             {
                 Deposits = response,
                 Pages = (int)maxPage
             };
         }
 
-        public async Task<GetDepositRequestDTO.GetDepositRequestListResponse> GetDepositRequestByUserIdPagination(Guid? userId, int skip, int top)
+        public async Task<GetDepositRequestDTO.GetDepositRequestListResponseData> GetDepositRequestByUserIdPagination(Guid? userId, int skip, int top)
         {
             var queryable = await _depositRequestRepository.GetDepositRequestByUserIdPagination(userId);
             var pagination = queryable.Skip(skip).Take(top).AsQueryable();
             var totalCount = queryable.Count();
             var maxPage = totalCount >= top ? Math.Ceiling((double)totalCount / top) : 1;
             var response = _mapper.Map<IList<GetDepositRequestDTO.DepositRequestDTO>>(pagination);
-            return new GetDepositRequestDTO.GetDepositRequestListResponse()
+            return new GetDepositRequestDTO.GetDepositRequestListResponseData()
             {
                 Deposits = response,
                 Pages = (int)maxPage
             };
+        }
+
+        public async Task<GetDepositRequestDTO.DepositRequestDTO> GetDepositRequestById(Guid depositRequestId)
+        {
+            var depositRequest = await _depositRequestRepository.GetByIdAsync(depositRequestId);
+            if (depositRequest == null)
+            {
+                throw new GetDepositRequestException(GetDepositRequestException.StatusCodeEnum.DepositRequestNotFound, "Deposit request not found");
+            }
+            return _mapper.Map<GetDepositRequestDTO.DepositRequestDTO>(depositRequest);
         }
     }
 }

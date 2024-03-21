@@ -39,5 +39,15 @@ namespace Repositories.DepositRequest
 
             return depositRequest;
         }
+
+        public async Task<BussinessObjects.Models.DepositRequest> GetByOrchidId(Guid orchidId)
+        {
+            var depositRequest = await _context.DepositRequests
+                .Include(dr => dr.Orchid)
+                .Where(dr => dr.OrchidId == orchidId)
+                .FirstOrDefaultAsync();
+
+            return depositRequest;
+        }
     }
 }

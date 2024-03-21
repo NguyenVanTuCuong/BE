@@ -2,6 +2,7 @@
 using BussinessObjects.DTOs;
 using BussinessObjects.Enums;
 using BussinessObjects.Models;
+using Repositories.DepositRequest;
 using Repositories.User;
 using Services.Auth;
 using Services.Common.Firebase;
@@ -14,12 +15,14 @@ namespace Services.Orchid
         private readonly IOrchidRepository _orchidRepository;
         private readonly IFirebaseService _firebaseService;
         private readonly IMapper _mapper;
+        private readonly IDepositRequestRepository _depositRequestRepository;
 
-        public OrchidService(IOrchidRepository orchidRepository, IFirebaseService firebaseService, IMapper mapper)
+        public OrchidService(IOrchidRepository orchidRepository, IFirebaseService firebaseService, IMapper mapper, IDepositRequestRepository depositRequestRepository)
         {
             _orchidRepository = orchidRepository;
             _firebaseService = firebaseService;
             _mapper = mapper;
+            _depositRequestRepository = depositRequestRepository;
         }
         public class AddOrchidException : Exception
         {
@@ -75,6 +78,8 @@ namespace Services.Orchid
             public enum StatusCodeEnum
             {
                 DeleteOrchidFailed,
+                OrchidAlreadyInDepositRequest,
+                OrchidNotFound
             }
             public StatusCodeEnum StatusCode { get; }
             public override string Message { get; }
@@ -143,7 +148,13 @@ namespace Services.Orchid
             var existingOrchid = await _orchidRepository.GetByIdAsync(request.Data.OrchidId);
             if (existingOrchid == null)
             {
-                throw new GetOrchidException(GetOrchidException.StatusCodeEnum.OrchidNotFound, "Orchid not found");
+                throw new DeleteOrchidException(DeleteOrchidException.StatusCodeEnum.OrchidNotFound, "Orchid not found");
+            }
+
+            var existingDepositRequest = await _depositRequestRepository.GetByOrchidId(request.Data.OrchidId);
+            if (existingDepositRequest != null)
+            {
+                throw new DeleteOrchidException(DeleteOrchidException.StatusCodeEnum.OrchidAlreadyInDepositRequest, "Orchid has already in deposit request");
             }
 
             await _orchidRepository.DeleteAsync(existingOrchid.OrchidId);

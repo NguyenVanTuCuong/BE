@@ -129,6 +129,10 @@ namespace BE.Controllers
             {
                 switch (e.StatusCode)
                 {
+                    case DeleteOrchidException.StatusCodeEnum.OrchidNotFound:
+                        return NotFound(e.Message);
+                    case DeleteOrchidException.StatusCodeEnum.OrchidAlreadyInDepositRequest:
+                        return StatusCode(400, e.Message);
                     default:
                         return StatusCode(500, e.Message);
                 }

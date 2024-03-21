@@ -108,7 +108,7 @@
   {
     "ContainingType": "BE.Controllers.DepositRequestController",
     "Method": "GetAllDepositRequestPagination",
-    "RelativePath": "api/deposit-request/all",
+    "RelativePath": "api/deposit-request",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -233,6 +233,11 @@
       },
       {
         "Name": "DepositStatus",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ApprovalStatus",
         "Type": "System.String",
         "IsRequired": false
       }

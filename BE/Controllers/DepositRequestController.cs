@@ -103,7 +103,7 @@ namespace BE.Controllers
         {
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
             var depositRequest = await _depositRequestService.GetAllDepositRequestPagination(skip, top);
-            return Ok(new GetDepositRequestDTO.GetDepositResponse
+            return Ok(new GetDepositRequestDTO.GetDepositRequestResponse
             {
                 Data = depositRequest,
                 AuthTokens = new AuthTokens
@@ -119,7 +119,7 @@ namespace BE.Controllers
         {
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
             var depositRequest = await _depositRequestService.GetDepositRequestByUserIdPagination(userId, skip, top);
-            return Ok(new GetDepositRequestDTO.GetDepositResponse
+            return Ok(new GetDepositRequestDTO.GetDepositRequestResponse
             {
                 Data = depositRequest,
                 AuthTokens = new AuthTokens
@@ -127,6 +127,35 @@ namespace BE.Controllers
                     AccessToken = await _jwtService.GenerateToken(userId.Value),
                 }
             });
+        }
+
+        [Authorize]
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetDepositRequestById(Guid id)
+        {
+            var userId = _jwtService.GetUserIdFromContext(HttpContext);
+            try
+            {
+                var depositRequest = await _depositRequestService.GetDepositRequestById(id);
+                return Ok(new GetDepositRequestDTO.GetOneDepositRequestResponse
+                {
+                    Data = depositRequest,
+                    AuthTokens = new AuthTokens
+                    {
+                        AccessToken = await _jwtService.GenerateToken(userId.Value),
+                    }
+                });
+            }
+            catch (GetDepositRequestException e)
+            {
+                switch (e.StatusCode)
+                {
+                    case GetDepositRequestException.StatusCodeEnum.DepositRequestNotFound:
+                        return NotFound(e.Message);
+                    default:
+                        return StatusCode(500, e.Message);
+                }
+            }
         }
     }
 }

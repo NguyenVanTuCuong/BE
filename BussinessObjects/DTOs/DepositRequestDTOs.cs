@@ -97,13 +97,17 @@ namespace BussinessObjects.DTOs
             public RequestStatus? RequestStatus { get; set; }
         }
 
-        public class GetDepositRequestListResponse
+        public class GetOneDepositRequestResponse : AuthResponse<DepositRequestDTO>
+        {
+        }
+
+        public class GetDepositRequestListResponseData
         {
             public IList<DepositRequestDTO>? Deposits { get; set; }
             public int Pages { get; set; }
         }
 
-        public class GetDepositResponse : AuthResponse<GetDepositRequestListResponse>
+        public class GetDepositRequestResponse : AuthResponse<GetDepositRequestListResponseData>
         {
         }
     }

@@ -12,7 +12,8 @@ namespace Services.DepositRequest
     {
         public Task<AddDepositRequestDTO.AddDepositRequestResponseData> AddDepositRequest(AddDepositRequestDTO.AddDepositRequestRequest request);
         public Task<UpdateDepositRequestDTO.UpdateDepositRequestResponseData> UpdateDepositRequest(UpdateDepositRequestDTO.UpdateDepositRequestRequest request);
-        public Task<GetDepositRequestDTO.GetDepositRequestListResponse> GetAllDepositRequestPagination(int skip, int top);
-        public Task<GetDepositRequestDTO.GetDepositRequestListResponse> GetDepositRequestByUserIdPagination(Guid? userId, int skip, int top);
+        public Task<GetDepositRequestDTO.GetDepositRequestListResponseData> GetAllDepositRequestPagination(int skip, int top);
+        public Task<GetDepositRequestDTO.DepositRequestDTO> GetDepositRequestById(Guid depositRequestId);
+        public Task<GetDepositRequestDTO.GetDepositRequestListResponseData> GetDepositRequestByUserIdPagination(Guid? userId, int skip, int top);
     }
 }

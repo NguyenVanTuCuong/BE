@@ -14,5 +14,6 @@ namespace Repositories.DepositRequest
     {
         public Task<List<BussinessObjects.Models.DepositRequest>> GetDepositRequestByUserIdPagination(Guid? userId);
         public Task<BussinessObjects.Models.DepositRequest> GetByOrchidIdAndLatestCreatedDate(Guid orchidId);
+        public Task<BussinessObjects.Models.DepositRequest> GetByOrchidId(Guid orchidId);
     }
 }
