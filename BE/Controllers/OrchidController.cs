@@ -1,4 +1,5 @@
-﻿using BussinessObjects.DTOs;
+﻿using AutoMapper;
+using BussinessObjects.DTOs;
 using BussinessObjects.Enums;
 using BussinessObjects.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -18,11 +19,13 @@ namespace BE.Controllers
     {
         private readonly IOrchidService _orchidService;
         private readonly IJwtService _jwtService;
+        private readonly IMapper _mapper;
 
-        public OrchidController(IOrchidService orchidService, IJwtService jwtService)
+        public OrchidController(IOrchidService orchidService, IJwtService jwtService, IMapper mapper)
         {
             _orchidService = orchidService;
             _jwtService = jwtService;
+            _mapper = mapper;
         }
 
         //Add orchid from dto
@@ -127,6 +130,34 @@ namespace BE.Controllers
                     default:
                         return StatusCode(500, e.Message);
                 }
+            }
+        }
+
+        [Authorize]
+        [HttpGet("owned")]
+        public async Task<IActionResult> GetOwnedOrchidsPagination(int skip, int top)
+        {
+            var userId = _jwtService.GetUserIdFromContext(HttpContext);
+            try
+            {
+                var orchids = await _orchidService.GetOwnedOrchidsPagination(userId.Value, skip, top);
+                return Ok(new GetOrchidDTO.GetOwnedOrchidListResponse()
+                {
+                    Data = new GetOrchidDTO.GetOwnedOrchidListResponseData
+                    {
+                        orchids = orchids.orchids,
+                        pages = orchids.pages
+                    },
+                    AuthTokens = new AuthTokens
+                    {
+                        AccessToken = await _jwtService.GenerateToken(userId.Value),
+                    }
+                }
+               );
+           }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
             }
         }
 

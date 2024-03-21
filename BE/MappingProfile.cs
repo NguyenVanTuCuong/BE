@@ -14,6 +14,7 @@ namespace BE
             CreateMap<GetProfileDTO.GetProfileResponseData, User>().ReverseMap();
 
             CreateMap<AddOrchidDTO.AddOrchidResponseData, Orchid>().ReverseMap();
+            CreateMap<GetOwnedOrchidListResponseData, GetOrchidListResponse>().ReverseMap();
             CreateMap<OrchidDTO, Orchid>().ReverseMap();
 
             CreateMap<AddDepositRequestDTO.AddDepositResponseData, Orchid>().ReverseMap();

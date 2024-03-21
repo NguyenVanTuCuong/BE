@@ -87,7 +87,6 @@ namespace Services.Auth
                 throw new SignUpException(SignUpException.StatusCodeEnum.UserEmailExisted, "User with this email has been existed.");
             }
 
-            request.Password = _sha256Service.Hash(request.Password);
             var mapped = new BussinessObjects.Models.User()
             {
                 Email = request.Email,

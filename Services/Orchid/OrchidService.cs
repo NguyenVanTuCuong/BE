@@ -195,5 +195,20 @@ namespace Services.Orchid
                 pages = maxPage
             };
         }
+
+        public async Task<GetOwnedOrchidListResponseData> GetOwnedOrchidsPagination(Guid ownerId, int skip, int top)
+        {
+            var queryable = await _orchidRepository.GetAllAsync();
+            var pagination = queryable.Where(orchid => orchid.OwnerId == ownerId).Skip(skip).Take(top).AsQueryable();
+            var totalCount = queryable.Count();
+            var maxPage = totalCount >= top ? Math.Ceiling((double)totalCount / top) : 1;
+            var response = _mapper.Map<IList<OrchidDTO>>(pagination);
+
+            return new GetOwnedOrchidListResponseData()
+            {
+                orchids = response,
+                pages = maxPage
+            };
+        }
     }
 }

@@ -23,7 +23,7 @@ namespace BE.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> AddDepositRequest([FromForm] AddDepositRequestDTO.AddDepositRequestData data)
+        public async Task<IActionResult> AddDepositRequest([FromBody] AddDepositRequestDTO.AddDepositRequestData data)
         {
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
             try
@@ -57,7 +57,7 @@ namespace BE.Controllers
 
         [Authorize]
         [HttpPut]
-        public async Task<IActionResult> UpdateDepositRequest([FromForm] UpdateDepositRequestDTO.UpdateDepositRequestData data)
+        public async Task<IActionResult> UpdateDepositRequest([FromBody] UpdateDepositRequestDTO.UpdateDepositRequestData data)
         {
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
             try
