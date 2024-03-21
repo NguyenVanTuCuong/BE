@@ -36,7 +36,7 @@ namespace BE.Controllers
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
             try
             {
-
+                //add with userId and all data from orchid request
                 var orchid = await _orchidService.AddOrchid(new AddOrchidDTO.AddOrchidRequest()
                 {
                     UserId = userId.Value,
@@ -70,6 +70,7 @@ namespace BE.Controllers
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
             try
             {
+                //update with data and user id
                 var orchid = await _orchidService.UpdateOrchid(new UpdateOrchidDTO.UpdateOrchidRequest()
                 {
                     UserId = userId.Value,
@@ -105,6 +106,7 @@ namespace BE.Controllers
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
             try
             {
+                //delete orchid with id
                 var orchid = await _orchidService.DeleteOrchid(new DeleteOrchidDTO.DeleteOrchidRequest()
                 {
                     UserId = userId.Value,
@@ -166,6 +168,7 @@ namespace BE.Controllers
         {
             try
             {
+                //get list orchid with pageSize and pageNumber
                 var orchids = await _orchidService.GetOrchidsPagination(skip, top);
                 return Ok(new GetOrchidDTO.GetOrchidListResponse
                 {
@@ -185,6 +188,7 @@ namespace BE.Controllers
         {
             try
             {
+                //get orchid by id
                 var orchids = await _orchidService.GetOrchidById(id);
                 return Ok(orchids);
             }
@@ -206,6 +210,7 @@ namespace BE.Controllers
         {
             try
             {
+                //search with name, description, depositStatus, pageNumber and pageSize
                 var orchids = await _orchidService.SearchOrchids(name, decription, depositStatus, skip, top);
 
                 return Ok(new GetOrchidDTO.GetOrchidListResponse

@@ -18,8 +18,12 @@ using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+// add automapper
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
+
+// add scoped
 builder.Services.AddControllers().AddJsonOptions(options =>
  options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 
@@ -41,6 +45,7 @@ builder.Services.AddTransient<IDepositRequestService, DepositRequestService>();
 
 builder.Services.AddEndpointsApiExplorer();
 
+//config swagger
 builder.Services.AddSwaggerGen(option =>
 {
     option.SwaggerDoc("v1", new OpenApiInfo { Title = "Demo API", Version = "v1" });
@@ -69,6 +74,7 @@ builder.Services.AddSwaggerGen(option =>
     });
 });
 
+//add authentication
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(option =>
 {
     option.TokenValidationParameters = new TokenValidationParameters
