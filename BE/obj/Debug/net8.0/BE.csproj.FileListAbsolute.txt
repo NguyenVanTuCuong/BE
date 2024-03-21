@@ -386,3 +386,11 @@ C:\Users\StarCii\Desktop\Repositories\BE\BE\obj\Debug\net8.0\refint\BE.dll
 C:\Users\StarCii\Desktop\Repositories\BE\BE\obj\Debug\net8.0\BE.pdb
 C:\Users\StarCii\Desktop\Repositories\BE\BE\obj\Debug\net8.0\BE.genruntimeconfig.cache
 C:\Users\StarCii\Desktop\Repositories\BE\BE\obj\Debug\net8.0\ref\BE.dll
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\Google.Protobuf.dll
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\Grpc.AspNetCore.Server.dll
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\Grpc.AspNetCore.Server.ClientFactory.dll
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\Grpc.Core.Api.dll
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\Grpc.Net.Client.dll
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\Grpc.Net.ClientFactory.dll
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\bin\Debug\net8.0\Grpc.Net.Common.dll
+C:\Users\huynh\OneDrive\Máy tính\233\BE\BE\obj\Debug\net8.0\BE.MvcApplicationPartsAssemblyInfo.cs

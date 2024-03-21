@@ -1,26 +1,5 @@
 [
   {
-    "ContainingType": "BE.Controllers.DepositRequestController",
-    "Method": "GetAllDepositRequestPagination",
-    "RelativePath": "all",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "skip",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "top",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "BE.Controllers.AuthController",
     "Method": "GetProfile",
     "RelativePath": "api/auth/get-profile",
@@ -103,24 +82,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "OrchidId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "Title",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Description",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "WalletAddress",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "data",
+        "Type": "BussinessObjects.DTOs.AddDepositRequestDTO\u002BAddDepositRequestRequestData",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -134,33 +98,50 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "DepositRequestId",
-        "Type": "System.Guid",
+        "Name": "data",
+        "Type": "BussinessObjects.DTOs.UpdateDepositRequestDTO\u002BUpdateDepositRequestRequestData",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BE.Controllers.DepositRequestController",
+    "Method": "GetAllDepositRequestPagination",
+    "RelativePath": "api/deposit-request/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "skip",
+        "Type": "System.Int32",
         "IsRequired": false
       },
       {
-        "Name": "OrchidId",
-        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Name": "top",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BE.Controllers.DepositRequestController",
+    "Method": "GetDepositRequestByUserIdPagination",
+    "RelativePath": "api/deposit-request/owned",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "skip",
+        "Type": "System.Int32",
         "IsRequired": false
       },
       {
-        "Name": "Title",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Description",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "WalletAddress",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "requestStatus",
-        "Type": "System.String",
+        "Name": "top",
+        "Type": "System.Int32",
         "IsRequired": false
       }
     ],
@@ -313,6 +294,27 @@
   },
   {
     "ContainingType": "BE.Controllers.OrchidController",
+    "Method": "GetOwnedOrchidsPagination",
+    "RelativePath": "api/orchid/owned",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "skip",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "top",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BE.Controllers.OrchidController",
     "Method": "SearchOrchids",
     "RelativePath": "api/orchid/search",
     "HttpMethod": "GET",
@@ -450,27 +452,6 @@
         "Type": "System.String",
         "IsRequired": false
       },
-      {
-        "Name": "skip",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "top",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BE.Controllers.DepositRequestController",
-    "Method": "GetDepositRequestByUserIdPagination",
-    "RelativePath": "curent-user",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
       {
         "Name": "skip",
         "Type": "System.Int32",

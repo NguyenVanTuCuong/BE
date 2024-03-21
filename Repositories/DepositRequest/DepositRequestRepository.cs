@@ -27,5 +27,17 @@ namespace Repositories.DepositRequest
 
             return depositRequests;
         }
+
+        public async Task<BussinessObjects.Models.DepositRequest> GetByOrchidIdAndLatestCreatedDate(Guid orchidId)
+        {
+            //get deposit request by orchid id and latest created date
+            var depositRequest = await _context.DepositRequests
+                .Include(dr => dr.Orchid)
+                .Where(dr => dr.OrchidId == orchidId)
+                .OrderByDescending(dr => dr.CreatedAt)
+                .FirstOrDefaultAsync();
+
+            return depositRequest;
+        }
     }
 }

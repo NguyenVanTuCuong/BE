@@ -99,6 +99,7 @@ namespace Services.Orchid
                 Species = request.Data.Json.Species,
                 OwnerId = request.UserId,
                 DepositedStatus = DepositStatus.Available,
+                ApprovalStatus = ApprovalStatus.Available,
             };
 
             var created = await _orchidRepository.AddAsync(orchid);
@@ -117,6 +118,7 @@ namespace Services.Orchid
                 throw new UpdateOrchidException(UpdateOrchidException.StatusCodeEnum.OrchidNotFound, "Orchid not found");
             }
             existingOrchid.DepositedStatus = request.Data.DepositStatus ?? existingOrchid.DepositedStatus;
+            existingOrchid.ApprovalStatus = request.Data.ApprovalStatus ?? existingOrchid.ApprovalStatus;
             existingOrchid.Name = request.Data.Json.Name ?? existingOrchid.Name;
             existingOrchid.Description = request.Data.Json.Description ?? existingOrchid.Description;
             existingOrchid.Color = request.Data.Json.Color ?? existingOrchid.Color;
@@ -162,8 +164,8 @@ namespace Services.Orchid
 
             return new GetOrchidListResponse
             {
-                orchids = response,
-                pages = maxPage
+                Orchids = response,
+                Pages = (int)maxPage
             };
         }
 
@@ -191,8 +193,8 @@ namespace Services.Orchid
 
             return new GetOrchidListResponse
             {
-                orchids = response,
-                pages = maxPage
+                Orchids = response,
+                Pages = (int)maxPage
             };
         }
 
@@ -206,8 +208,8 @@ namespace Services.Orchid
 
             return new GetOwnedOrchidListResponseData()
             {
-                orchids = response,
-                pages = maxPage
+                Orchids = response,
+                Pages = (int)maxPage
             };
         }
     }

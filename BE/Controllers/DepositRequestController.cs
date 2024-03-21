@@ -23,19 +23,19 @@ namespace BE.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> AddDepositRequest([FromBody] AddDepositRequestDTO.AddDepositRequestData data)
+        public async Task<IActionResult> AddDepositRequest([FromBody] AddDepositRequestDTO.AddDepositRequestRequestData data)
         {
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
             try
             {
 
-                var depositRequest = await _depositRequestService.AddDepositRequest(new AddDepositRequestDTO.AddDepositRequest()
+                var depositRequest = await _depositRequestService.AddDepositRequest(new AddDepositRequestDTO.AddDepositRequestRequest()
                 {
                     UserId = userId.Value,
                     Data = data,
                 });
 
-                return Created("null", new AddDepositRequestDTO.AddDepositResponse
+                return Created("null", new AddDepositRequestDTO.AddDepositRequestResponse
                 {
                     Data = depositRequest,
                     AuthTokens = new AuthTokens
@@ -49,6 +49,12 @@ namespace BE.Controllers
             {
                 switch (e.StatusCode)
                 {
+                    case DepositRequestService.AddDepositRequestException.StatusCodeEnum.OrchidNotFound:
+                        return NotFound(e.Message);
+                    case DepositRequestService.AddDepositRequestException.StatusCodeEnum.OrchidAlreadySentForApproval:
+                        return StatusCode(400, e.Message);
+                    case DepositRequestService.AddDepositRequestException.StatusCodeEnum.DepositRequestIsPending:
+                        return StatusCode(400, e.Message);
                     default:
                         return StatusCode(500, e.Message);
                 }
@@ -57,19 +63,19 @@ namespace BE.Controllers
 
         [Authorize]
         [HttpPut]
-        public async Task<IActionResult> UpdateDepositRequest([FromBody] UpdateDepositRequestDTO.UpdateDepositRequestData data)
+        public async Task<IActionResult> UpdateDepositRequest([FromBody] UpdateDepositRequestDTO.UpdateDepositRequestRequestData data)
         {
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
             try
             {
 
-                var depositRequest = await _depositRequestService.UpdateDepositRequest(new UpdateDepositRequestDTO.UpdateDepositRequest()
+                var depositRequest = await _depositRequestService.UpdateDepositRequest(new UpdateDepositRequestDTO.UpdateDepositRequestRequest()
                 {
                     UserId = userId.Value,
                     Data = data,
                 });
 
-                return Ok(new UpdateDepositRequestDTO.UpdateDepositResponse
+                return Ok(new UpdateDepositRequestDTO.UpdateDepositRequestResponse
                 {
                     Data = depositRequest,
                     AuthTokens = new AuthTokens
@@ -92,12 +98,12 @@ namespace BE.Controllers
         }
 
         [Authorize(Roles = "Administrator")]
-        [HttpGet("/all")]
+        [HttpGet]
         public async Task<IActionResult> GetAllDepositRequestPagination(int skip, int top)
         {
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
             var depositRequest = await _depositRequestService.GetAllDepositRequestPagination(skip, top);
-            return Ok(new GetDepositDTO.GetDepositResponse
+            return Ok(new GetDepositRequestDTO.GetDepositResponse
             {
                 Data = depositRequest,
                 AuthTokens = new AuthTokens
@@ -108,12 +114,12 @@ namespace BE.Controllers
         }
 
         [Authorize]
-        [HttpGet("/curent-user")]
+        [HttpGet("owned")]
         public async Task<IActionResult> GetDepositRequestByUserIdPagination(int skip, int top)
         {
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
             var depositRequest = await _depositRequestService.GetDepositRequestByUserIdPagination(userId, skip, top);
-            return Ok(new GetDepositDTO.GetDepositResponse
+            return Ok(new GetDepositRequestDTO.GetDepositResponse
             {
                 Data = depositRequest,
                 AuthTokens = new AuthTokens
