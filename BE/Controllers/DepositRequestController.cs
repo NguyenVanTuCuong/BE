@@ -92,7 +92,7 @@ namespace BE.Controllers
         }
 
         [Authorize(Roles = "Administrator")]
-        [HttpGet("/all")]
+        [HttpGet("all")]
         public async Task<IActionResult> GetAllDepositRequestPagination(int skip, int top)
         {
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
@@ -106,16 +106,18 @@ namespace BE.Controllers
                 }
             });
         }
-
         [Authorize]
-        [HttpGet("/curent-user")]
-        public async Task<IActionResult> GetDepositRequestByUserIdPagination(int skip, int top)
+        [HttpPatch("review")]
+        public async Task<IActionResult> ReviewDepositRequest([FromBody] ReviewDepositRequestDTO.ReviewDepositRequestData data)
         {
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
-            var depositRequest = await _depositRequestService.GetDepositRequestByUserIdPagination(userId, skip, top);
-            return Ok(new GetDepositDTO.GetDepositResponse
+            var req = await _depositRequestService.ReviewDepositRequest(new ()
             {
-                Data = depositRequest,
+                UserId = userId.Value,
+                Data = data
+            });
+            return Ok(new ReviewDepositRequestDTO.ReviewDepositResponse
+            {
                 AuthTokens = new AuthTokens
                 {
                     AccessToken = await _jwtService.GenerateToken(userId.Value),

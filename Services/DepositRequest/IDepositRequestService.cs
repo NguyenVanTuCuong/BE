@@ -10,9 +10,10 @@ namespace Services.DepositRequest
 {
     public interface IDepositRequestService
     {
+        public Task<AddDepositRequestDTO.AddDepositResponseData> DepositRequest(AddDepositRequestDTO.AddDepositRequest request);
         public Task<AddDepositRequestDTO.AddDepositResponseData> AddDepositRequest(AddDepositRequestDTO.AddDepositRequest request);
         public Task<UpdateDepositRequestDTO.UpdateDepositResponseData> UpdateDepositRequest(UpdateDepositRequestDTO.UpdateDepositRequest request);
         public Task<GetDepositDTO.GetDepositListResponse> GetAllDepositRequestPagination(int skip, int top);
-        public Task<GetDepositDTO.GetDepositListResponse> GetDepositRequestByUserIdPagination(Guid? userId, int skip, int top);
+        public Task<ReviewDepositRequestDTO.ReviewDepositResponseData> ReviewDepositRequest(ReviewDepositRequestDTO.ReviewDepositRequest request);
     }
 }

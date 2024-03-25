@@ -13,5 +13,6 @@ namespace Repositories.DepositRequest
     public interface IDepositRequestRepository : IGenericRepository<BussinessObjects.Models.DepositRequest>
     {
         public Task<List<BussinessObjects.Models.DepositRequest>> GetDepositRequestByUserIdPagination(Guid? userId);
+        public Task<List<BussinessObjects.Models.DepositRequest>> GetAllIncludesAsync();
     }
 }

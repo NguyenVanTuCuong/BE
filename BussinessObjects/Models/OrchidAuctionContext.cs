@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace BussinessObjects.Models;
 
@@ -21,8 +22,17 @@ public partial class OrchidAuctionContext : DbContext
     public virtual DbSet<DepositRequest> DepositRequests { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=(local);uid=sa;pwd=12345;database=OrchidAuction;TrustServerCertificate=True;");
+        => optionsBuilder.UseSqlServer(GetConnectionString());
+
+        private string GetConnectionString()
+        {
+            IConfiguration config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", true, true)
+                .Build();
+        return config.GetConnectionString("Db");
+        }
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -38,6 +48,7 @@ public partial class OrchidAuctionContext : DbContext
             entity.Property(e => e.Species).HasMaxLength(50);
             entity.Property(e => e.Origin).HasMaxLength(50);
             entity.Property(e => e.DepositedStatus).HasDefaultValue(Enums.DepositStatus.Available);
+            entity.Property(e => e.ApprovalStatus).HasDefaultValue(Enums.ApprovalStatus.Available);
 
             entity.Property(e => e.CreatedAt)
                 .HasColumnType("datetime2")

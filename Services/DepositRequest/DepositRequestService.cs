@@ -109,7 +109,7 @@ namespace Services.DepositRequest
             existingRequest.Description = request.Data.Description ?? existingRequest.Description;
             existingRequest.RequestStatus = request.Data.requestStatus ?? existingRequest.RequestStatus;
             existingRequest.UpdatedAt = DateTime.Now;
-            await _depositRequestRepository.UpdateAsync(existingRequest.DepositRequestId, existingRequest);      
+            await _depositRequestRepository.UpdateAsync(existingRequest.DepositRequestId, existingRequest);
 
             return new UpdateDepositRequestDTO.UpdateDepositResponseData()
             {
@@ -119,8 +119,8 @@ namespace Services.DepositRequest
 
         public async Task<GetDepositDTO.GetDepositListResponse> GetAllDepositRequestPagination(int skip, int top)
         {
-            var queryable = await _depositRequestRepository.GetAllAsync();
-            var pagination = queryable.Skip(skip).Take(top).AsQueryable();
+            var queryable = await _depositRequestRepository.GetAllIncludesAsync();
+            var pagination = queryable.Skip(skip).Take(top).Reverse().AsQueryable();
             var totalCount = queryable.Count();
             var maxPage = totalCount >= top ? Math.Ceiling((double)totalCount / top) : 1;
             var response = _mapper.Map<IList<GetDepositDTO.DepositDTO>>(pagination);
@@ -144,6 +144,55 @@ namespace Services.DepositRequest
                 deposits = response,
                 pages = maxPage
             };
+        }
+
+        public class ReviewDepositRequestException : Exception
+        {
+            public enum StatusCodeEnum
+            {
+                AlreadyReviewd
+            }
+            public StatusCodeEnum StatusCode { get; }
+            public override string Message { get; }
+
+            public ReviewDepositRequestException(StatusCodeEnum statusCode, string message)
+            {
+                StatusCode = statusCode;
+                Message = message;
+            }
+        }
+
+        public async Task<ReviewDepositRequestDTO.ReviewDepositResponseData> ReviewDepositRequest(ReviewDepositRequestDTO.ReviewDepositRequest request)
+        {
+            var depositRequest = await _depositRequestRepository.GetByIdAsync(request.Data.DepositRequestId);
+            if (depositRequest.RequestStatus != RequestStatus.Pending) throw new ReviewDepositRequestException(ReviewDepositRequestException.StatusCodeEnum.AlreadyReviewd, "Already reviewed");
+
+            depositRequest.RequestStatus = request.Data.RequestStatus;
+            await _depositRequestRepository.UpdateAsync(depositRequest.DepositRequestId, depositRequest);
+
+            var orchid = await _orchidRepository.GetByIdAsync(depositRequest.OrchidId);
+            await _orchidRepository.UpdateAsync(orchid.OrchidId, orchid);
+
+            orchid.ApprovalStatus = ApprovalStatus.Available;
+
+            if (request.Data.RequestStatus == RequestStatus.Approved)
+            {
+                orchid.DepositedStatus = DepositStatus.Deposited;
+            }
+            else
+            {
+                orchid.DepositedStatus = DepositStatus.Available;
+            }
+
+            return new ReviewDepositRequestDTO.ReviewDepositResponseData()
+            {
+
+            };
+        }
+
+        public Task<AddDepositRequestDTO.AddDepositResponseData> DepositRequest(AddDepositRequestDTO.AddDepositRequest request)
+        {
+            throw new NotImplementedException();
         }
     }
 }

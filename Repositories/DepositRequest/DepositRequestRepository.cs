@@ -18,6 +18,15 @@ namespace Repositories.DepositRequest
         {
             _context = new OrchidAuctionContext();
         }
+
+        public async Task<List<BussinessObjects.Models.DepositRequest>> GetAllIncludesAsync()
+        {
+            var depositRequests = await _context.DepositRequests
+            .Include(dr => dr.Orchid)
+            .ToListAsync();
+            return depositRequests;
+        }
+
         public async Task<List<BussinessObjects.Models.DepositRequest>> GetDepositRequestByUserIdPagination(Guid? userId)
         {
             var depositRequests = await _context.DepositRequests

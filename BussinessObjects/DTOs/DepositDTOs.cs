@@ -41,7 +41,7 @@ namespace BussinessObjects.DTOs
             public Guid? OrchidId { get; set; }
             public string? Title { get; set; }
             public string? Description { get; set; }
-            public string WalletAddress { get; set; }
+            public string? WalletAddress { get; set; }
             public RequestStatus? requestStatus { get; set; }
         }
 
@@ -69,7 +69,11 @@ namespace BussinessObjects.DTOs
             public string? Title { get; set; }
             public string? Description { get; set; }
             public string WalletAddress { get; set; }
+            public DateTime CreatedAt {  get; set; }
+            public DateTime UpdatedAt { get; set; }
+
             public RequestStatus? RequestStatus { get; set; }
+            public OrchidDTO Orchid { get; set; }
         }
 
         public class GetDepositListResponse
@@ -82,4 +86,27 @@ namespace BussinessObjects.DTOs
         {
         }
     }
+
+    public class ReviewDepositRequestDTO
+    {
+        public class ReviewDepositRequestData
+        {
+            public Guid DepositRequestId { get; set; }
+            public RequestStatus RequestStatus {  get; set; }
+        }
+
+        public class ReviewDepositRequest : AuthRequest<ReviewDepositRequestData>
+        {
+
+        }
+
+        public class ReviewDepositResponseData
+        {
+        }
+
+        public class ReviewDepositResponse : AuthResponse<ReviewDepositResponseData>
+        {
+        }
+    }
+
 }

@@ -45,10 +45,10 @@ namespace Services.Blockchain
             
             var orchid = await _orchidRepository.GetByIdAsync(data.OrchidId);
 
-                if (orchid.DepositedStatus == DepositStatus.Deposited)
-            {
-                throw new DepositForNftException(DepositForNftException.StatusCodeEnum.AlreadyDeposited, "Already deposited.");
-            }
+            //    if (orchid.DepositedStatus == DepositStatus.Deposited)
+            //{
+            //    throw new DepositForNftException(DepositForNftException.StatusCodeEnum.AlreadyDeposited, "Already deposited.");
+            //}
 
             orchid.DepositedStatus = DepositStatus.Deposited;
             await _orchidRepository.UpdateAsync(orchid.OrchidId, orchid);
@@ -111,6 +111,8 @@ namespace Services.Blockchain
 
             var orchid = await _orchidRepository.GetByIdAsync(Guid.Parse(response.OrchidId));
             orchid.DepositedStatus = DepositStatus.Available;
+            orchid.ApprovalStatus = ApprovalStatus.Available;
+            orchid.OwnerId = userId;
             await _orchidRepository.UpdateAsync(orchid.OrchidId, orchid);
 
             if (orchid.OwnerId != userId) throw new WithdrawNftException(WithdrawNftException.StatusCodeEnum.NotOwned, "You are not the owned of this orchid.");
