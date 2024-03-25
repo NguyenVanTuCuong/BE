@@ -83,6 +83,7 @@ namespace BE.Controllers
             }
         }
 
+        // Get Profile
         [Authorize]
         [HttpGet("get-profile")]
         public async Task<IActionResult> GetProfile()
