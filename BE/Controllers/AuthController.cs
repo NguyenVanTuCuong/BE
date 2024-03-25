@@ -54,6 +54,8 @@ namespace BE.Controllers
             }
         }
 
+
+        // Sign-Up
         [AllowAnonymous]
         [HttpPost("sign-up")]
         public async Task<IActionResult> SignUp([FromBody] SignUpDTO.SignUpRequest data)
