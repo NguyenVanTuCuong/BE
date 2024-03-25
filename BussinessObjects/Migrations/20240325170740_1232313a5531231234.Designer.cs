@@ -4,6 +4,7 @@ using BussinessObjects.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BussinessObjects.Migrations
 {
     [DbContext(typeof(OrchidAuctionContext))]
-    partial class OrchidAuctionContextModelSnapshot : ModelSnapshot
+    [Migration("20240325170740_1232313a5531231234")]
+    partial class _1232313a5531231234
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -75,8 +78,7 @@ namespace BussinessObjects.Migrations
                     b.Property<int>("ApprovalStatus")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasDefaultValue(0)
-                        .HasColumnName("ApprovalStatus");
+                        .HasDefaultValue(0);
 
                     b.Property<string>("Color")
                         .HasMaxLength(50)
@@ -90,8 +92,7 @@ namespace BussinessObjects.Migrations
                     b.Property<int>("DepositedStatus")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasDefaultValue(0)
-                        .HasColumnName("DepositedStatus");
+                        .HasDefaultValue(0);
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)

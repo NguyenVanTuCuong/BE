@@ -29,4 +29,5 @@ public partial class Orchid
     public DateTime UpdatedAt { get; set; }
 
     public virtual ICollection<DepositRequest> DepositRequests { get; set; } = new List<DepositRequest>();
+    public virtual ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();
 }

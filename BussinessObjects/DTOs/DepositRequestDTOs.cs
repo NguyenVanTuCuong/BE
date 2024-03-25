@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static BussinessObjects.DTOs.GetOrchidDTO;
 
 namespace BussinessObjects.DTOs
 {
@@ -22,9 +23,6 @@ namespace BussinessObjects.DTOs
             [MinLength(1, ErrorMessage = "Description must be at least 1 characters")]
             [MaxLength(255, ErrorMessage = "Description can not be more than 255 characters")]
             public string? Description { get; set; }
-
-            [Required(ErrorMessage = "WalletAddress is required")]
-            [MaxLength(100, ErrorMessage = "WalletAddress can not be more than 100 characters")]
             public string WalletAddress { get; set; }
         }
 
@@ -46,26 +44,17 @@ namespace BussinessObjects.DTOs
     {
         public class UpdateDepositRequestRequestData
         {
-            [Required(ErrorMessage = "DepositRequestId is required")]
             public Guid DepositRequestId { get; set; }
 
-            [Required(ErrorMessage = "OrchidId is required")]
-            public Guid OrchidId { get; set; }
+            public Guid? OrchidId { get; set; }
 
-            [MinLength(1, ErrorMessage = "Title must be at least 1 characters")]
-            [MaxLength(255, ErrorMessage = "Title can not be more than 255 characters")]
             public string? Title { get; set; }
 
-            [MinLength(1, ErrorMessage = "Description must be at least 1 characters")]
-            [MaxLength(255, ErrorMessage = "Description can not be more than 255 characters")]
             public string? Description { get; set; }
 
-            [Required(ErrorMessage = "WalletAddress is required")]
-            [MaxLength(100, ErrorMessage = "WalletAddress can not be more than 100 characters")]
-            public string WalletAddress { get; set; }
+            public string? WalletAddress { get; set; }
 
-            [Required(ErrorMessage = "RequestStatus is required")]
-            public RequestStatus? requestStatus { get; set; }
+            public RequestStatus? RequestStatus { get; set; }
         }
 
         public class UpdateDepositRequestRequest : AuthRequest<UpdateDepositRequestRequestData>
@@ -93,6 +82,9 @@ namespace BussinessObjects.DTOs
             public string? Description { get; set; }
             public string WalletAddress { get; set; }
             public RequestStatus? RequestStatus { get; set; }
+            public DateTime CreatedAt { get; set; }
+            public DateTime UpdatedAt { get; set; }
+            public OrchidDTO Orchid { get; set; }
         }
 
         public class GetOneDepositRequestResponse : AuthResponse<DepositRequestDTO>

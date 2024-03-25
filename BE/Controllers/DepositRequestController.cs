@@ -98,7 +98,7 @@ namespace BE.Controllers
         }
 
         [Authorize(Roles = "Administrator")]
-        [HttpGet("/all")]
+        [HttpGet("all")]
         public async Task<IActionResult> GetAllDepositRequestPagination(int skip, int top)
         {
             var userId = _jwtService.GetUserIdFromContext(HttpContext);

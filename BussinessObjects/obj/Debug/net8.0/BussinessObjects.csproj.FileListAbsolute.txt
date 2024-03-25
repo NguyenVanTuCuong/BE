@@ -1,0 +1,15 @@
+C:\Users\tucuo\OneDrive\Desktop\BE\BussinessObjects\bin\Debug\net8.0\BussinessObjects.deps.json
+C:\Users\tucuo\OneDrive\Desktop\BE\BussinessObjects\bin\Debug\net8.0\BussinessObjects.runtimeconfig.json
+C:\Users\tucuo\OneDrive\Desktop\BE\BussinessObjects\bin\Debug\net8.0\BussinessObjects.dll
+C:\Users\tucuo\OneDrive\Desktop\BE\BussinessObjects\bin\Debug\net8.0\BussinessObjects.pdb
+C:\Users\tucuo\OneDrive\Desktop\BE\BussinessObjects\obj\Debug\net8.0\BussinessObjects.csproj.AssemblyReference.cache
+C:\Users\tucuo\OneDrive\Desktop\BE\BussinessObjects\obj\Debug\net8.0\BussinessObjects.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tucuo\OneDrive\Desktop\BE\BussinessObjects\obj\Debug\net8.0\BussinessObjects.AssemblyInfoInputs.cache
+C:\Users\tucuo\OneDrive\Desktop\BE\BussinessObjects\obj\Debug\net8.0\BussinessObjects.AssemblyInfo.cs
+C:\Users\tucuo\OneDrive\Desktop\BE\BussinessObjects\obj\Debug\net8.0\BussinessObjects.csproj.CoreCompileInputs.cache
+C:\Users\tucuo\OneDrive\Desktop\BE\BussinessObjects\obj\Debug\net8.0\BussinessObjects.sourcelink.json
+C:\Users\tucuo\OneDrive\Desktop\BE\BussinessObjects\obj\Debug\net8.0\BussinessObjects.dll
+C:\Users\tucuo\OneDrive\Desktop\BE\BussinessObjects\obj\Debug\net8.0\refint\BussinessObjects.dll
+C:\Users\tucuo\OneDrive\Desktop\BE\BussinessObjects\obj\Debug\net8.0\BussinessObjects.pdb
+C:\Users\tucuo\OneDrive\Desktop\BE\BussinessObjects\obj\Debug\net8.0\BussinessObjects.genruntimeconfig.cache
+C:\Users\tucuo\OneDrive\Desktop\BE\BussinessObjects\obj\Debug\net8.0\ref\BussinessObjects.dll

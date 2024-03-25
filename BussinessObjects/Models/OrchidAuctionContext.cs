@@ -20,9 +20,10 @@ public partial class OrchidAuctionContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
     public virtual DbSet<DepositRequest> DepositRequests { get; set; }
+    public virtual DbSet<Transaction> Transactions { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer(GetConnectionString());
+        => optionsBuilder.UseSqlServer("Server=(local);uid=sa;pwd=12345;database=OrchidAuction;TrustServerCertificate=True");
 
         private string GetConnectionString()
         {
@@ -108,8 +109,29 @@ public partial class OrchidAuctionContext : DbContext
                 .HasConstraintName("FK_DepositRequest_Orchid");
         });
 
-        OnModelCreatingPartial(modelBuilder);
+
+        modelBuilder.Entity<Transaction>(entity =>
+        {
+            entity.ToTable("Transaction");
+
+            entity.Property(e => e.TransactionId).ValueGeneratedOnAdd();
+            entity.Property(e => e.Amount);
+            entity.Property(e => e.TransactionHash);
+            entity.Property(e => e.OrchidId);
+            entity.Property(e => e.CreatedAt)
+               .HasColumnType("datetime2")
+               .HasDefaultValueSql("SYSDATETIME()")
+               .ValueGeneratedOnAdd();
+
+            entity.HasOne(d => d.Orchid).WithMany(p => p.Transactions)
+                .HasForeignKey(d => d.OrchidId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Transaction_Orchid");
+        });
+
+    OnModelCreatingPartial(modelBuilder);
     }
+
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

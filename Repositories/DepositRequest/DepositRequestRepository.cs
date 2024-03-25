@@ -23,6 +23,7 @@ namespace Repositories.DepositRequest
         {
             var depositRequests = await _context.DepositRequests
             .Include(dr => dr.Orchid)
+            .OrderByDescending(dr => dr.CreatedAt)
             .ToListAsync();
             return depositRequests;
         }

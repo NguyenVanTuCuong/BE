@@ -126,7 +126,7 @@ namespace Services.DepositRequest
             existingRequest.Title = request.Data.Title ?? existingRequest.Title;
             existingRequest.Description = request.Data.Description ?? existingRequest.Description;
             existingRequest.WalletAddress = request.Data.WalletAddress ?? existingRequest.WalletAddress;
-            existingRequest.RequestStatus = request.Data.requestStatus ?? existingRequest.RequestStatus;
+            existingRequest.RequestStatus = request.Data.RequestStatus ?? existingRequest.RequestStatus;
             existingRequest.UpdatedAt = DateTime.Now;
             await _depositRequestRepository.UpdateAsync(existingRequest.DepositRequestId, existingRequest);
 
@@ -139,7 +139,7 @@ namespace Services.DepositRequest
         public async Task<GetDepositRequestDTO.GetDepositRequestListResponseData> GetAllDepositRequestPagination(int skip, int top)
         {
             var queryable = await _depositRequestRepository.GetAllIncludesAsync();
-            var pagination = queryable.Skip(skip).Take(top).Reverse().AsQueryable();
+            var pagination = queryable.Skip(skip).Take(top).AsQueryable();
             var totalCount = queryable.Count();
             var maxPage = totalCount >= top ? Math.Ceiling((double)totalCount / top) : 1;
             var response = _mapper.Map<IList<GetDepositRequestDTO.DepositRequestDTO>>(pagination);
