@@ -54,6 +54,8 @@ namespace BE.Controllers
             }
         }
 
+
+        // Sign-Up
         [AllowAnonymous]
         [HttpPost("sign-up")]
         public async Task<IActionResult> SignUp([FromBody] SignUpDTO.SignUpRequest data)
@@ -83,6 +85,7 @@ namespace BE.Controllers
             }
         }
 
+        // Get Profile
         [Authorize]
         [HttpGet("get-profile")]
         public async Task<IActionResult> GetProfile()
