@@ -1,5 +1,6 @@
 ﻿using BussinessObjects.Enums;
 using Microsoft.AspNetCore.Http;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 using static BussinessObjects.DTOs.UpdateOrchidDTO;
 
@@ -9,10 +10,24 @@ namespace BussinessObjects.DTOs
     {
         public class AddOrchidRequestJson
         {
+            [Required(ErrorMessage = "Name is required")]
+            [MaxLength(100, ErrorMessage = "Name can not be more than 100 characters")]
             public string Name { get; set; }
+
+            [MinLength(1, ErrorMessage = "Description must be at least 1 characters")]
+            [MaxLength(500, ErrorMessage = "Description can not be more than 500 characters")]
             public string? Description { get; set; }
+
+            [MinLength(1, ErrorMessage = "Color must be at least 1 characters")]
+            [MaxLength(50, ErrorMessage = "Color can not be more than 50 characters")]
             public string? Color { get; set; }
+
+            [MinLength(1, ErrorMessage = "Origin must be at least 1 characters")]
+            [MaxLength(50, ErrorMessage = "Origin can not be more than 50 characters")]
             public string? Origin { get; set; }
+
+            [MinLength(1, ErrorMessage = "Species must be at least 1 characters")]
+            [MaxLength(50, ErrorMessage = "Species can not be more than 50 characters")]
             public string? Species { get; set; }
         }
 
@@ -40,21 +55,34 @@ namespace BussinessObjects.DTOs
     {
         public class UpdateOrchidRequestJson
         {
+            [MaxLength(100, ErrorMessage = "Name can not be more than 100 characters")]
             public string? Name { get; set; }
+
+            [MaxLength(500, ErrorMessage = "Description can not be more than 500 characters")]
             public string? Description { get; set; }
+
+            [MaxLength(50, ErrorMessage = "Color can not be more than 50 characters")]
             public string? Color { get; set; }
+
+            [MaxLength(50, ErrorMessage = "Origin can not be more than 50 characters")]
             public string? Origin { get; set; }
+
+            [MaxLength(50, ErrorMessage = "Species can not be more than 50 characters")]
             public string? Species { get; set; }
         }
 
         public class UpdateOrchidRequestData
         {
+            [Required(ErrorMessage = "OrchidId is required")]
             public Guid OrchidId { get; set; }
             public UpdateOrchidRequestJson? Json { get; set; }
             public IFormFile? ImageFile { get; set; }
 
             [JsonConverter(typeof(JsonStringEnumConverter))]
             public DepositStatus? DepositStatus { get; set; }
+
+            [JsonConverter(typeof(JsonStringEnumConverter))]
+            public ApprovalStatus? ApprovalStatus { get; set; }
         }
 
         public class UpdateOrchidRequest : AuthRequest<UpdateOrchidRequestData>
@@ -78,6 +106,7 @@ namespace BussinessObjects.DTOs
         }
         public class DeleteOrchidRequestData
         {
+            [Required(ErrorMessage = "OrchidId is required")]
             public Guid OrchidId { get; set; }
         }
 
@@ -107,14 +136,14 @@ namespace BussinessObjects.DTOs
 
         public class GetOrchidListResponse
         {
-            public IList<OrchidDTO>? orchids { get; set; }
-            public double pages { get; set; }
+            public IList<OrchidDTO>? Orchids { get; set; }
+            public int Pages { get; set; }
         }
 
         public class GetOwnedOrchidListResponseData
         {
-            public IList<OrchidDTO>? orchids { get; set; }
-            public double pages { get; set; }
+            public IList<OrchidDTO>? Orchids { get; set; }
+            public int Pages { get; set; }
         }
         public class GetOwnedOrchidListResponse : AuthResponse<GetOwnedOrchidListResponseData>
         {

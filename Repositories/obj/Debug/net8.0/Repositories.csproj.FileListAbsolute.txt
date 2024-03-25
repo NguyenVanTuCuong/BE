@@ -1,64 +1,16 @@
-C:\Users\huynh\OneDrive\Máy tính\233\BE\Repositories\bin\Debug\net8.0\Repositories.deps.json
-C:\Users\huynh\OneDrive\Máy tính\233\BE\Repositories\bin\Debug\net8.0\Repositories.dll
-C:\Users\huynh\OneDrive\Máy tính\233\BE\Repositories\bin\Debug\net8.0\Repositories.pdb
-C:\Users\huynh\OneDrive\Máy tính\233\BE\Repositories\bin\Debug\net8.0\BussinessObjects.dll
-C:\Users\huynh\OneDrive\Máy tính\233\BE\Repositories\bin\Debug\net8.0\BussinessObjects.pdb
-C:\Users\huynh\OneDrive\Máy tính\233\BE\Repositories\obj\Debug\net8.0\Repositories.csproj.AssemblyReference.cache
-C:\Users\huynh\OneDrive\Máy tính\233\BE\Repositories\obj\Debug\net8.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\huynh\OneDrive\Máy tính\233\BE\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfoInputs.cache
-C:\Users\huynh\OneDrive\Máy tính\233\BE\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfo.cs
-C:\Users\huynh\OneDrive\Máy tính\233\BE\Repositories\obj\Debug\net8.0\Repositories.csproj.CoreCompileInputs.cache
-C:\Users\huynh\OneDrive\Máy tính\233\BE\Repositories\obj\Debug\net8.0\Repositories.sourcelink.json
-C:\Users\huynh\OneDrive\Máy tính\233\BE\Repositories\obj\Debug\net8.0\Reposito.787EC4B2.Up2Date
-C:\Users\huynh\OneDrive\Máy tính\233\BE\Repositories\obj\Debug\net8.0\Repositories.dll
-C:\Users\huynh\OneDrive\Máy tính\233\BE\Repositories\obj\Debug\net8.0\refint\Repositories.dll
-C:\Users\huynh\OneDrive\Máy tính\233\BE\Repositories\obj\Debug\net8.0\Repositories.pdb
-C:\Users\huynh\OneDrive\Máy tính\233\BE\Repositories\obj\Debug\net8.0\ref\Repositories.dll
-C:\Users\tucuo\OneDrive\Desktop\New folder\BE\Repositories\bin\Debug\net8.0\Repositories.deps.json
-C:\Users\tucuo\OneDrive\Desktop\New folder\BE\Repositories\bin\Debug\net8.0\Repositories.dll
-C:\Users\tucuo\OneDrive\Desktop\New folder\BE\Repositories\bin\Debug\net8.0\Repositories.pdb
-C:\Users\tucuo\OneDrive\Desktop\New folder\BE\Repositories\bin\Debug\net8.0\BussinessObjects.dll
-C:\Users\tucuo\OneDrive\Desktop\New folder\BE\Repositories\bin\Debug\net8.0\BussinessObjects.pdb
-C:\Users\tucuo\OneDrive\Desktop\New folder\BE\Repositories\obj\Debug\net8.0\Repositories.csproj.AssemblyReference.cache
-C:\Users\tucuo\OneDrive\Desktop\New folder\BE\Repositories\obj\Debug\net8.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\tucuo\OneDrive\Desktop\New folder\BE\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfoInputs.cache
-C:\Users\tucuo\OneDrive\Desktop\New folder\BE\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfo.cs
-C:\Users\tucuo\OneDrive\Desktop\New folder\BE\Repositories\obj\Debug\net8.0\Repositories.csproj.CoreCompileInputs.cache
-C:\Users\tucuo\OneDrive\Desktop\New folder\BE\Repositories\obj\Debug\net8.0\Repositories.sourcelink.json
-C:\Users\tucuo\OneDrive\Desktop\New folder\BE\Repositories\obj\Debug\net8.0\Repositories.csproj.CopyComplete
-C:\Users\tucuo\OneDrive\Desktop\New folder\BE\Repositories\obj\Debug\net8.0\Repositories.dll
-C:\Users\tucuo\OneDrive\Desktop\New folder\BE\Repositories\obj\Debug\net8.0\refint\Repositories.dll
-C:\Users\tucuo\OneDrive\Desktop\New folder\BE\Repositories\obj\Debug\net8.0\Repositories.pdb
-C:\Users\tucuo\OneDrive\Desktop\New folder\BE\Repositories\obj\Debug\net8.0\ref\Repositories.dll
-C:\Users\tucuo\OneDrive\Desktop\BE\Repositories\bin\Debug\net8.0\Repositories.deps.json
-C:\Users\tucuo\OneDrive\Desktop\BE\Repositories\bin\Debug\net8.0\Repositories.dll
-C:\Users\tucuo\OneDrive\Desktop\BE\Repositories\bin\Debug\net8.0\Repositories.pdb
-C:\Users\tucuo\OneDrive\Desktop\BE\Repositories\bin\Debug\net8.0\BussinessObjects.dll
-C:\Users\tucuo\OneDrive\Desktop\BE\Repositories\bin\Debug\net8.0\BussinessObjects.pdb
 C:\Users\tucuo\OneDrive\Desktop\BE\Repositories\obj\Debug\net8.0\Repositories.csproj.AssemblyReference.cache
 C:\Users\tucuo\OneDrive\Desktop\BE\Repositories\obj\Debug\net8.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\tucuo\OneDrive\Desktop\BE\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfoInputs.cache
 C:\Users\tucuo\OneDrive\Desktop\BE\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfo.cs
 C:\Users\tucuo\OneDrive\Desktop\BE\Repositories\obj\Debug\net8.0\Repositories.csproj.CoreCompileInputs.cache
 C:\Users\tucuo\OneDrive\Desktop\BE\Repositories\obj\Debug\net8.0\Repositories.sourcelink.json
+C:\Users\tucuo\OneDrive\Desktop\BE\Repositories\bin\Debug\net8.0\Repositories.deps.json
+C:\Users\tucuo\OneDrive\Desktop\BE\Repositories\bin\Debug\net8.0\Repositories.dll
+C:\Users\tucuo\OneDrive\Desktop\BE\Repositories\bin\Debug\net8.0\Repositories.pdb
+C:\Users\tucuo\OneDrive\Desktop\BE\Repositories\bin\Debug\net8.0\BussinessObjects.dll
+C:\Users\tucuo\OneDrive\Desktop\BE\Repositories\bin\Debug\net8.0\BussinessObjects.pdb
 C:\Users\tucuo\OneDrive\Desktop\BE\Repositories\obj\Debug\net8.0\Repositories.csproj.CopyComplete
 C:\Users\tucuo\OneDrive\Desktop\BE\Repositories\obj\Debug\net8.0\Repositories.dll
 C:\Users\tucuo\OneDrive\Desktop\BE\Repositories\obj\Debug\net8.0\refint\Repositories.dll
 C:\Users\tucuo\OneDrive\Desktop\BE\Repositories\obj\Debug\net8.0\Repositories.pdb
 C:\Users\tucuo\OneDrive\Desktop\BE\Repositories\obj\Debug\net8.0\ref\Repositories.dll
-C:\Users\StarCii\Desktop\Repositories\BE\Repositories\bin\Debug\net8.0\Repositories.deps.json
-C:\Users\StarCii\Desktop\Repositories\BE\Repositories\bin\Debug\net8.0\Repositories.dll
-C:\Users\StarCii\Desktop\Repositories\BE\Repositories\bin\Debug\net8.0\Repositories.pdb
-C:\Users\StarCii\Desktop\Repositories\BE\Repositories\bin\Debug\net8.0\BussinessObjects.dll
-C:\Users\StarCii\Desktop\Repositories\BE\Repositories\bin\Debug\net8.0\BussinessObjects.pdb
-C:\Users\StarCii\Desktop\Repositories\BE\Repositories\obj\Debug\net8.0\Repositories.csproj.AssemblyReference.cache
-C:\Users\StarCii\Desktop\Repositories\BE\Repositories\obj\Debug\net8.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\StarCii\Desktop\Repositories\BE\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfoInputs.cache
-C:\Users\StarCii\Desktop\Repositories\BE\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfo.cs
-C:\Users\StarCii\Desktop\Repositories\BE\Repositories\obj\Debug\net8.0\Repositories.csproj.CoreCompileInputs.cache
-C:\Users\StarCii\Desktop\Repositories\BE\Repositories\obj\Debug\net8.0\Repositories.sourcelink.json
-C:\Users\StarCii\Desktop\Repositories\BE\Repositories\obj\Debug\net8.0\Reposito.787EC4B2.Up2Date
-C:\Users\StarCii\Desktop\Repositories\BE\Repositories\obj\Debug\net8.0\Repositories.dll
-C:\Users\StarCii\Desktop\Repositories\BE\Repositories\obj\Debug\net8.0\refint\Repositories.dll
-C:\Users\StarCii\Desktop\Repositories\BE\Repositories\obj\Debug\net8.0\Repositories.pdb
-C:\Users\StarCii\Desktop\Repositories\BE\Repositories\obj\Debug\net8.0\ref\Repositories.dll

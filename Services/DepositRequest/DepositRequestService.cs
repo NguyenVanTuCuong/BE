@@ -41,7 +41,9 @@ namespace Services.DepositRequest
         {
             public enum StatusCodeEnum
             {
-                AddDepositFailed
+                OrchidNotFound,
+                OrchidAlreadySentForApproval,
+                DepositRequestIsPending
             }
             public StatusCodeEnum StatusCode { get; }
             public override string Message { get; }
@@ -76,8 +78,25 @@ namespace Services.DepositRequest
             _mapper = mapper;
             _orchidRepository = orchidRepository;
         }
-        public async Task<AddDepositRequestDTO.AddDepositResponseData> AddDepositRequest(AddDepositRequestDTO.AddDepositRequest request)
+        public async Task<AddDepositRequestDTO.AddDepositRequestResponseData> AddDepositRequest(AddDepositRequestDTO.AddDepositRequestRequest request)
         {
+            var orchid = await _orchidRepository.GetByIdAsync(request.Data.OrchidId);
+            if (orchid == null)
+            {
+                throw new AddDepositRequestException(AddDepositRequestException.StatusCodeEnum.OrchidNotFound, "Orchid not found");
+            }
+
+            if (orchid.ApprovalStatus == ApprovalStatus.Sented)
+            {
+                throw new AddDepositRequestException(AddDepositRequestException.StatusCodeEnum.OrchidAlreadySentForApproval, "Orchid already sent for approval");
+            }
+
+            //var existingRequest = await _depositRequestRepository.GetByOrchidIdAndLatestCreatedDate(request.Data.OrchidId);
+            //if (existingRequest != null && existingRequest.RequestStatus == RequestStatus.Pending)
+            //{
+            //    throw new AddDepositRequestException(AddDepositRequestException.StatusCodeEnum.DepositRequestIsPending, "Deposit request is already created and still pending");
+            //}
+            
             var depositRequest = new BussinessObjects.Models.DepositRequest()
             {
                 OrchidId = request.Data.OrchidId,
@@ -87,18 +106,17 @@ namespace Services.DepositRequest
                 RequestStatus = RequestStatus.Pending,
             };
             var created = await _depositRequestRepository.AddAsync(depositRequest);
-
-            var orchid = await _orchidRepository.GetByIdAsync(request.Data.OrchidId);
+            
             orchid.ApprovalStatus = ApprovalStatus.Sented;
             await _orchidRepository.UpdateAsync(request.Data.OrchidId, orchid);
 
-            return new AddDepositRequestDTO.AddDepositResponseData()
+            return new AddDepositRequestDTO.AddDepositRequestResponseData()
             {
                 DepositRequestId = created.DepositRequestId
             };
         }
 
-        public async Task<UpdateDepositRequestDTO.UpdateDepositResponseData> UpdateDepositRequest(UpdateDepositRequestDTO.UpdateDepositRequest request)
+        public async Task<UpdateDepositRequestDTO.UpdateDepositRequestResponseData> UpdateDepositRequest(UpdateDepositRequestDTO.UpdateDepositRequestRequest request)
         {
             var existingRequest = await _depositRequestRepository.GetByIdAsync(request.Data.DepositRequestId);
             if (existingRequest == null)
@@ -107,92 +125,54 @@ namespace Services.DepositRequest
             }
             existingRequest.Title = request.Data.Title ?? existingRequest.Title;
             existingRequest.Description = request.Data.Description ?? existingRequest.Description;
+            existingRequest.WalletAddress = request.Data.WalletAddress ?? existingRequest.WalletAddress;
             existingRequest.RequestStatus = request.Data.requestStatus ?? existingRequest.RequestStatus;
             existingRequest.UpdatedAt = DateTime.Now;
             await _depositRequestRepository.UpdateAsync(existingRequest.DepositRequestId, existingRequest);
 
-            return new UpdateDepositRequestDTO.UpdateDepositResponseData()
+            return new UpdateDepositRequestDTO.UpdateDepositRequestResponseData()
             {
                 DepositRequestId = existingRequest.DepositRequestId
             };
         }
 
-        public async Task<GetDepositDTO.GetDepositListResponse> GetAllDepositRequestPagination(int skip, int top)
+        public async Task<GetDepositRequestDTO.GetDepositRequestListResponseData> GetAllDepositRequestPagination(int skip, int top)
         {
             var queryable = await _depositRequestRepository.GetAllIncludesAsync();
             var pagination = queryable.Skip(skip).Take(top).Reverse().AsQueryable();
             var totalCount = queryable.Count();
             var maxPage = totalCount >= top ? Math.Ceiling((double)totalCount / top) : 1;
-            var response = _mapper.Map<IList<GetDepositDTO.DepositDTO>>(pagination);
+            var response = _mapper.Map<IList<GetDepositRequestDTO.DepositRequestDTO>>(pagination);
 
-            return new GetDepositDTO.GetDepositListResponse()
+            return new GetDepositRequestDTO.GetDepositRequestListResponseData()
             {
-                deposits = response,
-                pages = maxPage
+                Deposits = response,
+                Pages = (int)maxPage
             };
         }
 
-        public async Task<GetDepositDTO.GetDepositListResponse> GetDepositRequestByUserIdPagination(Guid? userId, int skip, int top)
+        public async Task<GetDepositRequestDTO.GetDepositRequestListResponseData> GetDepositRequestByUserIdPagination(Guid? userId, int skip, int top)
         {
             var queryable = await _depositRequestRepository.GetDepositRequestByUserIdPagination(userId);
             var pagination = queryable.Skip(skip).Take(top).AsQueryable();
             var totalCount = queryable.Count();
             var maxPage = totalCount >= top ? Math.Ceiling((double)totalCount / top) : 1;
-            var response = _mapper.Map<IList<GetDepositDTO.DepositDTO>>(pagination);
-            return new GetDepositDTO.GetDepositListResponse()
+            var response = _mapper.Map<IList<GetDepositRequestDTO.DepositRequestDTO>>(pagination);
+            return new GetDepositRequestDTO.GetDepositRequestListResponseData()
             {
-                deposits = response,
-                pages = maxPage
+                Deposits = response,
+                Pages = (int)maxPage
             };
         }
 
-        public class ReviewDepositRequestException : Exception
+        public async Task<GetDepositRequestDTO.DepositRequestDTO> GetDepositRequestById(Guid depositRequestId)
         {
-            public enum StatusCodeEnum
+            var depositRequest = await _depositRequestRepository.GetByIdAsync(depositRequestId);
+            if (depositRequest == null)
             {
-                AlreadyReviewd
+                throw new GetDepositRequestException(GetDepositRequestException.StatusCodeEnum.DepositRequestNotFound, "Deposit request not found");
             }
-            public StatusCodeEnum StatusCode { get; }
-            public override string Message { get; }
-
-            public ReviewDepositRequestException(StatusCodeEnum statusCode, string message)
-            {
-                StatusCode = statusCode;
-                Message = message;
-            }
-        }
-
-        public async Task<ReviewDepositRequestDTO.ReviewDepositResponseData> ReviewDepositRequest(ReviewDepositRequestDTO.ReviewDepositRequest request)
-        {
-            var depositRequest = await _depositRequestRepository.GetByIdAsync(request.Data.DepositRequestId);
-            if (depositRequest.RequestStatus != RequestStatus.Pending) throw new ReviewDepositRequestException(ReviewDepositRequestException.StatusCodeEnum.AlreadyReviewd, "Already reviewed");
-
-            depositRequest.RequestStatus = request.Data.RequestStatus;
-            await _depositRequestRepository.UpdateAsync(depositRequest.DepositRequestId, depositRequest);
-
-            var orchid = await _orchidRepository.GetByIdAsync(depositRequest.OrchidId);
-            await _orchidRepository.UpdateAsync(orchid.OrchidId, orchid);
-
-            orchid.ApprovalStatus = ApprovalStatus.Available;
-
-            if (request.Data.RequestStatus == RequestStatus.Approved)
-            {
-                orchid.DepositedStatus = DepositStatus.Deposited;
-            }
-            else
-            {
-                orchid.DepositedStatus = DepositStatus.Available;
-            }
-
-            return new ReviewDepositRequestDTO.ReviewDepositResponseData()
-            {
-
-            };
-        }
-
-        public Task<AddDepositRequestDTO.AddDepositResponseData> DepositRequest(AddDepositRequestDTO.AddDepositRequest request)
-        {
-            throw new NotImplementedException();
+            return _mapper.Map<GetDepositRequestDTO.DepositRequestDTO>(depositRequest);
         }
     }
 }

@@ -30,7 +30,7 @@ namespace BE.Controllers
 
         //Add orchid from dto
         [Authorize]
-        [HttpPost()]
+        [HttpPost]
         public async Task<IActionResult> AddOrchid([FromForm] AddOrchidDTO.AddOrchidRequestData data)
         {
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
@@ -129,6 +129,10 @@ namespace BE.Controllers
             {
                 switch (e.StatusCode)
                 {
+                    case DeleteOrchidException.StatusCodeEnum.OrchidNotFound:
+                        return NotFound(e.Message);
+                    case DeleteOrchidException.StatusCodeEnum.OrchidAlreadyInDepositRequest:
+                        return StatusCode(400, e.Message);
                     default:
                         return StatusCode(500, e.Message);
                 }
@@ -147,8 +151,8 @@ namespace BE.Controllers
                 {
                     Data = new GetOrchidDTO.GetOwnedOrchidListResponseData
                     {
-                        orchids = orchids.orchids,
-                        pages = orchids.pages
+                        Orchids = orchids.Orchids,
+                        Pages = orchids.Pages
                     },
                     AuthTokens = new AuthTokens
                     {
@@ -172,8 +176,8 @@ namespace BE.Controllers
                 var orchids = await _orchidService.GetOrchidsPagination(skip, top);
                 return Ok(new GetOrchidDTO.GetOrchidListResponse
                 {
-                    orchids = orchids.orchids,
-                    pages = orchids.pages
+                    Orchids = orchids.Orchids,
+                    Pages = orchids.Pages
                 });
             }
             catch (Exception e)
@@ -215,8 +219,8 @@ namespace BE.Controllers
 
                 return Ok(new GetOrchidDTO.GetOrchidListResponse
                 {
-                    orchids = orchids.orchids,
-                    pages = orchids.pages
+                    Orchids = orchids.Orchids,
+                    Pages = orchids.Pages
                 }) ;
             }
             catch (OrchidService.GetOrchidException e)

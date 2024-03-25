@@ -17,8 +17,8 @@ namespace BE
             CreateMap<GetOwnedOrchidListResponseData, GetOrchidListResponse>().ReverseMap();
             CreateMap<OrchidDTO, Orchid>().ReverseMap();
 
-            CreateMap<AddDepositRequestDTO.AddDepositResponseData, Orchid>().ReverseMap();
-            CreateMap<GetDepositDTO.DepositDTO, DepositRequest>().ForMember(fr => fr.Orchid, dest => dest.MapFrom(fr => fr.Orchid)).ReverseMap();
+            CreateMap<AddDepositRequestDTO.AddDepositRequestResponseData, Orchid>().ReverseMap();
+            CreateMap<GetDepositRequestDTO.DepositRequestDTO, DepositRequest>().ReverseMap();
 
             CreateMap<AddUserDTO.AddUserResponseData, User>().ReverseMap();
             CreateMap<AddUserDTO.AddUserRequestData, User>().ReverseMap();
