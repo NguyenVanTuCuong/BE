@@ -15,10 +15,10 @@ namespace Services.Transaction
         public Task<AddTransactionRequestJson.AddTransactionResponseData>
                 AddTransactionData(AddTransactionRequestJson.AddTransactionRequest request);
         // GET LIST
-        public Task<GetTransactionListResponse> GetOrchidsPagination(int skip, int top);
-        public Task<GetOwnedTransactionListResponseData> GetOwnedOrchidsPagination(Guid ownerId, int skip, int top);
-        public Task<UpdateTransactionDTO.UpdateTransactionResponseData> UpdateOrchid(UpdateTransactionDTO.UpdateTransactionRequest request);
-        public Task<DeleteTransactionDTO.DeleteTrasactionResponseData> DeleteOrchid(DeleteTransactionDTO.DeleteTransactionRequest request);
+        public Task<GetTransactionListResponse> GetTransactionPagination(int skip, int top);
+        public Task<GetOwnedTransactionListResponseData> GetOwnedTransactionPagination(Guid ownerId, int skip, int top);
+        public Task<UpdateTransactionDTO.UpdateTransactionResponseData> UpdateTransaction(UpdateTransactionDTO.UpdateTransactionRequest request);
+        public Task<DeleteTransactionDTO.DeleteTrasactionResponseData> DeleteTransaction(DeleteTransactionDTO.DeleteTransactionRequest request);
         public Task<TransactionDTO> GetTrasactionById(Guid transactionId);
         public Task<GetTransactionListResponse> SearchTransaction(Guid? OrchidId, int skip, int top);
     }
