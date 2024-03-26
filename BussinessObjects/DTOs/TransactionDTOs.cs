@@ -16,8 +16,6 @@ namespace BussinessObjects.DTOs
     //ADD----------------------------------------------------------
     public class AddTransactionRequestJson
     {
-        [Required(ErrorMessage = "TransactionId is required")]
-        public Guid TransactionId { get; set; }
         [Required(ErrorMessage = "TransactionHash is required")]
         public string TransactionHash { get; set; } = null!;
         [Required(ErrorMessage = "Amount is required")]
@@ -45,40 +43,43 @@ namespace BussinessObjects.DTOs
     }
 
     //UPDATE----------------------------------------------------------
-    public class UpdateTransactionDTO
-    {
-        public class UpdateTransactionRequestJson
-        {
-            [Required(ErrorMessage = "TransactionId is required")]
-            public Guid TransactionId { get; set; }
-            [Required(ErrorMessage = "TransactionHash is required")]
-            public string TransactionHash { get; set; } = null!;
-            [Required(ErrorMessage = "Amount is required")]
-            public float Amount { get; set; }
-            [Required(ErrorMessage = "OrchidId is required")]
-            public Guid OrchidId { get; set; }
-        }
+    //public class UpdateTransactionDTO
+    //{
+    //    public class UpdateTransactionRequestJson
+    //    {
+    //        [Required(ErrorMessage = "TransactionId is required")]
+    //        public Guid TransactionId { get; set; }
 
-        public class UpdateTransactionRequestData
-        {
-            [Required(ErrorMessage = "TransactionId is required")]
-            public Guid TransactionId { get; set; }
-            public UpdateTransactionRequestJson? Json { get; set; }
-        }
+    //        [Required(ErrorMessage = "TransactionHash is required")]
+    //        public string TransactionHash { get; set; } = null!;
 
-        public class UpdateTransactionRequest : AuthRequest<UpdateTransactionRequestData>
-        {
-        }
+    //        [Required(ErrorMessage = "Amount is required")]
+    //        public float Amount { get; set; }
 
-        public class UpdateTransactionResponseData
-        {
-            public Guid TransactionId { get; set; }
-        }
+    //        [Required(ErrorMessage = "OrchidId is required")]
+    //        public Guid OrchidId { get; set; }
+    //    }
 
-        public class UpdateTransactionResponse : AuthResponse<UpdateTransactionResponseData>
-        {
-        }
-    }
+    //    public class UpdateTransactionRequestData
+    //    {
+    //        [Required(ErrorMessage = "TransactionId is required")]
+    //        public Guid TransactionId { get; set; }
+    //        public UpdateTransactionRequestJson? Json { get; set; }
+    //    }
+
+    //    public class UpdateTransactionRequest : AuthRequest<UpdateTransactionRequestData>
+    //    {
+    //    }
+
+    //    public class UpdateTransactionResponseData
+    //    {
+    //        public Guid TransactionId { get; set; }
+    //    }
+
+    //    public class UpdateTransactionResponse : AuthResponse<UpdateTransactionResponseData>
+    //    {
+    //    }
+    //}
 
     //DELETE-----------------------------------------------------------------------------------
     public class DeleteTransactionDTO
@@ -111,6 +112,7 @@ namespace BussinessObjects.DTOs
             public string TransactionHash { get; set; } = null!;
             public float Amount { get; set; }
             public Guid OrchidId { get; set; }
+            public Orchid Orchid { get; set; }
             public DateTime CreatedAt { get; set; }
         }
 
