@@ -25,18 +25,19 @@ public partial class OrchidAuctionContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer("Server=(local);uid=sa;pwd=12345;database=OrchidAuction;TrustServerCertificate=True");
 
-        private string GetConnectionString()
-        {
-            IConfiguration config = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", true, true)
-                .Build();
+    private string GetConnectionString()
+    {
+        IConfiguration config = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json", true, true)
+            .Build();
         return config.GetConnectionString("Db");
-        }
+    }
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Orchid>().Ignore(o => o.ApprovalStatus);
         modelBuilder.Entity<Orchid>(entity =>
         {
             entity.ToTable("Orchid");
@@ -129,7 +130,7 @@ public partial class OrchidAuctionContext : DbContext
                 .HasConstraintName("FK_Transaction_Orchid");
         });
 
-    OnModelCreatingPartial(modelBuilder);
+        OnModelCreatingPartial(modelBuilder);
     }
 
 

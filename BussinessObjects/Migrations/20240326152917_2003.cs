@@ -5,7 +5,7 @@
 namespace BussinessObjects.Migrations
 {
     /// <inheritdoc />
-    public partial class _1232313a55213 : Migration
+    public partial class _2003 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

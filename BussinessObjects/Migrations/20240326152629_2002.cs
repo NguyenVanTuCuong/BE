@@ -6,27 +6,18 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BussinessObjects.Migrations
 {
     /// <inheritdoc />
-    public partial class _1232313a : Migration
+    public partial class _2002 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterColumn<int>(
-                name: "ApprovalStatus",
-                table: "Orchid",
-                type: "int",
-                nullable: false,
-                defaultValue: 0,
-                oldClrType: typeof(int),
-                oldType: "int");
-
             migrationBuilder.CreateTable(
                 name: "Transaction",
                 columns: table => new
                 {
                     TransactionId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     TransactionHash = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Amount = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Amount = table.Column<float>(type: "real", nullable: false),
                     OrchidId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "SYSDATETIME()")
                 },
@@ -51,15 +42,6 @@ namespace BussinessObjects.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Transaction");
-
-            migrationBuilder.AlterColumn<int>(
-                name: "ApprovalStatus",
-                table: "Orchid",
-                type: "int",
-                nullable: false,
-                oldClrType: typeof(int),
-                oldType: "int",
-                oldDefaultValue: 0);
         }
     }
 }

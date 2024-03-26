@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\Services\\Services.csproj": {}
+    "D:\\KY9_Spring\\PRN231\\BE\\Services\\Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\BussinessObjects\\BussinessObjects.csproj": {
+    "D:\\KY9_Spring\\PRN231\\BE\\BussinessObjects\\BussinessObjects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\BussinessObjects\\BussinessObjects.csproj",
+        "projectUniqueName": "D:\\KY9_Spring\\PRN231\\BE\\BussinessObjects\\BussinessObjects.csproj",
         "projectName": "BussinessObjects",
-        "projectPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\BussinessObjects\\BussinessObjects.csproj",
-        "packagesPath": "C:\\Users\\tucuo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\BussinessObjects\\obj\\",
+        "projectPath": "D:\\KY9_Spring\\PRN231\\BE\\BussinessObjects\\BussinessObjects.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "D:\\KY9_Spring\\PRN231\\BE\\BussinessObjects\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\tucuo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -97,21 +107,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\Repositories\\Repositories.csproj": {
+    "D:\\KY9_Spring\\PRN231\\BE\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "D:\\KY9_Spring\\PRN231\\BE\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\Repositories\\Repositories.csproj",
-        "packagesPath": "C:\\Users\\tucuo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\Repositories\\obj\\",
+        "projectPath": "D:\\KY9_Spring\\PRN231\\BE\\Repositories\\Repositories.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "D:\\KY9_Spring\\PRN231\\BE\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\tucuo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -119,14 +133,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\BussinessObjects\\BussinessObjects.csproj": {
-                "projectPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\BussinessObjects\\BussinessObjects.csproj"
+              "D:\\KY9_Spring\\PRN231\\BE\\BussinessObjects\\BussinessObjects.csproj": {
+                "projectPath": "D:\\KY9_Spring\\PRN231\\BE\\BussinessObjects\\BussinessObjects.csproj"
               }
             }
           }
@@ -135,6 +150,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -170,21 +190,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\Services\\Services.csproj": {
+    "D:\\KY9_Spring\\PRN231\\BE\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\Services\\Services.csproj",
+        "projectUniqueName": "D:\\KY9_Spring\\PRN231\\BE\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\Services\\Services.csproj",
-        "packagesPath": "C:\\Users\\tucuo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\Services\\obj\\",
+        "projectPath": "D:\\KY9_Spring\\PRN231\\BE\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "D:\\KY9_Spring\\PRN231\\BE\\Services\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\tucuo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -192,17 +216,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\BussinessObjects\\BussinessObjects.csproj": {
-                "projectPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\BussinessObjects\\BussinessObjects.csproj"
+              "D:\\KY9_Spring\\PRN231\\BE\\BussinessObjects\\BussinessObjects.csproj": {
+                "projectPath": "D:\\KY9_Spring\\PRN231\\BE\\BussinessObjects\\BussinessObjects.csproj"
               },
-              "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\Repositories\\Repositories.csproj": {
-                "projectPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\Repositories\\Repositories.csproj"
+              "D:\\KY9_Spring\\PRN231\\BE\\Repositories\\Repositories.csproj": {
+                "projectPath": "D:\\KY9_Spring\\PRN231\\BE\\Repositories\\Repositories.csproj"
               }
             }
           }
@@ -211,6 +236,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -254,7 +284,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BussinessObjects.Migrations
 {
     [DbContext(typeof(OrchidAuctionContext))]
-    [Migration("20240325170917_1232313a55312312342")]
-    partial class _1232313a55312312342
+    [Migration("20240326152917_2003")]
+    partial class _2003
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -78,8 +78,7 @@ namespace BussinessObjects.Migrations
                     b.Property<int>("ApprovalStatus")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasDefaultValue(0)
-                        .HasColumnName("ApprovalStatus");
+                        .HasDefaultValue(0);
 
                     b.Property<string>("Color")
                         .HasMaxLength(50)
@@ -93,8 +92,7 @@ namespace BussinessObjects.Migrations
                     b.Property<int>("DepositedStatus")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasDefaultValue(0)
-                        .HasColumnName("DepositedStatus");
+                        .HasDefaultValue(0);
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)

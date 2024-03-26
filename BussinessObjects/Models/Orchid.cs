@@ -1,6 +1,7 @@
 ﻿using BussinessObjects.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BussinessObjects.Models;
 
@@ -21,6 +22,7 @@ public partial class Orchid
     public Guid OwnerId { get; set; }
 
     public DepositStatus DepositedStatus { get; set; }
+
     public ApprovalStatus ApprovalStatus { get; set; }
 
     public virtual User Owner { get; set; } = null!;

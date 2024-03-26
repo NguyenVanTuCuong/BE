@@ -75,8 +75,7 @@ namespace BussinessObjects.Migrations
                     b.Property<int>("ApprovalStatus")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasDefaultValue(0)
-                        .HasColumnName("ApprovalStatus");
+                        .HasDefaultValue(0);
 
                     b.Property<string>("Color")
                         .HasMaxLength(50)
@@ -90,8 +89,7 @@ namespace BussinessObjects.Migrations
                     b.Property<int>("DepositedStatus")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasDefaultValue(0)
-                        .HasColumnName("DepositedStatus");
+                        .HasDefaultValue(0);
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)
