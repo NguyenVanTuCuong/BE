@@ -19,7 +19,7 @@ namespace Services.Transaction
         public Task<GetOwnedTransactionListResponseData> GetOwnedTransactionPagination(Guid ownerId, int skip, int top);
         public Task<UpdateTransactionDTO.UpdateTransactionResponseData> UpdateTransaction(UpdateTransactionDTO.UpdateTransactionRequest request);
         public Task<DeleteTransactionDTO.DeleteTrasactionResponseData> DeleteTransaction(DeleteTransactionDTO.DeleteTransactionRequest request);
-        public Task<TransactionDTO> GetTrasactionById(Guid transactionId);
+        public Task<TransactionDTO> GetTransactionById(Guid transactionId);
         public Task<GetTransactionListResponse> SearchTransaction(Guid? OrchidId, int skip, int top);
     }
 }
