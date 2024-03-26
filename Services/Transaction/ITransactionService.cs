@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Services.Transaction
 {
-    internal interface ITransactionService
+    public interface ITransactionService
     {
     }
 }
