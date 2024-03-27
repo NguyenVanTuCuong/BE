@@ -126,7 +126,17 @@ namespace Services.DepositRequest
             existingRequest.Title = request.Data.Title ?? existingRequest.Title;
             existingRequest.Description = request.Data.Description ?? existingRequest.Description;
             existingRequest.WalletAddress = request.Data.WalletAddress ?? existingRequest.WalletAddress;
-            existingRequest.RequestStatus = request.Data.RequestStatus ?? existingRequest.RequestStatus;
+            if (request.Data.RequestStatus != null)
+            {
+                existingRequest.RequestStatus = request.Data.RequestStatus.Value;
+                if (request.Data.RequestStatus == RequestStatus.Rejected)
+                {
+                    var orchid = await _orchidRepository.GetByIdAsync(existingRequest.OrchidId);
+                    orchid.ApprovalStatus = ApprovalStatus.Available;
+                    orchid.DepositedStatus = DepositStatus.Available;
+                    await _orchidRepository.UpdateAsync(existingRequest.OrchidId, orchid);
+                }
+            }
             existingRequest.UpdatedAt = DateTime.Now;
             await _depositRequestRepository.UpdateAsync(existingRequest.DepositRequestId, existingRequest);
 
