@@ -75,8 +75,7 @@ namespace BussinessObjects.Migrations
                     b.Property<int>("ApprovalStatus")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasDefaultValue(0)
-                        .HasColumnName("ApprovalStatus");
+                        .HasDefaultValue(0);
 
                     b.Property<string>("Color")
                         .HasMaxLength(50)
@@ -90,8 +89,7 @@ namespace BussinessObjects.Migrations
                     b.Property<int>("DepositedStatus")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasDefaultValue(0)
-                        .HasColumnName("DepositedStatus");
+                        .HasDefaultValue(0);
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)
@@ -135,8 +133,8 @@ namespace BussinessObjects.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<float>("Amount")
-                        .HasColumnType("real");
+                    b.Property<double>("Amount")
+                        .HasColumnType("float");
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
@@ -148,7 +146,8 @@ namespace BussinessObjects.Migrations
 
                     b.Property<string>("TransactionHash")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.HasKey("TransactionId");
 

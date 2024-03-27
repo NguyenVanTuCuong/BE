@@ -32,6 +32,8 @@ namespace BE
 
             CreateMap<DetailsUserDTO.DetailsUserResponseData, User>().ReverseMap();
             CreateMap<UserDTO, User>().ReverseMap();
+
+            CreateMap<GetTransactionDTO.TransactionDTO, Transaction>().ReverseMap();
         }
     }
 }

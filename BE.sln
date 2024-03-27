@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Protos", "Protos", "{0B29A1
 		nft.proto = nft.proto
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{F33BB3F5-815F-4FF1-8AB6-1E25BBC174E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{2CC5BE37-71F1-460F-941C-1931F06E790C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CC5BE37-71F1-460F-941C-1931F06E790C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CC5BE37-71F1-460F-941C-1931F06E790C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F33BB3F5-815F-4FF1-8AB6-1E25BBC174E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F33BB3F5-815F-4FF1-8AB6-1E25BBC174E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F33BB3F5-815F-4FF1-8AB6-1E25BBC174E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F33BB3F5-815F-4FF1-8AB6-1E25BBC174E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

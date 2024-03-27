@@ -25,15 +25,6 @@ public partial class OrchidAuctionContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer("Server=(local);uid=sa;pwd=12345;database=OrchidAuction;TrustServerCertificate=True");
 
-        private string GetConnectionString()
-        {
-            IConfiguration config = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", true, true)
-                .Build();
-        return config.GetConnectionString("Db");
-        }
-
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -115,8 +106,8 @@ public partial class OrchidAuctionContext : DbContext
             entity.ToTable("Transaction");
 
             entity.Property(e => e.TransactionId).ValueGeneratedOnAdd();
-            entity.Property(e => e.Amount);
-            entity.Property(e => e.TransactionHash);
+            entity.Property(e => e.Amount).HasColumnType("float"); ;
+            entity.Property(e => e.TransactionHash).HasMaxLength(255);
             entity.Property(e => e.OrchidId);
             entity.Property(e => e.CreatedAt)
                .HasColumnType("datetime2")

@@ -1590,12 +1590,25 @@
           "bin/placeholder/BussinessObjects.dll": {}
         }
       },
+      "DAO/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "BussinessObjects": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DAO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DAO.dll": {}
+        }
+      },
       "Repositories/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "AutoMapper": "13.0.1",
-          "BussinessObjects": "1.0.0",
+          "DAO": "1.0.0",
           "FirebaseAdmin": "2.4.0",
           "Grpc.AspNetCore": "2.61.0"
         },
@@ -4275,6 +4288,11 @@
       "path": "../BussinessObjects/BussinessObjects.csproj",
       "msbuildProject": "../BussinessObjects/BussinessObjects.csproj"
     },
+    "DAO/1.0.0": {
+      "type": "project",
+      "path": "../DAO/DAO.csproj",
+      "msbuildProject": "../DAO/DAO.csproj"
+    },
     "Repositories/1.0.0": {
       "type": "project",
       "path": "../Repositories/Repositories.csproj",
@@ -4299,19 +4317,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tucuo\\.nuget\\packages\\": {}
+    "C:\\Users\\huynh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\BE\\BE.csproj",
+      "projectUniqueName": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\BE\\BE.csproj",
       "projectName": "BE",
-      "projectPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\BE\\BE.csproj",
-      "packagesPath": "C:\\Users\\tucuo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\BE\\obj\\",
+      "projectPath": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\BE\\BE.csproj",
+      "packagesPath": "C:\\Users\\huynh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\BE\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\tucuo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\huynh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4325,11 +4343,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\Repositories\\Repositories.csproj": {
-              "projectPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\Repositories\\Repositories.csproj"
+            "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\Repositories\\Repositories.csproj": {
+              "projectPath": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\Repositories\\Repositories.csproj"
             },
-            "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\Services\\Services.csproj": {
-              "projectPath": "C:\\Users\\tucuo\\OneDrive\\Desktop\\BE\\Services\\Services.csproj"
+            "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\huynh\\OneDrive\\Máy tính\\233\\BE\\Services\\Services.csproj"
             }
           }
         }
@@ -4338,6 +4356,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4390,7 +4413,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

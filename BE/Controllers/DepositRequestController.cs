@@ -113,13 +113,14 @@ namespace BE.Controllers
             });
         }
         [Authorize]
-        [HttpGet("/curent-user")]
+        [HttpGet("owned")]
         public async Task<IActionResult> GetDepositRequestByUserIdPagination(int skip, int top)
         {
             var userId = _jwtService.GetUserIdFromContext(HttpContext);
             var depositRequest = await _depositRequestService.GetDepositRequestByUserIdPagination(userId, skip, top);
             return Ok(new GetDepositRequestDTO.GetDepositRequestResponse
             {
+                Data = depositRequest,
                 AuthTokens = new AuthTokens
                 {
                     AccessToken = await _jwtService.GenerateToken(userId.Value),

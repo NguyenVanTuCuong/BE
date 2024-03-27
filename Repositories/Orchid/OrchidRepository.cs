@@ -14,11 +14,5 @@ namespace Repositories.User
 {
     public class OrchidRepository : GenericRepository<Orchid>, IOrchidRepository
     {
-        private readonly OrchidAuctionContext _context;
-
-        public OrchidRepository()
-        {
-            _context = new OrchidAuctionContext();
-        }
     }
 }

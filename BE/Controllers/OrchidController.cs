@@ -19,13 +19,11 @@ namespace BE.Controllers
     {
         private readonly IOrchidService _orchidService;
         private readonly IJwtService _jwtService;
-        private readonly IMapper _mapper;
 
-        public OrchidController(IOrchidService orchidService, IJwtService jwtService, IMapper mapper)
+        public OrchidController(IOrchidService orchidService, IJwtService jwtService)
         {
             _orchidService = orchidService;
             _jwtService = jwtService;
-            _mapper = mapper;
         }
 
         //Add orchid from dto
@@ -98,7 +96,6 @@ namespace BE.Controllers
             }
         }
 
-        //Delete orchid from dto
         [Authorize]
         [HttpDelete()]
         public async Task<IActionResult> DeleteOrchid(Guid orchidId)

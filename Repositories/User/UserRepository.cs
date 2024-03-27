@@ -1,4 +1,5 @@
 ﻿using BussinessObjects.Models;
+using DAO.User;
 using Microsoft.EntityFrameworkCore;
 using Repositories.Generic;
 using System;
@@ -11,17 +12,7 @@ namespace Repositories.User
 {
     public class UserRepository : GenericRepository<BussinessObjects.Models.User>, IUserRepository
     {
-        private readonly OrchidAuctionContext _context;
-
-        public UserRepository()
-        {
-            _context = new OrchidAuctionContext();
-        }
-
-        public async Task<BussinessObjects.Models.User?> GetByEmailAsync(string email)
-        {
-            return await _context.Users.FirstOrDefaultAsync(entity => entity.Email.Equals(email));
-        }
-
+        public async Task<BussinessObjects.Models.User?> GetByEmailAsync(string email) 
+            => await UserDAO.Instance.GetByEmailAsync(email);
     }
 }

@@ -1,8 +1,13 @@
 using BE;
+using DAO.DepositRequest;
+using DAO.Orchid;
+using DAO.Transaction;
+using DAO.User;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Repositories.DepositRequest;
+using Repositories.Transaction;
 using Repositories.User;
 using Services.Auth;
 using Services.Blockchain;
@@ -12,6 +17,7 @@ using Services.Common.Jwt;
 using Services.Common.Sha256;
 using Services.DepositRequest;
 using Services.Orchid;
+using Services.Transaction;
 using Services.User;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -27,9 +33,15 @@ builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddControllers().AddJsonOptions(options =>
  options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 
+builder.Services.AddTransient<IUserDAO, UserDAO>();
+builder.Services.AddTransient<IOrchidDAO, OrchidDAO>();
+builder.Services.AddTransient<IDepositRequestDAO, DepositRequestDAO>();
+builder.Services.AddTransient<ITransactionDAO, TransactionDAO>();
+
 builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddTransient<IOrchidRepository, OrchidRepository>();
 builder.Services.AddTransient<IDepositRequestRepository, DepositRequestRepository>();
+builder.Services.AddTransient<ITransactionRepository, TransactionRepository>();
 
 builder.Services.AddTransient<IJwtService, JwtService>();
 builder.Services.AddTransient<ISha256Service, Sha256Service>();
@@ -42,6 +54,7 @@ builder.Services.AddTransient<IOrchidService, OrchidService>();
 builder.Services.AddSingleton<IBlockchainService, BlockchainService>();
 builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IDepositRequestService, DepositRequestService>();
+builder.Services.AddTransient<ITransactionService, TransactionService>();
 
 builder.Services.AddEndpointsApiExplorer();
 

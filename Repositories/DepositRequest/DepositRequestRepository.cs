@@ -1,4 +1,5 @@
 ﻿using BussinessObjects.Models;
+using DAO.DepositRequest;
 using Microsoft.EntityFrameworkCore;
 using Repositories.Generic;
 using Repositories.User;
@@ -12,52 +13,17 @@ namespace Repositories.DepositRequest
 {
     public class DepositRequestRepository : GenericRepository<BussinessObjects.Models.DepositRequest>, IDepositRequestRepository
     {
-        private readonly OrchidAuctionContext _context;
-
-        public DepositRequestRepository()
-        {
-            _context = new OrchidAuctionContext();
-        }
 
         public async Task<List<BussinessObjects.Models.DepositRequest>> GetAllIncludesAsync()
-        {
-            var depositRequests = await _context.DepositRequests
-            .Include(dr => dr.Orchid)
-            .OrderByDescending(dr => dr.CreatedAt)
-            .ToListAsync();
-            return depositRequests;
-        }
+            => await DepositRequestDAO.Instance.GetAllIncludesAsync();
 
         public async Task<List<BussinessObjects.Models.DepositRequest>> GetDepositRequestByUserIdPagination(Guid? userId)
-        {
-            var depositRequests = await _context.DepositRequests
-            .Include(dr => dr.Orchid)
-            .Where(dr => dr.Orchid.OwnerId == userId)
-            .ToListAsync();
-
-            return depositRequests;
-        }
+            => await DepositRequestDAO.Instance.GetDepositRequestByUserIdPagination(userId);
 
         public async Task<BussinessObjects.Models.DepositRequest> GetByOrchidIdAndLatestCreatedDate(Guid orchidId)
-        {
-            //get deposit request by orchid id and latest created date
-            var depositRequest = await _context.DepositRequests
-                .Include(dr => dr.Orchid)
-                .Where(dr => dr.OrchidId == orchidId)
-                .OrderByDescending(dr => dr.CreatedAt)
-                .FirstOrDefaultAsync();
-
-            return depositRequest;
-        }
+            => await DepositRequestDAO.Instance.GetByOrchidIdAndLatestCreatedDate(orchidId);
 
         public async Task<BussinessObjects.Models.DepositRequest> GetByOrchidId(Guid orchidId)
-        {
-            var depositRequest = await _context.DepositRequests
-                .Include(dr => dr.Orchid)
-                .Where(dr => dr.OrchidId == orchidId)
-                .FirstOrDefaultAsync();
-
-            return depositRequest;
-        }
+            => await DepositRequestDAO.Instance.GetByOrchidId(orchidId);
     }
 }
