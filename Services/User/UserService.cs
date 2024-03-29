@@ -3,6 +3,7 @@ using BussinessObjects.DTOs;
 using BussinessObjects.Enums;
 using BussinessObjects.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using Repositories.User;
 using Services.Common.Sha256;
 using System;
@@ -32,7 +33,7 @@ namespace Services.User
         {
             public enum StatusCodeEnum
             {
-                UserNotFound, EmailExisted
+                UserNotFound, EmailExisted, PasswordNotMatch
             }
             public StatusCodeEnum StatusCode { get; }
             public override string Message { get; }
@@ -124,13 +125,30 @@ namespace Services.User
                 throw new UserException(UserException.StatusCodeEnum.UserNotFound, "User not found");
             }
             var updateUser = request.Data;
-            updateUser.Password = _sha256Service.Hash(updateUser.Password);
+            var existedEmailUser = await _userRepository.GetByEmailAsync(updateUser.Email);
+            if (existedEmailUser != null && !existedEmailUser.Email.Equals(existingUser.Email))
+            {
+                throw new UserException(UserException.StatusCodeEnum.EmailExisted, "Email existed!");
+            }
+
+            if (!string.IsNullOrEmpty(updateUser.OldPassword) && !string.IsNullOrEmpty(updateUser.Password))
+            {
+                var same = _sha256Service.Verify(updateUser.OldPassword, existingUser.Password);
+                if (same)
+                {
+                    updateUser.Password = _sha256Service.Hash(updateUser.Password);
+                    existingUser.Password = updateUser.Password ?? existingUser.Password;
+                } else
+                {
+                    throw new UserException(UserException.StatusCodeEnum.PasswordNotMatch, "Password Not Match");
+                }
+            }
 
             existingUser.Email = updateUser.Email ?? existingUser.Email;
             existingUser.Username = updateUser.Username ?? existingUser.Username;
-            existingUser.Password = updateUser.Password ?? existingUser.Password;
             existingUser.FirstName = updateUser.FirstName ?? existingUser.FirstName;
             existingUser.LastName = updateUser.LastName ?? existingUser.LastName;
+            existingUser.Birthday = updateUser.Birthday;
             existingUser.Status = updateUser.Status;
             existingUser.Role = updateUser.Role;
 

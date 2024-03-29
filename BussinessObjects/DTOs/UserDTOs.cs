@@ -91,10 +91,9 @@ namespace BussinessObjects.DTOs
             [EmailAddress(ErrorMessage = "Invalid email address")]
             public string Email { get; set; }
 
-            [Required(ErrorMessage = "Password is required")]
-            [MinLength(3, ErrorMessage = "Password must be at least 3 characters long")]
-            [MaxLength(50, ErrorMessage = "Password can not be more than 20 characters")]
-            public string Password { get; set; }
+            public string? Password { get; set; }
+
+            public string? OldPassword { get; set; }
 
             [Required(ErrorMessage = "Username is required")]
             [MinLength(3, ErrorMessage = "Username must be at least 3 characters long")]
